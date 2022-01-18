@@ -1,0 +1,978 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* d4e_swiss_creative_2website
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-16 00:21+0000\n"
+"PO-Revision-Date: 2021-09-16 00:21+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: d4e_swiss_creative_2website
+#: model_terms:ir.ui.view,arch_db:d4e_swiss_creative_2website.pass_provino
+msgid "1 jeton Bouteille"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model_terms:ir.ui.view,arch_db:d4e_swiss_creative_2website.pass_provino
+msgid "220 caves à choix"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model_terms:ir.ui.view,arch_db:d4e_swiss_creative_2website.pass_provino
+msgid "4 jetons Dégustations"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model:mail.template,body_html:d4e_swiss_creative_2website.email_template_sale_recap_mail
+msgid ""
+"<?xml version=\"1.0\"?>\n"
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"                    <p style=\"margin: 0px; padding: 0px;font-size: 13px;\">\n"
+"                        Hello ${object.supplier_id.name},<br/>\n"
+"                        Here is our <strong>${object.month_year} Sale Recap</strong>\n"
+"                    </p>\n"
+"                </div>\n"
+"            "
+msgstr ""
+"<?xml version=\"1.0\"?>\n"
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"                    <p style=\"margin: 0px; padding: 0px;font-size: 13px;\">\n"
+"                        ${object.supplier_id.name},<br/>\n"
+"                        Vous trouverez ci-joint votre <strong>${object.month_year} recapitulatif de vente</strong>\n"
+"                    </p>\n"
+"                </div>\n"
+"            "
+
+#. module: d4e_swiss_creative_2website
+#: model_terms:ir.ui.view,arch_db:d4e_swiss_creative_2website.pass_provino
+msgid ""
+"<b>\n"
+"                  Le Pass Dégustation Provino\n"
+"                </b>"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model_terms:ir.ui.view,arch_db:d4e_swiss_creative_2website.pass_provino
+msgid ""
+"<font style=\"font-size: 14px;\">\n"
+"                        M.\n"
+"                   &amp;nbsp;</font>"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model_terms:ir.ui.view,arch_db:d4e_swiss_creative_2website.pass_provino
+msgid ""
+"<font style=\"font-size: 14px;\">\n"
+"                        Mme.\n"
+"                   &amp;nbsp;</font>"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model_terms:ir.ui.view,arch_db:d4e_swiss_creative_2website.pass_provino
+msgid "<font style=\"font-size: 14px;\">&amp;nbsp;    *</font>"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model_terms:ir.ui.view,arch_db:d4e_swiss_creative_2website.pass_provino
+msgid "<font style=\"font-size: 14px;\">&amp;nbsp;*</font>"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model_terms:ir.ui.view,arch_db:d4e_swiss_creative_2website.pass_provino
+msgid "<font style=\"font-size: 14px;\">&amp;nbsp;</font>"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model_terms:ir.ui.view,arch_db:d4e_swiss_creative_2website.pass_provino
+msgid ""
+"<font style=\"font-size: 14px;\">&amp;nbsp;</font>Le Pass ProVino, c'est "
+"plus de 200 artisans-vignerons qui vous ouvrent leurs portes. Partez à la "
+"découverte de notre région, de ses paysages et de son savoir-faire en "
+"profitant d'un accueil convivial et authentique chez les artisans."
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model_terms:ir.ui.view,arch_db:d4e_swiss_creative_2website.pass_provino
+msgid "<font style=\"font-size: 14px;\">Adresse email</font>"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model_terms:ir.ui.view,arch_db:d4e_swiss_creative_2website.pass_provino
+msgid "<font style=\"font-size: 14px;\">Adresse</font>"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model_terms:ir.ui.view,arch_db:d4e_swiss_creative_2website.pass_provino
+msgid "<font style=\"font-size: 14px;\">Civilité</font>"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model_terms:ir.ui.view,arch_db:d4e_swiss_creative_2website.pass_provino
+msgid "<font style=\"font-size: 14px;\">Code postal</font>"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model_terms:ir.ui.view,arch_db:d4e_swiss_creative_2website.pass_provino
+msgid "<font style=\"font-size: 14px;\">Custom Texte long</font>"
+msgstr "<font style=\"font-size: 14px;\">Longueur Texte personnalisé</font>"
+
+#. module: d4e_swiss_creative_2website
+#: model_terms:ir.ui.view,arch_db:d4e_swiss_creative_2website.pass_provino
+msgid "<font style=\"font-size: 14px;\">Subject</font>"
+msgstr "<font style=\"font-size: 14px;\">Sujet</font>"
+
+#. module: d4e_swiss_creative_2website
+#: model_terms:ir.ui.view,arch_db:d4e_swiss_creative_2website.pass_provino
+msgid "<font style=\"font-size: 14px;\">Ville</font>"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model_terms:ir.ui.view,arch_db:d4e_swiss_creative_2website.producteur
+msgid "<i class=\"fa fa-shopping-cart\"/> Acheter"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model_terms:ir.ui.view,arch_db:d4e_swiss_creative_2website.producteurs
+msgid "<span class=\"\">Les vins du domaine</span>"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model_terms:ir.ui.view,arch_db:d4e_swiss_creative_2website.producteur
+msgid ""
+"<span class=\"s_website_form_label_content\"/>\n"
+"                            <span title=\"Separate email addresses with a comma.\">\n"
+"                              <i class=\"fa fa-info-circle\"/>\n"
+"                            </span>"
+msgstr ""
+"<span class=\"s_website_form_label_content\"/>\n"
+"                            <span title=\"Séparer les adresses mails avec une virgule.\">\n"
+"                              <i class=\"fa fa-info-circle\"/>\n"
+"                            </span>"
+
+#. module: d4e_swiss_creative_2website
+#: model_terms:ir.ui.view,arch_db:d4e_swiss_creative_2website.pass_provino
+msgid ""
+"<span class=\"s_website_form_label_content\"/>\n"
+"                        <span title=\"Separate email addresses with a comma.\">\n"
+"                          <i class=\"fa fa-info-circle\"/>\n"
+"                        </span>"
+msgstr ""
+"<span class=\"s_website_form_label_content\"/>\n"
+"                        <span title=\"Séparer les adresses mails avec une virgule.\">\n"
+"                          <i class=\"fa fa-info-circle\"/>\n"
+"                        </span>"
+
+#. module: d4e_swiss_creative_2website
+#: model_terms:ir.ui.view,arch_db:d4e_swiss_creative_2website.pass_provino
+msgid ""
+"<span class=\"s_website_form_label_content\">\n"
+"\n"
+"                          Nom\n"
+"\n"
+"                      </span>\n"
+"                      <span class=\"s_website_form_mark\">\n"
+"\n"
+"                          &amp;nbsp;*\n"
+"\n"
+"                      </span>"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model_terms:ir.ui.view,arch_db:d4e_swiss_creative_2website.pass_provino
+msgid ""
+"<span class=\"s_website_form_label_content\">\n"
+"\n"
+"                          Nombre de pass\n"
+"\n"
+"                      </span>"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model_terms:ir.ui.view,arch_db:d4e_swiss_creative_2website.products_item
+msgid "<span>Millésime </span>"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_res_partner__aoc
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_res_users__aoc
+msgid "AOC"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_res_partner__pass_provino
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_res_users__pass_provino
+msgid "Accepte le Pass Provino"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_product_product__accord
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_product_template__accord
+msgid "Accord"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model_terms:ir.ui.view,arch_db:d4e_swiss_creative_2website.pass_provino
+msgid "Adresse"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model_terms:ir.ui.view,arch_db:d4e_swiss_creative_2website.pass_provino
+#: model_terms:ir.ui.view,arch_db:d4e_swiss_creative_2website.producteur
+msgid "Adresse email"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.model.fields,help:d4e_swiss_creative_2website.field_res_partner__aoc
+#: model:ir.model.fields,help:d4e_swiss_creative_2website.field_res_users__aoc
+msgid "Appellation d'Origine Contrôlée"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.model.fields.selection,name:d4e_swiss_creative_2website.selection__res_partner__canton__appenzell_rhodes-extérieures
+msgid "Appenzell Rhodes-Extérieures"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.model.fields.selection,name:d4e_swiss_creative_2website.selection__res_partner__canton__appenzell_rhodes-intérieures
+msgid "Appenzell Rhodes-Intérieures"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.model.fields.selection,name:d4e_swiss_creative_2website.selection__supplier_invoice_sale_generator__month__4
+msgid "April"
+msgstr "Avril"
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.model.fields.selection,name:d4e_swiss_creative_2website.selection__res_partner__canton__argovie
+msgid "Argovie"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model_terms:ir.ui.view,arch_db:d4e_swiss_creative_2website.producteurs
+msgid "Aucun producteur défini"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model_terms:ir.ui.view,arch_db:d4e_swiss_creative_2website.producteurs
+msgid "Aucun résultat"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model_terms:ir.ui.view,arch_db:d4e_swiss_creative_2website.producteurs
+msgid "Aucun résultat pour \""
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.model.fields.selection,name:d4e_swiss_creative_2website.selection__supplier_invoice_sale_generator__month__8
+msgid "August"
+msgstr "Août"
+
+#. module: d4e_swiss_creative_2website
+#: model_terms:ir.ui.view,arch_db:d4e_swiss_creative_2website.producteur
+msgid "Autres suggestions<br/>"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model_terms:ir.ui.view,arch_db:d4e_swiss_creative_2website.pass_provino
+msgid ""
+"Avec votre Pass de dégustation en poche, vous partirez à la découverte de "
+"votre région, de ses paysages et de son savoir-faire. Plus de 200 vignerons "
+"romands vous ouvrent leurs portes. Vous apprendrez l’art de la dégustation "
+"de nectars raffinés et profiterez d’un accueil convivial et authentique "
+"auprès des artisans de la région."
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.model.fields.selection,name:d4e_swiss_creative_2website.selection__res_partner__canton__berne
+msgid "Berne"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_product_product__bool_compute
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_product_template__bool_compute
+msgid "Bool Compute"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.model.fields.selection,name:d4e_swiss_creative_2website.selection__res_partner__canton__bâle-campagne
+msgid "Bâle-Campagne"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.model.fields.selection,name:d4e_swiss_creative_2website.selection__res_partner__canton__bâle-ville
+msgid "Bâle-Ville"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model_terms:ir.ui.view,arch_db:d4e_swiss_creative_2website.create_supp_invoices_wizard
+msgid "Cancel"
+msgstr "Annuler"
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_res_partner__canton
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_res_users__canton
+msgid "Canton"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model_terms:ir.ui.view,arch_db:d4e_swiss_creative_2website.pass_provino
+msgid "Ce qu'offre le Pass"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model_terms:ir.ui.view,arch_db:d4e_swiss_creative_2website.pass_provino
+msgid "Code postal"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model_terms:ir.ui.view,arch_db:d4e_swiss_creative_2website.pass_provino
+msgid "Commander"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model_terms:ir.ui.view,arch_db:d4e_swiss_creative_2website.pass_provino
+msgid "Commander mon Pass Provino"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model_terms:ir.ui.view,arch_db:d4e_swiss_creative_2website.pass_provino
+msgid "Commander mon pass"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.model,name:d4e_swiss_creative_2website.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model_terms:ir.ui.view,arch_db:d4e_swiss_creative_2website.producteur
+msgid "Contactez le producteur<br/>"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_product_product__contenance
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_product_template__contenance
+msgid "Contenance"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_sale_recap_mail__create_uid
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_supplier_invoice_sale_generator__create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_sale_recap_mail__create_date
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_supplier_invoice_sale_generator__create_date
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_product_product__cepage
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_product_template__cepage
+msgid "Cépage"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.model.fields.selection,name:d4e_swiss_creative_2website.selection__supplier_invoice_sale_generator__month__12
+msgid "December"
+msgstr "Décembre"
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_res_partner__web_desc
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_res_users__web_desc
+msgid "Descreption"
+msgstr "Description"
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_product_product__website_desc
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_product_template__website_desc
+msgid "Description site web "
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_account_move_line__display_name
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_procurement_group__display_name
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_product_product__display_name
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_product_supplierinfo__display_name
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_product_template__display_name
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_res_partner__display_name
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_sale_order__display_name
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_sale_recap_mail__display_name
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_stock_warehouse_orderpoint__display_name
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_supplier_invoice_sale_generator__display_name
+msgid "Display Name"
+msgstr "Nom affiché"
+
+#. module: d4e_swiss_creative_2website
+#: model_terms:ir.ui.view,arch_db:d4e_swiss_creative_2website.pass_provino
+msgid ""
+"Découvrez l'excellence des vins du terroir romand!\n"
+"                <br/>"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model_terms:ir.ui.view,arch_db:d4e_swiss_creative_2website.pass_provino
+msgid ""
+"Développez votre passion pour les vins et profitez de ce voyage au pays des "
+"sens !&amp;nbsp;"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model_terms:ir.ui.view,arch_db:d4e_swiss_creative_2website.producteur
+msgid "Envoyer"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model_terms:ir.ui.view,arch_db:d4e_swiss_creative_2website.create_supp_invoices_wizard
+msgid "FACTURES"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model_terms:ir.ui.view,arch_db:d4e_swiss_creative_2website.supp_invoice_recap_template
+msgid "Facturation fournisseur des produits vendus"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.model.fields.selection,name:d4e_swiss_creative_2website.selection__supplier_invoice_sale_generator__month__2
+msgid "February"
+msgstr "février"
+
+#. module: d4e_swiss_creative_2website
+#: model_terms:ir.ui.view,arch_db:d4e_swiss_creative_2website.supp_invoice_recap_template
+msgid "Fournisseur :"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.model.fields.selection,name:d4e_swiss_creative_2website.selection__res_partner__canton__fribourg
+msgid "Fribourg"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.model.fields.selection,name:d4e_swiss_creative_2website.selection__res_partner__canton__genève
+msgid "Genève"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.model.fields.selection,name:d4e_swiss_creative_2website.selection__res_partner__canton__glaris
+msgid "Glaris"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.model.fields.selection,name:d4e_swiss_creative_2website.selection__res_partner__canton__grisons
+msgid "Grisons"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_account_move_line__id
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_procurement_group__id
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_product_product__id
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_product_supplierinfo__id
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_product_template__id
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_res_partner__id
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_sale_order__id
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_sale_recap_mail__id
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_stock_warehouse_orderpoint__id
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_supplier_invoice_sale_generator__id
+msgid "ID"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_product_product__is_published
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_product_template__is_published
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_res_partner__is_published
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_res_users__is_published
+msgid "Is Published"
+msgstr "Est publié"
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.model.fields.selection,name:d4e_swiss_creative_2website.selection__supplier_invoice_sale_generator__month__1
+msgid "January"
+msgstr "Janvier"
+
+#. module: d4e_swiss_creative_2website
+#: model_terms:ir.ui.view,arch_db:d4e_swiss_creative_2website.pass_provino
+msgid "Jetons transmissibles et illimités dans le temps"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.model,name:d4e_swiss_creative_2website.model_account_move_line
+msgid "Journal Item"
+msgstr "Écriture comptable"
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.model.fields.selection,name:d4e_swiss_creative_2website.selection__supplier_invoice_sale_generator__month__7
+msgid "July"
+msgstr "Juillet"
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.model.fields.selection,name:d4e_swiss_creative_2website.selection__supplier_invoice_sale_generator__month__6
+msgid "June"
+msgstr "Juin"
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.model.fields.selection,name:d4e_swiss_creative_2website.selection__res_partner__canton__jura
+msgid "Jura"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_account_move_line____last_update
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_procurement_group____last_update
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_product_product____last_update
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_product_supplierinfo____last_update
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_product_template____last_update
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_res_partner____last_update
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_sale_order____last_update
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_sale_recap_mail____last_update
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_stock_warehouse_orderpoint____last_update
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_supplier_invoice_sale_generator____last_update
+msgid "Last Modified on"
+msgstr "Dernière modification le"
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_sale_recap_mail__write_uid
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_supplier_invoice_sale_generator__write_uid
+msgid "Last Updated by"
+msgstr "Dernière mise à jour par"
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_sale_recap_mail__write_date
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_supplier_invoice_sale_generator__write_date
+msgid "Last Updated on"
+msgstr "Dernière mise à jour le"
+
+#. module: d4e_swiss_creative_2website
+#: model_terms:ir.ui.view,arch_db:d4e_swiss_creative_2website.producteur
+msgid "Les vins du domaine<br/>"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model_terms:ir.ui.view,arch_db:d4e_swiss_creative_2website.pass_provino
+msgid "Liste des vignerons participants"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.model.fields.selection,name:d4e_swiss_creative_2website.selection__res_partner__canton__lucerne
+msgid "Lucerne"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.model.fields.selection,name:d4e_swiss_creative_2website.selection__supplier_invoice_sale_generator__month__3
+msgid "March"
+msgstr "Mars"
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.model.fields.selection,name:d4e_swiss_creative_2website.selection__supplier_invoice_sale_generator__month__5
+msgid "May"
+msgstr "Mai"
+
+#. module: d4e_swiss_creative_2website
+#: model_terms:ir.ui.view,arch_db:d4e_swiss_creative_2website.producteur
+msgid "Message"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_product_product__millesime
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_product_template__millesime
+msgid "Millésime"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.model,name:d4e_swiss_creative_2website.model_stock_warehouse_orderpoint
+msgid "Minimum Inventory Rule"
+msgstr "Règle de stock minimum."
+
+#. module: d4e_swiss_creative_2website
+#: model_terms:ir.ui.view,arch_db:d4e_swiss_creative_2website.supp_invoice_recap_template
+msgid "Mois :"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_supplier_invoice_sale_generator__month
+msgid "Month"
+msgstr "Mois"
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_sale_recap_mail__month_year
+msgid "Month/Year"
+msgstr "Mois/Année"
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.model.fields.selection,name:d4e_swiss_creative_2website.selection__res_partner__canton__neuchâtel
+msgid "Neuchâtel"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.model.fields.selection,name:d4e_swiss_creative_2website.selection__res_partner__canton__nidwald
+msgid "Nidwald"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model_terms:ir.ui.view,arch_db:d4e_swiss_creative_2website.producteur
+msgid "Nom"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model_terms:ir.ui.view,arch_db:d4e_swiss_creative_2website.pass_provino
+msgid "Nom Prénom"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.model.fields.selection,name:d4e_swiss_creative_2website.selection__supplier_invoice_sale_generator__month__11
+msgid "November"
+msgstr "Novembre"
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.model.fields.selection,name:d4e_swiss_creative_2website.selection__res_partner__canton__obwald
+msgid "Obwald"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.model.fields.selection,name:d4e_swiss_creative_2website.selection__supplier_invoice_sale_generator__month__10
+msgid "October"
+msgstr "Octobre"
+
+#. module: d4e_swiss_creative_2website
+#: model:website.menu,name:d4e_swiss_creative_2website.menu_pass_provino
+msgid "Pass Dégustation Provino"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model_terms:ir.ui.view,arch_db:d4e_swiss_creative_2website.supp_invoice_recap_template
+msgid "Prix/Unité"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.model,name:d4e_swiss_creative_2website.model_procurement_group
+msgid "Procurement Group"
+msgstr "Groupe d'approvisionnement"
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.model,name:d4e_swiss_creative_2website.model_product_product
+msgid "Product"
+msgstr "Article"
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.model,name:d4e_swiss_creative_2website.model_product_template
+msgid "Product Template"
+msgstr "Modèle d'article"
+
+#. module: d4e_swiss_creative_2website
+#: model_terms:ir.ui.view,arch_db:d4e_swiss_creative_2website.producteur
+#: model_terms:ir.ui.view,arch_db:d4e_swiss_creative_2website.producteurs
+msgid "Producteur Image"
+msgstr "Image Producteur"
+
+#. module: d4e_swiss_creative_2website
+#: model:website.menu,name:d4e_swiss_creative_2website.menu_producteurs
+msgid "Producteurs"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model_terms:ir.ui.view,arch_db:d4e_swiss_creative_2website.supp_invoice_recap_template
+msgid "Produit"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model_terms:ir.ui.view,arch_db:d4e_swiss_creative_2website.producteur
+msgid "Prénom"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model_terms:ir.ui.view,arch_db:d4e_swiss_creative_2website.create_supp_invoices_wizard
+msgid "Préparation de l'envoi par mail"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model_terms:ir.ui.view,arch_db:d4e_swiss_creative_2website.website_cart_summary
+msgid "Quantity Available"
+msgstr "Quantité disponible"
+
+#. module: d4e_swiss_creative_2website
+#: model_terms:ir.ui.view,arch_db:d4e_swiss_creative_2website.supp_invoice_recap_template
+msgid "Quantité Vendue"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model_terms:ir.ui.view,arch_db:d4e_swiss_creative_2website.create_supp_invoices_wizard
+msgid "RECAPITULATIF"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_sale_recap_mail__recap_attach
+msgid "Recap PDF"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.actions.act_window,name:d4e_swiss_creative_2website.action_create_supp_invoices
+#: model:ir.ui.menu,name:d4e_swiss_creative_2website.menu_supplier_invoice_sale_generator
+msgid "Relevé fournisseurs mensuel"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model_terms:ir.ui.view,arch_db:d4e_swiss_creative_2website.pass_provino
+msgid "Remarque"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.model.fields.selection,name:d4e_swiss_creative_2website.selection__res_partner__canton__saint-gall
+msgid "Saint-Gall"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model:mail.template,subject:d4e_swiss_creative_2website.email_template_sale_recap_mail
+msgid "Sale Recap"
+msgstr "Recapitulatif de Vente"
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.actions.act_window,name:d4e_swiss_creative_2website.sale_recap_mail_action
+#: model:ir.ui.menu,name:d4e_swiss_creative_2website.menu_sale_recap_mail
+msgid "Sale Recap Mailing"
+msgstr "Envoie de Mail de Recapitulatif de Vente"
+
+#. module: d4e_swiss_creative_2website
+#: model_terms:ir.ui.view,arch_db:d4e_swiss_creative_2website.sale_recap_mail_view_tree
+msgid "Sale Recap Mails"
+msgstr "Mails Recapitulatif de Vente"
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.model,name:d4e_swiss_creative_2website.model_sale_order
+msgid "Sales Order"
+msgstr "Bon de commande"
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.model.fields.selection,name:d4e_swiss_creative_2website.selection__res_partner__canton__schaffhouse
+msgid "Schaffhouse"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.model.fields.selection,name:d4e_swiss_creative_2website.selection__res_partner__canton__schwytz
+msgid "Schwytz"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.actions.server,name:d4e_swiss_creative_2website.action_sale_recap_mail_mass_mailing
+msgid "Send Mails"
+msgstr "Envoyer les Mails"
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.model.fields.selection,name:d4e_swiss_creative_2website.selection__sale_recap_mail__state__sent
+msgid "Sent"
+msgstr "Envoyé"
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.model.fields.selection,name:d4e_swiss_creative_2website.selection__supplier_invoice_sale_generator__month__9
+msgid "September"
+msgstr "Septembre"
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.model.fields.selection,name:d4e_swiss_creative_2website.selection__res_partner__canton__soleure
+msgid "Soleure"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_sale_recap_mail__state
+msgid "State"
+msgstr "État"
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_product_product__style
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_product_template__style
+msgid "Style"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model_terms:ir.ui.view,arch_db:d4e_swiss_creative_2website.producteur
+msgid "Sujet"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model_terms:ir.ui.view,arch_db:d4e_swiss_creative_2website.pass_provino
+msgid "Sujet: Commande Pass Provino"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_sale_order__supp_invoice
+msgid "Supp Invoice"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_sale_recap_mail__supplier_id
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_supplier_invoice_sale_generator__supplier_id
+msgid "Supplier"
+msgstr "Fournisseur"
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.actions.report,name:d4e_swiss_creative_2website.action_report_supp_invoice_recap
+msgid "Supplier Invoice Recap"
+msgstr "Recap Facture Fournisseur"
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.model,name:d4e_swiss_creative_2website.model_product_supplierinfo
+msgid "Supplier Pricelist"
+msgstr "Liste de prix du fournisseur"
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.model.fields.selection,name:d4e_swiss_creative_2website.selection__res_partner__canton__tessin
+msgid "Tessin"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: code:addons/d4e_swiss_creative_2website/wizard/supplier_invoice_sale_generator.py:0
+#: code:addons/d4e_swiss_creative_2website/wizard/supplier_invoice_sale_generator.py:0
+#, python-format
+msgid ""
+"There is no vendor associated to the product %s. Please define a vendor for "
+"this product."
+msgstr ""
+"Aucun fournisseur n'est associé au produit %s. Définissez un fournisseur "
+"pour ce produit."
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.model.fields.selection,name:d4e_swiss_creative_2website.selection__res_partner__canton__thurgovie
+msgid "Thurgovie"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.model.fields.selection,name:d4e_swiss_creative_2website.selection__sale_recap_mail__state__to_send
+msgid "To Send"
+msgstr "A envoyer"
+
+#. module: d4e_swiss_creative_2website
+#: model_terms:ir.ui.view,arch_db:d4e_swiss_creative_2website.supp_invoice_recap_template
+msgid "Total"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_product_product__vin_type
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_product_template__vin_type
+msgid "Type de vin"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model_terms:ir.ui.view,arch_db:d4e_swiss_creative_2website.producteur
+msgid "Téléphone"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model_terms:ir.ui.view,arch_db:d4e_swiss_creative_2website.supp_invoice_recap_template
+msgid "Unité"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.model.fields.selection,name:d4e_swiss_creative_2website.selection__res_partner__canton__uri
+msgid "Uri"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.model.fields.selection,name:d4e_swiss_creative_2website.selection__res_partner__canton__valais
+msgid "Valais"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.model.fields.selection,name:d4e_swiss_creative_2website.selection__res_partner__canton__vaud
+msgid "Vaud"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model_terms:ir.ui.view,arch_db:d4e_swiss_creative_2website.pass_provino
+msgid "Ville"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model_terms:ir.ui.view,arch_db:d4e_swiss_creative_2website.producteur
+msgid "Voir la boutique complète"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model_terms:ir.ui.view,arch_db:d4e_swiss_creative_2website.pass_provino
+msgid ""
+"Vous désirez approfondir vos connaissances en matière de dégustation ou tout"
+" simplement découvrir d’excellents vins issus du terroir romand ? Alors le "
+"Pass ProVino est fait pour vous !"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_account_move_line__website_id
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_product_supplierinfo__website_id
+msgid "Website"
+msgstr "Site web"
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_res_partner__web_image
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_res_users__web_image
+msgid "Website Image"
+msgstr "Image site web"
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_product_product__website_ids
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_product_template__website_ids
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_res_partner__website_ids
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_res_users__website_ids
+msgid "Websites"
+msgstr "Sites web"
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.model.fields.selection,name:d4e_swiss_creative_2website.selection__res_partner__canton__zoug
+msgid "Zoug"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.model.fields.selection,name:d4e_swiss_creative_2website.selection__res_partner__canton__zurich
+msgid "Zurich"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model_terms:ir.ui.view,arch_db:d4e_swiss_creative_2website.products_item
+msgid "available"
+msgstr "disponible"
+
+#. module: d4e_swiss_creative_2website
+#: model_terms:ir.ui.view,arch_db:d4e_swiss_creative_2website.custom_view_partner_form_inherit_websites
+msgid "eCommerce"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model:uom.uom,name:d4e_swiss_creative_2website.product_uom_six_unit
+msgid "la Sixaine"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_product_product__num_article
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_product_template__num_article
+msgid "n°article "
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model_terms:ir.ui.view,arch_db:d4e_swiss_creative_2website.producteur
+msgid "producteur.name"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_product_product__special_reappro
+#: model:ir.model.fields,field_description:d4e_swiss_creative_2website.field_product_template__special_reappro
+msgid "réapprovisionnement Specifique "
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.model,name:d4e_swiss_creative_2website.model_sale_recap_mail
+msgid "sale.recap.mail"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model:ir.model,name:d4e_swiss_creative_2website.model_supplier_invoice_sale_generator
+msgid "supplier.invoice.sale.generator"
+msgstr ""
+
+#. module: d4e_swiss_creative_2website
+#: model_terms:ir.ui.view,arch_db:d4e_swiss_creative_2website.producteur
+msgid "| Type"
+msgstr ""

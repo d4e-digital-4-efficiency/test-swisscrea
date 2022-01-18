@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (c) 2019 - Present PIT Solutions AG. (<https://www.pitsolutions.ch/>) -->
+<!-- See LICENSE file for full copyright and licensing details. -->
+<!-- License URL : https://www.webshopextension.com/en/licence-agreement/ -->
+<odoo>
+    <data noupdate="1">
+        <record id="payment_postfinance_flex.payment_acquirer_postfinance" model="payment.acquirer">
+            <field name="name">PostFinance Payment Providers</field>
+            <field name="image_128" type="base64" file="payment_postfinance_flex/static/src/img/postfinance_icon.png"/>
+            <field name="provider">postfinance</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="view_template_id" ref="postfinance_form"/>
+            <field name="state">test</field>
+            <field name="module_id" ref="base.module_payment_postfinance_flex"/>        
+            <field name="pre_msg"><![CDATA[
+<p></p>]]></field>
+            <field name="postfinance_api_userid">1234</field>
+            <field name="postfinance_api_spaceid">1234</field>
+            <field name="postfinance_api_application_key">dummy</field>
+        </record>
+    </data>
+
+    <data>
+        <record id="postfinance_email_template_payment_transaction" model="mail.template">
+            <field name="name">PostFinance Email To Customer</field>
+            <field name="model_id" ref="payment.model_payment_transaction"/>
+            <field name="email_from">${object.acquirer_id.company_id.email |safe}</field>
+            <field name="email_to">${object.partner_email} | ${object.partner_id.email_formatted}</field>
+            <field name="partner_to">${object.partner_id.id}</field>
+            <field name="subject">Status of Payment Transaction (Ref ${object.reference})</field>
+            <field name="body_html" type="html">
+                <div style="margin: 0px; padding: 0px;">
+                    <p style="margin: 0px; padding: 0px; font-size: 13px;">
+                        Dear ${object.partner_name} | ${object.partner_id.name},
+                        <br /><br />
+                        Your payment transaction referred ${object.reference} is ${object.state}.
+                        <br /><br />
+                        Do not hesitate to contact us if you have any question.
+                    </p>
+                </div>
+            </field>
+            <field name="lang">${object.partner_id.lang}</field>
+            <field name="auto_delete" eval="False"/>
+        </record>
+
+        <record id="postfinance_email_template_payment_transaction_confirm" model="mail.template">
+            <field name="name">Confirmation PostFinance Email To Customer</field>
+            <field name="model_id" ref="payment.model_payment_transaction"/>
+            <field name="email_from">${object.acquirer_id.company_id.email |safe}</field>
+            <field name="email_to">${object.partner_email}</field>
+            <field name="partner_to">${object.partner_id.id}</field>
+            <field name="subject">Status of Payment Transaction (Ref ${object.reference})</field>
+            <field name="body_html" type="html">
+				<div style="margin: 0px; padding: 0px;">
+				    <p style="margin: 0px; padding: 0px; font-size: 13px;">
+				        Dear ${object.partner_id.name},
+				        <br /><br />
+				        Your payment transaction referred ${object.reference} is confirmed.
+				    </p>
+				</div>
+            </field>
+            <field name="lang">${object.partner_id.lang}</field>
+            <field name="auto_delete" eval="False"/>
+        </record>
+
+        <record id="postfinance_email_template_payment_transaction_cancel" model="mail.template">
+            <field name="name">Cancelled PostFinance Email To Customer</field>
+            <field name="model_id" ref="payment.model_payment_transaction"/>
+            <field name="email_from">${object.acquirer_id.company_id.email |safe}</field>
+            <field name="email_to">${object.partner_id.email}</field>
+            <field name="partner_to">${object.partner_id.id}</field>
+            <field name="subject">Status of Payment Transaction (Ref ${object.reference})</field>
+            <field name="body_html" type="html">
+				<div style="margin: 0px; padding: 0px;">
+				    <p style="margin: 0px; padding: 0px; font-size: 13px;">
+				        Dear ${object.partner_id.name},
+				        <br /><br />
+				        Your payment transaction referred ${object.reference} is cancelled/failed.
+				    </p>
+				</div>
+            </field>
+            <field name="lang">${object.partner_id.lang}</field>
+            <field name="auto_delete" eval="False"/>
+        </record>
+    </data>
+    
+</odoo>

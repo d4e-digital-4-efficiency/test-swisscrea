@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <menuitem id="account_payment_method_menu"
+                  name="Payment Methods"
+                  action="account_payment_method_act_window"
+                  sequence="10"
+                  groups="d4e_payment_method.group_payment_method_manager"
+                  parent="account.root_payment_menu" />
+    </data>
+</odoo>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="sale.report_saleorder_document">
+        <t t-call="d4e_report_modifications.external_layout">
+            <t t-set="doc" t-value="doc.with_context(lang=doc.partner_id.lang)" />
+            <t t-set="address">
+                <div t-field="doc.partner_id"
+                    t-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": True}' />
+                <p t-if="doc.partner_id.vat"><t t-esc="doc.company_id.country_id.vat_label or 'Tax ID'"/>: <span t-field="doc.partner_id.vat"/></p>
+            </t>
+            <div class="page">
+                <div style="border:1px solid; width: 300px; margin-top: 10px;" >
+                    <strong t-if="doc.state != 'sale'" style="margin-left: 10px">Offer, Quotation N ° <span t-field="doc.order_sequence"/></strong>
+                    <strong t-if="doc.state == 'sale'" style="margin-left: 10px">Sale order confirmation N ° <span t-field="doc.order_sequence"/></strong>
+                </div>
+                <div>
+                    <strong t-if="doc.partner_id.ref" style="margin-left: 15px">Customer Reference :</strong> <span t-field="doc.partner_id.ref"/>
+                    <br></br>
+                    <t t-if="doc.date_order">
+                        <t t-set="date" t-value="doc.date_order.strftime('%d.%m.%Y')"/>
+                        <strong t-if="date" style="margin-left: 15px">Date:</strong> <t t-esc="date" style="padding-right: 30px; margin-right: 20px"/>
+                    </t>
+                    <t t-if="doc.validity_date">
+                        <t t-set="date_val" t-value="doc.validity_date.strftime('%d.%m.%Y')"/>
+                        validity: <t t-esc="date_val" style="padding-right: 30px; margin-left: 20px"/>
+                    </t>
+                </div>
+                <div name="expiration_date"/>
+                <t t-set="display_discount" t-value="any(l.discount for l in doc.order_line)"/>
+
+                <table style="width: 100%; font-size : 0.7rem !important">
+                    <style>
+                        th, td {
+                            margin: 5px;
+                            padding: 5px;
+                        }
+                    </style>
+                    <thead>
+                        <tr>
+                            <th style="border: 1px solid black;"><strong>Description</strong></th>
+                            <th style="border: 1px solid black;"><strong>Quantity</strong></th>
+                            <th style="border: 1px solid black;"><strong>Price</strong></th>
+                            <th style="border: 1px solid black;"><strong>VAT</strong></th>
+                            <th style="border: 1px solid black;"><strong>Amount</strong></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <t t-set="amount_total_line" t-value="0"/>
+                        <tr t-foreach="doc.order_line" t-as="line">
+
+                            <t t-set="amount_total_line" t-value="amount_total_line + line.price_subtotal"/>
+                            <td>
+                                <span t-if="line.display_type != 'line_section'" t-field="line.name"/>
+                                <span t-if="line.display_type == 'line_section'" style="font-weight: bold; font-size : 0.9rem" t-field="line.name"/>
+                            </td>
+                            <td t-if="line.display_type == 'line_section'"></td>
+                            <td t-if="line.display_type != 'line_section'">
+                                <span t-field="line.product_uom_qty"/>
+                                <span t-field="line.product_uom"/>
+                            </td>
+                            <td t-if="line.display_type == 'line_section'"></td>
+                            <td t-if="line.display_type != 'line_section'">
+                                <span t-field="line.price_unit"/>
+                            </td>
+                            <td t-if="line.display_type == 'line_section'"></td>
+                            <td t-if="line.display_type != 'line_section'">
+                                <span t-field="line.tax_id"/>
+                            </td>
+                            <td t-if="line.display_type == 'line_section'"></td>
+                            <td t-if="line.display_type != 'line_section'">
+                                <span t-field="line.price_subtotal"/>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td style="border-top: 1px solid black;">
+                                <t t-set="tax_rate" t-value="(doc.amount_tax / doc.amount_untaxed) * 100"/>
+                                Tax excluded <span t-esc=" '%.2f' %  tax_rate"/> % / <span t-field="doc.amount_untaxed"/> : <span t-field="doc.amount_tax"/>
+                            </td>
+                            <td style="border-top: 1px solid black;"></td>
+                            <td style="border-top: 1px solid black; width=20px; font-weight: bold;">Net Total</td>
+                            <td style="border-top: 1px solid black;"></td>
+                            <td style="border-top: 1px solid black;">
+                                <span t-esc="'%.2f' %  amount_total_line"/>
+                                <t t-esc="doc.company_id.currency_id.symbol"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td style="font-weight: bold;">VAT</td>
+                            <td></td>
+                            <td>
+                                <span t-field="doc.amount_tax"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td style="font-weight: bold;">Round</td>
+                            <td><span t-esc=" '%.2f' %  tax_rate"/></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td style="border-top: 1px solid black; width=20px; font-weight: bold;">Total</td>
+                            <td style="border-top: 1px solid black;"></td>
+                            <td style="border-top: 1px solid black;">
+                                <span t-field="doc.amount_total"/>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+                    <div style="width:100%">
+                        <br></br>
+                        <t t-if="doc.payment_term_id">Net payment to <span t-field="doc.payment_term_id"/></t>
+                        <br></br>
+                        With our thanks
+                        <br></br>
+<!--                        Team .....-->
+<!--                        <br></br>-->
+                    </div>
+
+                <div name="signature">
+                </div>
+
+            </div>
+        </t>
+    </template>
+    <record id="sale_management.report_saleorder_document_inherit_sale_management" model="ir.ui.view">
+        <field name="active">False</field>
+    </record>
+</odoo>

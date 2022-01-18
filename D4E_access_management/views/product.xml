@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+
+        <record id="product_tag_list_view" model="ir.ui.view">
+            <field name="name">product.tag.list</field>
+            <field name="model">product.tag</field>
+            <field name="priority">1</field>
+            <field name="arch" type="xml">
+                <tree string="Product tags">
+                    <field name="name" />
+                </tree>
+            </field>
+        </record>
+        <record id="product_tag_action_form" model="ir.actions.act_window">
+            <field name="name">Product Tag</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">product.tag</field>
+            <field name="view_id" ref="product_tag_list_view"/>
+        </record>
+       <menuitem id="menu_product_product_tags" name="Tags" parent="account.account_management_menu" action="product_tag_action_form" sequence="6"/>
+
+        <record id="product_template_form_view" model="ir.ui.view">
+            <field name="name">product.template.product.form</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_form_view"/>
+            <field name="arch" type="xml">
+                <field name="categ_id" position="after">
+                    <field name="tag_id" widget="many2many_tags"/>
+                </field>
+            </field>
+        </record>
+
+    </data>
+</odoo>

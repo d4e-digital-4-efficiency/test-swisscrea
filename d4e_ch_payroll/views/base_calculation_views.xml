@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<odoo>
+    <record id="base_calcul_view" model="ir.ui.view">
+        <field name="name">base.calcul.tree.view</field>
+        <field name="model">base.calcul</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="salary_rule_id"/>
+                <field name="january"/>
+                <field name="february"/>
+                <field name="march"/>
+                <field name="avril"/>
+                <field name="may"/>
+                <field name="june"/>
+                <field name="july"/>
+                <field name="august"/>
+                <field name="september"/>
+                <field name="october"/>
+                <field name="november"/>
+                <field name="december"/>
+                <field name="total"/>
+
+            </tree>
+        </field>
+    </record>
+</odoo>

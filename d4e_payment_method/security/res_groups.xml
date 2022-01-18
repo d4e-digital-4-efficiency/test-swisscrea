@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="res.groups" id="group_payment_method_manager">
+            <field name="name">Account Payment Method Manager</field>
+            <field name="category_id" ref="base.module_category_hidden" />
+            <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]" />
+        </record>
+
+        <record model="res.groups" id="account.group_account_manager">
+            <field name="implied_ids" eval="[(4, ref('d4e_payment_method.group_payment_method_manager'))]" />
+        </record>
+    </data>
+</odoo>

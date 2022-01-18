@@ -1,0 +1,192 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* d4e_payment_method
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-09 09:37+0000\n"
+"PO-Revision-Date: 2021-03-09 09:37+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. modules: stock, sale, account
+#: model_terms:ir.ui.view,arch_db:account.report_invoice_document
+#: model_terms:ir.ui.view,arch_db:sale.report_saleorder_document
+#: model_terms:ir.ui.view,arch_db:stock.report_delivery_document
+msgid "Net payment to"
+msgstr "Paiement net à"
+
+
+#. module: stock
+#: model_terms:ir.ui.view,arch_db:stock.report_delivery_document
+msgid "<strong style=\"margin-left: 15px\">Delivery note N °</strong>"
+msgstr "<strong style=\"margin-left: 15px\">Bulletin de livraison N°</strong>"
+
+
+#. module: stock
+#: model_terms:ir.ui.view,arch_db:stock.report_delivery_document
+msgid ""
+"<strong style=\"margin-left: 15px\">N / Reference : ......</strong>\n"
+"                        <br/>\n"
+"                        <strong style=\"margin-left: 15px\">v / Reference : ......</strong>\n"
+"                        <br/>\n"
+"                        <strong style=\"margin-left: 15px\">Date : </strong>"
+msgstr ""
+"<strong style=\"margin-left: 15px\">N / Référence : ......</strong>\n"
+"                        <br/>\n"
+"                        <strong style=\"margin-left: 15px\">v / Référence : ......</strong>\n"
+"                        <br/>\n"
+"                        <strong style=\"margin-left: 15px\">Date : </strong>"
+
+#. module: account
+#: model_terms:ir.ui.view,arch_db:account.report_invoice_document
+msgid ""
+"<br/>\n"
+"                            With our thanks\n"
+"                            <br/>"
+msgstr ""
+"<br/>\n"
+"                            Avec nos remerciement\n"
+"                            <br/>"
+
+#. modules: stock, sale
+#: model_terms:ir.ui.view,arch_db:sale.report_saleorder_document
+#: model_terms:ir.ui.view,arch_db:stock.report_delivery_document
+msgid "<strong>Amount</strong>"
+msgstr "<strong>Montant</strong>"
+
+#. module: account
+#: model_terms:ir.ui.view,arch_db:account.report_invoice_document
+msgid "<strong>Amount (H.T)</strong>"
+msgstr "<strong>Montant (H.T)</strong>"
+
+#. module: account
+#: model_terms:ir.ui.view,arch_db:account.report_invoice_document
+msgid ""
+"<span style=\"font-size: 15px; font-weight: bold; margin-left: "
+"20px;\">Invoice N°</span>"
+msgstr ""
+"<span style=\"font-size: 15px; font-weight: bold; margin-left: "
+"20px;\">Facture N°</span>"
+
+#. modules: stock, sale, account
+#: model_terms:ir.ui.view,arch_db:account.report_invoice_document
+#: model_terms:ir.ui.view,arch_db:sale.report_saleorder_document
+#: model_terms:ir.ui.view,arch_db:stock.report_delivery_document
+msgid "<strong>Price</strong>"
+msgstr "<strong>Prix</strong>"
+
+#. modules: stock, sale, account
+#: model_terms:ir.ui.view,arch_db:account.report_invoice_document
+#: model_terms:ir.ui.view,arch_db:sale.report_saleorder_document
+#: model_terms:ir.ui.view,arch_db:stock.report_delivery_document
+#: model_terms:ir.ui.view,arch_db:stock.report_picking
+msgid "<strong>Quantity</strong>"
+msgstr "<strong>Quantité</strong>"
+
+#. modules: stock, sale, account
+#: model_terms:ir.ui.view,arch_db:account.report_invoice_document
+#: model_terms:ir.ui.view,arch_db:sale.report_saleorder_document
+#: model_terms:ir.ui.view,arch_db:stock.report_delivery_document
+msgid "<strong>VAT</strong>"
+msgstr "<strong>TVA</strong>"
+
+#. modules: stock, sale, account
+#: model_terms:ir.ui.view,arch_db:account.report_invoice_document
+#: model_terms:ir.ui.view,arch_db:sale.report_saleorder_document
+#: model_terms:ir.ui.view,arch_db:stock.report_delivery_document
+msgid "Customer Reference :"
+msgstr "Référence client :"
+
+#. modules: sale, account
+#: model_terms:ir.ui.view,arch_db:account.report_invoice_document
+#: model_terms:ir.ui.view,arch_db:sale.report_saleorder_document
+msgid "Round"
+msgstr "Arrondi"
+
+#. modules: sale, account
+#: model_terms:ir.ui.view,arch_db:account.report_invoice_document
+#: model_terms:ir.ui.view,arch_db:sale.report_saleorder_document
+msgid "Tax excluded"
+msgstr "TVA incluse"
+
+#. modules: stock, sale
+#: model_terms:ir.ui.view,arch_db:sale.report_saleorder_document
+#: model_terms:ir.ui.view,arch_db:stock.report_delivery_document
+msgid ""
+"<br/>\n"
+"                        With our thanks\n"
+"                        <br/>"
+msgstr ""
+"<br/>\n"
+"                        Avec nos remerciement\n"
+"                        <br/>"
+
+#. module: sale
+#: model_terms:ir.ui.view,arch_db:sale.report_saleorder_document
+msgid "Offer, Quotation N °"
+msgstr "Offre, Devis N °"
+
+#. module: sale
+#: model_terms:ir.ui.view,arch_db:sale.report_saleorder_document
+msgid "Sale order confirmation N °"
+msgstr "Confirmation de commande N °"
+
+#. module: account_followup
+#: model:account_followup.followup.line,description:account_followup.demo_followup_line2
+msgid ""
+"\n"
+"                    We still have no news of your payments regarding the invoices below,\n"
+"                    We would be grateful if you could contact our accounting department to trace them.\n"
+"\n"
+"\n"
+"            "
+msgstr ""
+"\n"
+"                    Nous sommes toujours sans nouvelles de vos paiements concernant les factures ci-dessous,,\n"
+"                    Nous vous saurions gré de bien vouloir contacter notre service comptable pour retrover trace de ceux-ci.\n"
+"\n"
+"\n"
+"            "
+
+#. module: account_followup
+#: model:account_followup.followup.line,description:account_followup.demo_followup_line3
+#: model:account_followup.followup.line,description:account_followup.demo_followup_line4
+#: model:account_followup.followup.line,description:account_followup.demo_followup_line5
+msgid ""
+"\n"
+"                    We still have no news of your payments regarding the invoices below,\n"
+"                    We would be grateful if you could contact our accounting department to trace them.\n"
+"\n"
+"\n"
+"                "
+msgstr ""
+"\n"
+"                    Nous sommes toujours sans nouvelles de vos paiements concernant les factures ci-dessous,\n"
+"                    Nous vous saurions gré de bien vouloir contacter notre service comptable pour retrover trace de ceux-ci.\n"
+"\n"
+"\n"
+"                "
+
+#. module: account_followup
+#: model:account_followup.followup.line,description:account_followup.demo_followup_line1
+msgid ""
+"\n"
+"                We still have no news of your payments regarding the invoices below,\n"
+"                We would be grateful if you could contact our accounting department to trace them.\n"
+"\n"
+"\n"
+"            "
+msgstr ""
+"\n"
+"                Nous sommes toujours sans nouvelles de vos paiements concernant les factures ci-dessous,,\n"
+"                Nous vous saurions gré de bien vouloir contacter notre service comptable pour retrover trace de ceux-ci.\n"
+"\n"
+"\n"
+"            "

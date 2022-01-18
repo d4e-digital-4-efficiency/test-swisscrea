@@ -1,0 +1,233 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<odoo>
+
+    <record id="action_view_fund_form" model="ir.ui.view">
+        <field name="name">hr.fund.form</field>
+        <field name="model">hr.funds</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="type_of_crate"/>
+                            <field name="Name_of_fund_insurance"/>
+                            <field name="case_number"/>
+                        </group>
+                        <group>
+                            <field name="customer_number"/>
+                            <field name="contract_number"/>
+                            <field name="street"/>
+                            <field name="zip_Location"/>
+                            <field name="phone"/>
+                            <field name="e_mail"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_view_fund_tree" model="ir.ui.view">
+        <field name="name">hr.fund.tree</field>
+        <field name="model">hr.funds</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="Name_of_fund_insurance"/>
+                <field name="type_of_crate"/>
+                <field name="case_number"/>
+                <field name="customer_number"/>
+                <field name="contract_number"/>
+                <field name="street"/>
+                <field name="zip_Location"/>
+                <field name="phone"/>
+                <field name="e_mail"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_view_fund" model="ir.actions.act_window">
+        <field name="name">Additions of crates</field>
+        <field name="res_model">hr.funds</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+            id="menu_hr_payroll_global_settings_funds"
+            name="Funds / Insurance"
+            parent="hr_work_entry_contract.menu_hr_payroll_configuration"
+            sequence="1"
+            action="action_view_fund"
+            groups="base.group_system"/>
+
+    <!--    ***************************** (new task)-->
+    <record id="action_codes_laac_form" model="ir.ui.view">
+        <field name="name">codes.laac.form</field>
+        <field name="model">codes.laac</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="code"/>
+                        <field name="description"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_codes_laac_tree" model="ir.ui.view">
+        <field name="name">codes.laac.tree</field>
+        <field name="model">codes.laac</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="code"/>
+                <field name="description"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_laac_codes" model="ir.actions.act_window">
+        <field name="name">LAAC codes</field>
+        <field name="res_model">codes.laac</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+            id="menu_hr_payroll_global_laac_code"
+            name="LAAC codes"
+            parent="hr_work_entry_contract.menu_hr_payroll_configuration"
+            sequence="1"
+            action="action_laac_codes"
+            groups="base.group_system"/>
+
+    <record id="action_codes_ijm_form" model="ir.ui.view">
+        <field name="name">codes.ijm.form</field>
+        <field name="model">codes.ijm</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="code"/>
+                        <field name="description"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_codes_ijm_tree" model="ir.ui.view">
+        <field name="name">codes.ijm.tree</field>
+        <field name="model">codes.ijm</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="code"/>
+                <field name="description"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_IJM_codes" model="ir.actions.act_window">
+        <field name="name">IJM codes</field>
+        <field name="res_model">codes.ijm</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+            id="menu_hr_payroll_global_ijm_code"
+            name="IJM codes"
+            parent="hr_work_entry_contract.menu_hr_payroll_configuration"
+            sequence="1"
+            action="action_IJM_codes"
+            groups="base.group_system"/>
+
+    <record id="action_codes_lpp_form" model="ir.ui.view">
+        <field name="name">codes.lpp.form</field>
+        <field name="model">codes.lpp</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="code"/>
+                        <field name="description"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_codes_lpp_tree" model="ir.ui.view">
+        <field name="name">codes.lpp.tree</field>
+        <field name="model">codes.lpp</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="code"/>
+                <field name="description"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_LPP_codes" model="ir.actions.act_window">
+        <field name="name">LPP codes</field>
+        <field name="res_model">codes.lpp</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+            id="menu_hr_payroll_global_bvg_code"
+            name="LPP codes"
+            parent="hr_work_entry_contract.menu_hr_payroll_configuration"
+            sequence="1"
+            action="action_LPP_codes"
+            groups="base.group_system"/>
+
+<!--    ********************-->
+
+
+     <record id="action_view_rule_heading" model="ir.actions.act_window">
+        <field name="name">Headings</field>
+        <field name="res_model">hr.salary.rule</field>
+          <field name="domain">[('rule_type', 'in', ['Headings - Employer share','section'])]</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+     <record id="action_view_rule_base" model="ir.actions.act_window">
+        <field name="name">Calculation bases</field>
+        <field name="res_model">hr.salary.rule</field>
+          <field name="domain">[('rule_type', '=', 'calculation basis')]</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+      <menuitem
+        id="hr_payroll.menu_hr_salary_rule_category"
+        action="hr_payroll.action_hr_salary_rule_category"
+        name="Rule categories"
+        parent="hr_payroll.menu_hr_salary_configuration"
+        sequence="35"
+        groups="base.group_system"/>
+
+
+    <menuitem
+            id="menu_hr_payroll_salary_heading"
+            name="Headings"
+            parent="hr_payroll.menu_hr_salary_configuration"
+            sequence="1"
+            action="action_view_rule_heading"
+            groups="base.group_system"/>
+
+     <menuitem
+            id="menu_hr_payroll_salary_base"
+            name="Calculation bases"
+            parent="hr_payroll.menu_hr_salary_configuration"
+            sequence="1"
+            action="action_view_rule_base"
+            groups="base.group_system"/>
+
+
+
+
+</odoo>
+
+
+
+
+

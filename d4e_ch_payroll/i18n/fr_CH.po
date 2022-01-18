@@ -1,0 +1,3544 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* d4e_ch_payroll
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-22 14:57+0000\n"
+"PO-Revision-Date: 2021-11-22 14:57+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid "/ Rendita"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid "/ Rente"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid "01.01."
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_salary_rule__rubrique_certificat__1_salaire_rente
+msgid "1 Salaire / Rente"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_salary_rule__rubrique_certificat__10_1_prévoyance_professionnelle_(cotisations_ordinaires)
+msgid "10.1 Prévoyance professionnelle (cotisations ordinaires)"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_salary_rule__rubrique_certificat__10_2_prévoyance_professionnelle_(cotisation_pour_le_rachat)
+msgid "10.2 Prévoyance professionnelle (cotisation pour le rachat)"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_salary_rule__rubrique_certificat__12_retenue_de_l_impôt_à_la_source
+msgid "12 Retenue de l\"impôt à la source"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_salary_rule__rubrique_certificat__13_1_1_frais_effectifs_(voyage,_repas,_nuitées)
+msgid "13.1.1 Frais effectifs (voyage, repas, nuitées)"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_salary_rule__rubrique_certificat__13_1_2_frais_effectifs_(autres)
+msgid "13.1.2 Frais effectifs (autres)"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_salary_rule__rubrique_certificat__13_2_1_frais_forfaitaires_(représentation)
+msgid "13.2.1 Frais forfaitaires (représentation)"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_salary_rule__rubrique_certificat__13_2_2_frais_forfaitaires_(voiture)_
+msgid "13.2.2 Frais forfaitaires (voiture) "
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_salary_rule__rubrique_certificat__13_2_3_fris_forfaitaires_(autres)
+msgid "13.2.3 Fris forfaitaires (autres)"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_salary_rule__rubrique_certificat__13_3_contribution_au_perfectionnement
+msgid "13.3 Contribution au perfectionnement"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_salary_rule__rubrique_certificat__15_observations_-_beobachtungen
+msgid "15 Observations - Beobachtungen"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_salary_rule__rubrique_certificat__2_1_prestations_salariales_accessoires_(pension,_logement)
+msgid "2.1 Prestations salariales accessoires (pension, logement)"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_salary_rule__rubrique_certificat__2_2_part_privée_voiture_de_service
+msgid "2.2 Part privée voiture de service"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_salary_rule__rubrique_certificat__2_3_prestations_salariales_accessoires_(autres)
+msgid "2.3 Prestations salariales accessoires (autres)"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_salary_rule__rubrique_certificat__3_prestations_non_périodiques
+msgid "3 Prestations non périodiques"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid "31.12."
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_salary_rule__rubrique_certificat__4_prestations_en_capital
+msgid "4 Prestations en capital"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_salary_rule__rubrique_certificat__5_droits_de_participation
+msgid "5 Droits de participation"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_salary_rule__rubrique_certificat__6_indemnités_des_membres_de_l_administration
+msgid "6 Indemnités des membres de l administration"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_salary_rule__rubrique_certificat__7_1_autres_prestations_1
+msgid "7.1 Autres Prestations 1"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_salary_rule__rubrique_certificat__7_2_autres_prestations_2
+msgid "7.2 Autres Prestations 2"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_salary_rule__rubrique_certificat__9_cotisations_avs/ai/apg/ac/aanp
+msgid "9 Cotisations AVS/AI/APG/AC/AANP"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.account_payslip_send_wizard_form
+msgid ""
+"<span attrs=\"{'invisible': [('composition_mode', '!=', 'mass_mail')]}\">\n"
+"                                            <strong>Email mass mailing</strong>\n"
+"                                            on\n"
+"                                            <span>the selected records</span>\n"
+"                                        </span>\n"
+"                                        <span>Followers of the document and</span>"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid ""
+"<span style=\"padding-right: 10px;\">13.3</span><span style=\"padding: 0;\">\n"
+"                                        Beiträge an die Weiterbildung - Contributions au perfectionnement - Contributi per il perfezionamento\n"
+"                                        </span>"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid ""
+"<span style=\"padding-right: 10px;\"><strong>13.1.1</strong></span><span "
+"style=\"margin: 0;\">Reise, Verpflegung, Übernachtung - Voyage, repas, "
+"nuitées - Viaggio, vitto, alloggio</span>"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid ""
+"<span style=\"padding-right: 10px;\"><strong>13.1.2</strong></span><span "
+"style=\"padding: 0;\">Übrige - Autres - Altre</span>"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid ""
+"<span style=\"padding-right: 10px;\"><strong>13.1</strong></span>\n"
+"                                        <span style=\"margin: 0;\">Effektive Spesen</span>"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid ""
+"<span style=\"padding-right: 10px;\"><strong>13.2.1</strong></span><span "
+"style=\"margin: 0;\">Repräsentation - Représentation - Rappresentanza</span>"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid ""
+"<span style=\"padding-right: 10px;\"><strong>13.2.2</strong></span><span "
+"style=\"margin: 0;\">Auto - Voiture - Automobile</span>"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid ""
+"<span style=\"padding-right: 10px;\"><strong>13.2.3</strong></span><span "
+"style=\"padding: 0;\">Übrige - Autres - Altre</span>"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid ""
+"<span style=\"padding-right: 10px;\"><strong>13.2</strong></span>\n"
+"                                        <span style=\"margin: 0;\">Pauschalspesen</span>"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid ""
+"<span style=\"padding-right: 10px;\"><strong>2.1 </strong></span>\n"
+"                                        <span>Verpflegung, Unterkunft - Pension, logement - Vitto, allogio</span>"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid ""
+"<span style=\"padding-right: 10px;\"><strong>2.2 </strong></span>\n"
+"                                        <span>\n"
+"                                        Privatanteil Geschäftswagen - Part privée voiture de service - Quota privata automobile di servizio\n"
+"                                    </span>"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid ""
+"<span style=\"padding-right: 10px;\"><strong>2.3 </strong></span>\n"
+"                                        <span>Andere - Autres - Altre </span>"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid ""
+"<span style=\"padding-right: 40px;\">2° pilastro </span>\n"
+"                                        <span style=\"padding-right: 10px;\"><strong>10.2 </strong></span>\n"
+"                                        <span style=\"border-bottom: 1px solid black;\">Beiträge für den EinKauf - Cotisations pour le rachat - Contributi per il riscatto</span>"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid ""
+"<span style=\"padding-right: 52px;\">2. Säule </span>\n"
+"                                        <span style=\"padding-right: 10px;\"><strong>10.1 </strong></span>\n"
+"                                        <span style=\"border-bottom: 1px solid black;\">Ordentliche Beiträge - Cotisations ordinaires - Contributi ordinar</span>"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid ""
+"<span style=\"padding: 0;\">\n"
+"                                        Beiträge AHV/IV/EO/ALV/NBUV - Cotisations AVS/AI/APG/AC/AANP - Contributi AVS/AI/IPG/AD/AINP\n"
+"                                        </span>"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid ""
+"<span style=\"padding: 0;\">\n"
+"                                        Beteiligungsrechte gemäss Beiblatt - Droits de participation selon annexe - Diritti di partecipazione secondo allegato\n"
+"                                        </span>"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid ""
+"<span style=\"padding: 0;\">\n"
+"                                        Bruttolohn total / Rente - Salaire brut total / Rente - Salario lordo totale / Rendita\n"
+"                                        </span>"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid ""
+"<span style=\"padding: 0;\">\n"
+"                                        Quellensteuerabzug - Retenue de l'impôt à la source - Ritenuta d'imposta alla fonte\n"
+"                                        </span>"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid ""
+"<span style=\"padding: 0;\">\n"
+"                                        Verwaltungsratsentschädigungen - Indemnités des membres de l'administration - Indennità dei membri di consigli d'administrazione\n"
+"                                        </span>"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid "<span>2e pilier</span>"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid ""
+"<strong style=\"padding: 0;\">\n"
+"                                        Nettolohn / Rente - Salaire net / Rente - Salario netto / Rendita\n"
+"                                        </strong>"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid ""
+"<strong style=\"padding: 0;\">In die Steuererklärung übertragen - A reporter"
+" sur la déclaration d'impôt - Da riportare nella dichiarazione "
+"d'imposta</strong>"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid "<strong>10.</strong>"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid "<strong>11.</strong>"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid "<strong>12.</strong>"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid "<strong>13.</strong>"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid "<strong>14.</strong>"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid "<strong>15.</strong>"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid "<strong>605.040.18 Form. 11</strong>(25.8.2006)"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid ""
+"<strong>Lohnausweis - Certificat de salaire - Certificato di "
+"salario</strong>"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid ""
+"<strong>Rentenbescheinigung - Attestation de rentes - Attestazione delle "
+"rendite</strong>"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__a0
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__a0
+msgid "A0"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__laa_contribution__a0-not_subject_to_laa
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__laa_contribution__a0-not_subject_to_laa
+msgid "A0-Not subject to LAA"
+msgstr "A0-Non soumis LAA"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__a1
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__a1
+msgid "A1"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__laa_contribution__a1_-_aap_and_aanp_insured_-_with_aanp_deductions
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__laa_contribution__a1_-_aap_and_aanp_insured_-_with_aanp_deductions
+msgid "A1 - AAP and AANP insured - with AANP deductions"
+msgstr "A1 - AAP et AANP assurés - avec déductions AANP"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__a2
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__a2
+msgid "A2"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__laa_contribution__a2_-_aap_and_aanp_insured_-_without_aanp_deduction
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__laa_contribution__a2_-_aap_and_aanp_insured_-_without_aanp_deduction
+msgid "A2 - AAP and AANP insured - without AANP deduction"
+msgstr "A2 - Assurés AAP et AANP - sans déduction AANP"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__a3
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__a3
+msgid "A3"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__laa_contribution__a3_-_aap_insured_only_-_without_aanp_deduction
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__laa_contribution__a3_-_aap_insured_only_-_without_aanp_deduction
+msgid "A3 - AAP insured only - without AANP deduction"
+msgstr "A3 - AAP assuré uniquement - sans déduction AANP"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__a4
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__a4
+msgid "A4"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__a5
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__a5
+msgid "A5"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__a6
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__a6
+msgid "A6"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__a7
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__a7
+msgid "A7"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__a8
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__a8
+msgid "A8"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__a9
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__a9
+msgid "A9"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.d4e_inherit_hr_contract_view_form
+msgid "AC"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_contract__ac_contribution
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_contract_history__ac_contribution
+msgid "AC contribution"
+msgstr "Cotisation AC"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__canton__ag
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__canton__ag
+msgid "AG"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid "AHV-Nr. - No AVS - N. AVS"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__canton__ai
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__canton__ai
+msgid "AI"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__canton__ar
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__canton__ar
+msgid "AR"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.d4e_inherit_hr_contract_view_form
+msgid "AVS"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.d4e_inherit_hr_contract_view_form
+msgid "AVS / AC"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_contract__avs_contribution
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_contract_history__avs_contribution
+msgid "AVS contribution"
+msgstr "Cotisation AVS"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_funds__type_of_crate__avs/ac
+msgid "AVS/AC"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_send__active_domain
+msgid "Active domain"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.view_wizard_tree
+msgid "Add"
+msgstr "Ajouter"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_send__add_sign
+msgid "Add Sign"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.account_payslip_send_wizard_form
+msgid "Add contacts to notify..."
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_send__partner_ids
+msgid "Additional Contacts"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.actions.act_window,name:d4e_ch_payroll.action_view_fund
+msgid "Additions of crates"
+msgstr "Ajouts de caisses"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_worked_days__visible_in_payslip
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_work_entry_type__visible_in_payslip
+msgid "Afficher dans la fiche de paie"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_employee__emp_age
+msgid "Age"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_salary_certificate__all_emp
+msgid "All Employees"
+msgstr "Tous les employés "
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_contract__allocation_for_child
+msgid "Allocation for child "
+msgstr "Allocations familiale"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_employee__allocation_for_child
+msgid "Allocation pour enfant"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid "Altre prestazioni accessorie al salario"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_line_copy__amount
+msgid "Amount"
+msgstr "Montant"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_line_copy__amount_copy
+msgid "Amount Copy"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_line_copy__amount_select
+msgid "Amount Type"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid "Andere Leistungen - Autres prestations - Altre prestazioni"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,help:d4e_ch_payroll.field_hr_payslip_send__no_auto_thread
+msgid ""
+"Answers do not go in the original document discussion thread. This has an "
+"impact on the generated message-id."
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_line__appears_on_payslip
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_line_copy__appears_on_payslip
+msgid "Appears on Payslip"
+msgstr "Apparaît sur le bulletin de paie"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__res_partner__canton__ar
+msgid "Appenzell Rhodes-Extérieures"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__res_partner__canton__ai
+msgid "Appenzell Rhodes-Intérieures"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__res_partner__canton__ag
+msgid "Argovie"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid "Art"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid "Art - Genre - Genere"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid "Art - Grenre - Genere"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.account_payslip_send_wizard_form
+msgid "Attach a file"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_send__attachment_ids
+msgid "Attachments"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_salary_rule__rubrique_certificat__aucune_rubrique
+msgid "Aucune rubrique"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_base_calcul__august
+msgid "August"
+msgstr "Août"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_send__author_id
+msgid "Author"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,help:d4e_ch_payroll.field_hr_payslip_send__author_id
+msgid ""
+"Author of the message. If not set, email_from may hold an email address that"
+" did not match any partner."
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid "Autres prestations salariales accessoires"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_base_calcul__avril
+msgid "Avril"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__b0
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__b0
+msgid "B0"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__laa_contribution__b0-not_subject_to_laa
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__laa_contribution__b0-not_subject_to_laa
+msgid "B0-Not subject to LAA"
+msgstr "B0-Non soumis LAA"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__b1
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__b1
+msgid "B1"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__laa_contribution__b1_-_aap_and_aanp_insured_-_with_aanp_deductions
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__laa_contribution__b1_-_aap_and_aanp_insured_-_with_aanp_deductions
+msgid "B1 - AAP and AANP insured - with AANP deductions"
+msgstr "B1 - AAP et AANP assurés - avec déductions AANP"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__b2
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__b2
+msgid "B2"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__laa_contribution__b2_-_aap_and_aanp_insured_-_without_aanp_deduction
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__laa_contribution__b2_-_aap_and_aanp_insured_-_without_aanp_deduction
+msgid "B2 - AAP and AANP insured - without AANP deduction"
+msgstr "B2 - Assurés AAP et AANP - sans déduction AANP"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__b3
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__b3
+msgid "B3"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__laa_contribution__b3_-_aap_insured_only_-_without_aanp_deduction
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__laa_contribution__b3_-_aap_insured_only_-_without_aanp_deduction
+msgid "B3 - AAP insured only - without AANP deduction"
+msgstr "B3 - AAP assuré uniquement - sans déduction AANP"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__b4
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__b4
+msgid "B4"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__b5
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__b5
+msgid "B5"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__b6
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__b6
+msgid "B6"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__b7
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__b7
+msgid "B7"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__b8
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__b8
+msgid "B8"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__b9
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__b9
+msgid "B9"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__canton__be
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__canton__be
+msgid "BE"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__canton__bl
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__canton__bl
+msgid "BL"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__canton__bs
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__canton__bs
+msgid "BS"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_cumulative_salary__perception_scale
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_employee__perception_scale
+msgid "Barème de perception"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_tax_rate__perception_scale
+msgid "Barême de perception"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_salary_rule__base_test
+msgid "Base"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: code:addons/d4e_ch_payroll/models/hr_payslip.py:0
+#, python-format
+msgid "Basic Salary"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid "Bemerkungen"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__res_partner__canton__be
+msgid "Berne"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid "Berufliche Vorsorge"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__res_partner__canton__bl
+msgid "Bâle-Campagne"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__res_partner__canton__bs
+msgid "Bâle-Ville"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__c0
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__c0
+msgid "C0"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__laa_contribution__c0-not_subject_to_laa
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__laa_contribution__c0-not_subject_to_laa
+msgid "C0-Not subject to LAA"
+msgstr "C0-Non soumis LAA"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__c1
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__c1
+msgid "C1"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__laa_contribution__c1-_aap_and_aanp_insured_-_with_aanp_deductions
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__laa_contribution__c1-_aap_and_aanp_insured_-_with_aanp_deductions
+msgid "C1 - AAP and AANP insured - with AANP deductions"
+msgstr "C1 - AAP et AANP assurés - avec déductions AANP"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__c2
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__c2
+msgid "C2"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__laa_contribution__c2_-_aap_and_aanp_insured_-_without_aanp_deduction
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__laa_contribution__c2_-_aap_and_aanp_insured_-_without_aanp_deduction
+msgid "C2 - AAP and AANP insured - without AANP deduction"
+msgstr "C2 - Assurés AAP et AANP - sans déduction AANP"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__c3
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__c3
+msgid "C3"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__laa_contribution__c3_-_aap_insured_only_-_without_aanp_deduction
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__laa_contribution__c3_-_aap_insured_only_-_without_aanp_deduction
+msgid "C3 - AAP insured only - without AANP deduction"
+msgstr "C3 - AAP assuré uniquement - sans déduction AANP"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__c4
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__c4
+msgid "C4"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__c5
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__c5
+msgid "C5"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__c6
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__c6
+msgid "C6"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__c7
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__c7
+msgid "C7"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__c8
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__c8
+msgid "C8"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__c9
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__c9
+msgid "C9"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid "CHF"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.actions.act_window,name:d4e_ch_payroll.action_view_rule_base
+#: model:ir.ui.menu,name:d4e_ch_payroll.menu_hr_payroll_salary_base
+msgid "Calculation bases"
+msgstr "Bases de calcul"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__base_calcul__rule_type__calculation_basis
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_salary_rule__rule_type__calculation_basis
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.d4e_view_hr_payslip_form
+msgid "Calculation basis"
+msgstr "Base de calcul"
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.account_payslip_send_wizard_form
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.salary_certificate_wizard_form
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.tax_rate_wizard_form
+msgid "Cancel"
+msgstr "Annuler"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_contract__canton
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_contract_history__canton
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_res_partner__canton
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_res_users__canton
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_tax_rate__code_canton
+msgid "Canton"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_contract__Car_flat_fee
+msgid "Car flat fee"
+msgstr "Frais forfaitaire de voiture"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_funds__case_number
+msgid "Case number"
+msgstr "Numéro de la caisse"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_line_copy__category_id
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_line_copy__category_id_copy
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_rule_parameter__category
+msgid "Category"
+msgstr "Catégorie"
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid "Certificato esatto e completo"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid "Certifié exact et complet"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_payslip_line__payslip_rubrique__charges_sociales
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_payslip_line_copy__payslip_rubrique__charges_sociales
+msgid "Charges Sociales"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_contract__church_tax
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_contract_history__church_tax
+msgid "Church tax"
+msgstr "Impôt ecclésiastique"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_codes_ijm__code
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_codes_laac__code
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_codes_lpp__code
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_line_copy__code
+msgid "Code"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.d4e_inherit_res_partner_view_form_private
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.d4e_inherit_view_partner_form
+msgid "Commune OFS"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_line_copy__company_id
+msgid "Company"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_contract__compensation_fund
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_contract_history__compensation_fund
+msgid "Compensation Fund"
+msgstr "Caisse de compensation"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_send__composer_id
+msgid "Composer"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_send__composition_mode
+msgid "Composition mode"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model,name:d4e_ch_payroll.model_res_config_settings
+msgid "Config Settings"
+msgstr "Paramètres de config"
+
+#. module: d4e_ch_payroll
+#: model:ir.model,name:d4e_ch_payroll.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_send__body
+msgid "Contents"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_line_copy__contract_id
+msgid "Contract"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_funds__contract_number
+msgid "Contract Number"
+msgstr "N° de contrat"
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.d4e_inherit_hr_contract_view_form
+msgid "Contributions"
+msgstr "Cotisations"
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.hr_payroll_structure_view_form_add_product
+msgid "Copy a rule from another structure"
+msgstr "Copier une règle d'une autre structure"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_base_calcul__create_uid
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_codes_ijm__create_uid
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_codes_laac__create_uid
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_codes_lpp__create_uid
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_cumulative_salary__create_uid
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hierarchy_status__create_uid
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_contract_history__create_uid
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_funds__create_uid
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_line_copy__create_uid
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_send__create_uid
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_npa_commune_ofs__create_uid
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_salary_certificate__create_uid
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_salary_rule_wizard__create_uid
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_tax_rate__create_uid
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_tax_rate_import__create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_base_calcul__create_date
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_codes_ijm__create_date
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_codes_laac__create_date
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_codes_lpp__create_date
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_cumulative_salary__create_date
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hierarchy_status__create_date
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_contract_history__create_date
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_funds__create_date
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_line_copy__create_date
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_send__create_date
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_npa_commune_ofs__create_date
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_salary_certificate__create_date
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_salary_rule_wizard__create_date
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_tax_rate__create_date
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_tax_rate_import__create_date
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_cumulative_salary__cumulative_salary
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.d4e_inherit_view_employee_form
+msgid "Cumulative Salary"
+msgstr "Salaire Cumulé"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_employee__cumulative_salary_lines
+msgid "Cumulative Salary Lines"
+msgstr "Les lignes de salaire cumulé"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_employee__currency_id
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_tax_rate__currency_id
+msgid "Currency"
+msgstr "Devise"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_funds__customer_number
+msgid "Customer Number"
+msgstr "N° de client"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__laa_contribution__d0-not_subject_to_laa
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__laa_contribution__d0-not_subject_to_laa
+msgid "D0-Not subject to LAA"
+msgstr "D0-Non soumis LAA"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__laa_contribution__d1-_aap_and_aanp_insured_-_with_aanp_deductions
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__laa_contribution__d1-_aap_and_aanp_insured_-_with_aanp_deductions
+msgid "D1 - AAP and AANP insured - with AANP deductions"
+msgstr "D1 - AAP et AANP assurés - avec déductions AANP"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__laa_contribution__d2_-_aap_and_aanp_insured_-_without_aanp_deduction
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__laa_contribution__d2_-_aap_and_aanp_insured_-_without_aanp_deduction
+msgid "D2 - AAP and AANP insured - without AANP deduction"
+msgstr "D2 - Assurés AAP et AANP - sans déduction AANP"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__laa_contribution__d3_-_aap_insured_only_-_without_aanp_deduction
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__laa_contribution__d3_-_aap_insured_only_-_without_aanp_deduction
+msgid "D3 - AAP insured only - without AANP deduction"
+msgstr "D3 - AAP assuré uniquement - sans déduction AANP"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip__date_from_year
+msgid "Date From Year"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_contract__date_validity_lines
+msgid "Date Lines"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_employee__date_deb_benefic_rente
+msgid "Date début bénéficiaire rente"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_tax_rate__validity_start_date
+msgid "Date début de validité"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_base_calcul__december
+msgid "December"
+msgstr "Décembre"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_send__auto_delete
+msgid "Delete Emails"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_send__auto_delete_message
+msgid "Delete Message Copy"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_codes_ijm__description
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_codes_laac__description
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_codes_lpp__description
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_input_type__name
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_line_copy__note
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.d4e_inherit_hr_salary_rule_form
+msgid "Description"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid "Die Richtigkeit und Vollständigkeit bestätigt"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_base_calcul__display_name
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_codes_ijm__display_name
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_codes_laac__display_name
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_codes_lpp__display_name
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_cumulative_salary__display_name
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hierarchy_status__display_name
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_contract__display_name
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_contract_history__display_name
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_employee__display_name
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_funds__display_name
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payroll_structure__display_name
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip__display_name
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_input__display_name
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_input_type__display_name
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_line__display_name
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_line_copy__display_name
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_run__display_name
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_send__display_name
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_worked_days__display_name
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_rule_parameter__display_name
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_salary_rule__display_name
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_work_entry_type__display_name
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_npa_commune_ofs__display_name
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_report_d4e_ch_payroll_report_salary_certificate_template__display_name
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_res_partner__display_name
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_salary_certificate__display_name
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_salary_rule_wizard__display_name
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_tax_rate__display_name
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_tax_rate_import__display_name
+msgid "Display Name"
+msgstr "Nom affiché"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_line_copy__display_type
+msgid "Display Type"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_payslip_line__payslip_rubrique__divers
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_payslip_line_copy__payslip_rubrique__divers
+msgid "Divers"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,help:d4e_ch_payroll.field_hr_payslip_send__auto_delete_message
+msgid ""
+"Do not keep a copy of the email in the document communication history (mass "
+"mailing only)"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_funds__e_mail
+msgid "E Mail"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__e0
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__e0
+msgid "E0"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_send__is_email
+msgid "Email"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,help:d4e_ch_payroll.field_hr_payslip_send__email_from
+msgid ""
+"Email address of the sender. This field is set when no matching partner is "
+"found and replaces the author_id field in the chatter."
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_cumulative_salary__emp_id
+msgid "Emp"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model,name:d4e_ch_payroll.model_hr_employee
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_line_copy__employee_id
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_salary_certificate__emp_id
+msgid "Employee"
+msgstr "Employé"
+
+#. module: d4e_ch_payroll
+#: model:ir.model,name:d4e_ch_payroll.model_hr_contract
+msgid "Employee Contract"
+msgstr "Contrat de l'employé"
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.d4e_view_hr_payslip_form
+msgid "Employer share"
+msgstr "Part employeur"
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.hr_payslip_run_view_form
+msgid "Envoyer les fiches par e-mail"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid "Erde, le"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,help:d4e_ch_payroll.field_hr_payslip_line_copy__partner_id
+msgid "Eventual third party involved in the salary payment of the employees."
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__f0
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__f0
+msgid "F0"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__f1
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__f1
+msgid "F1"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__f2
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__f2
+msgid "F2"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__f3
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__f3
+msgid "F3"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__f4
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__f4
+msgid "F4"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__f5
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__f5
+msgid "F5"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__f6
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__f6
+msgid "F6"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__f7
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__f7
+msgid "F7"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__f8
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__f8
+msgid "F8"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__f9
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__f9
+msgid "F9"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__canton__fr
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__canton__fr
+msgid "FR"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__church_tax__false
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__church_tax__false
+msgid "False"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_base_calcul__february
+msgid "February"
+msgstr "Février"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_employee__gender__female
+msgid "Female"
+msgstr "Féminin"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_tax_rate_import__filename
+msgid "Filename"
+msgstr "Fichier"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_line_copy__amount_fix
+msgid "Fixed Amount"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_contract__lpp_fixe
+msgid "Fixed LPP"
+msgstr "Cotisation LPP fixe"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_salary_rule__base_test__fixed_base
+msgid "Fixed base"
+msgstr "Base fixe"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_salary_rule__rate_quantity__fixed_rate_quantity
+msgid "Fixed rate quantity"
+msgstr "Taux / quantité fixe"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_contract__Flat_rate_for_expatriates
+msgid "Flat rate for expatriates"
+msgstr "Frais forfaitaire pour expatriés"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,help:d4e_ch_payroll.field_hr_payslip_line_copy__amount_percentage
+msgid "For example, enter 50.0 to apply a percentage of 50%"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid "Frais effectis"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.d4e_inherit_hr_contract_view_form
+msgid "Frais fixes"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid "Frais forfaitaires"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_contract__lump_sum_representation_costs
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_employee__lump_sum_representation_costs
+msgid "Frais forfaitaires de représentation"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_salary_rule__base_test__free_base
+msgid "Free base"
+msgstr "Base libre"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_salary_rule__rate_quantity__free_rate_quantity
+msgid "Free rate quantity"
+msgstr "Taux / quantité libre"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__res_partner__canton__fr
+msgid "Fribourg"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_line_copy__date_from
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_send__email_from
+msgid "From"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.ui.menu,name:d4e_ch_payroll.menu_hr_payroll_global_settings_funds
+msgid "Funds / Insurance"
+msgstr "Caisses / Assurances"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__g9
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__g9
+msgid "G9"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__canton__ge
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__canton__ge
+msgid "GE"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__canton__gl
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__canton__gl
+msgid "GL"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__canton__gr
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__canton__gr
+msgid "GR"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid "Gehaltsnebenleistungen"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_employee__gender
+msgid "Gender"
+msgstr "Genre"
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid "Genere"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid "Genre"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__res_partner__canton__ge
+msgid "Genève"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__res_partner__canton__gl
+msgid "Glaris"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__res_partner__canton__gr
+msgid "Grisons"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: code:addons/d4e_ch_payroll/models/hr_payslip.py:0
+#, python-format
+msgid "Gross"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_line__payslip_rubrique
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_line_copy__payslip_rubrique
+msgid "Groupe"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__laa_contribution__h0-not_subject_to_laa
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__laa_contribution__h0-not_subject_to_laa
+msgid "H0-Not subject to LAA"
+msgstr "H0-Non soumis LAA"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__h1
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__h1
+msgid "H1"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__laa_contribution__h1-_aap_and_aanp_insured_-_with_aanp_deductions
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__laa_contribution__h1-_aap_and_aanp_insured_-_with_aanp_deductions
+msgid "H1 - AAP and AANP insured - with AANP deductions"
+msgstr "H1 - AAP et AANP assurés - avec déductions AANP"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__h2
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__h2
+msgid "H2"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__laa_contribution__h2_-_aap_and_aanp_insured_-_without_aanp_deduction
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__laa_contribution__h2_-_aap_and_aanp_insured_-_without_aanp_deduction
+msgid "H2 - AAP and AANP insured - without AANP deduction"
+msgstr "H2 - Assurés AAP et AANP - sans déduction AANP"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__h3
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__h3
+msgid "H3"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__laa_contribution__h3_-_aap_insured_only_-_without_aanp_deduction
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__laa_contribution__h3_-_aap_insured_only_-_without_aanp_deduction
+msgid "H3 - AAP insured only - without AANP deduction"
+msgstr "H3 - AAP assuré uniquement - sans déduction AANP"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__h4
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__h4
+msgid "H4"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__h5
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__h5
+msgid "H5"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__h6
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__h6
+msgid "H6"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__h7
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__h7
+msgid "H7"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__h8
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__h8
+msgid "H8"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__h9
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__h9
+msgid "H9"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__he
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__he
+msgid "HE"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model,name:d4e_ch_payroll.model_hr_work_entry_type
+msgid "HR Work Entry Type"
+msgstr "Type de prestations RH"
+
+#. module: d4e_ch_payroll
+#: model:ir.actions.act_window,name:d4e_ch_payroll.action_view_rule_heading
+#: model:ir.ui.menu,name:d4e_ch_payroll.menu_hr_payroll_salary_heading
+msgid "Headings"
+msgstr " Rubriques"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__base_calcul__rule_type__headings_-_employer_share
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_salary_rule__rule_type__headings_-_employer_share
+msgid "Headings - Employer share"
+msgstr "Rubriques - Part employeur"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_employee__hierarchy_status_id
+msgid "Hierarchy Status"
+msgstr "Hiérarchie Statut"
+
+#. module: d4e_ch_payroll
+#: model:ir.model,name:d4e_ch_payroll.model_hierarchy_status
+msgid "Hierarchy particular statut"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_contract_history__history_id
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.d4e_inherit_hr_contract_view_form
+msgid "History"
+msgstr "Historique"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_base_calcul__id
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_codes_ijm__id
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_codes_laac__id
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_codes_lpp__id
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_cumulative_salary__id
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hierarchy_status__id
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_contract__id
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_contract_history__id
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_employee__id
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_funds__id
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payroll_structure__id
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip__id
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_input__id
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_input_type__id
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_line__id
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_line_copy__id
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_run__id
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_send__id
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_worked_days__id
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_rule_parameter__id
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_salary_rule__id
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_work_entry_type__id
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_npa_commune_ofs__id
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_report_d4e_ch_payroll_report_salary_certificate_template__id
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_res_config_settings__id
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_res_partner__id
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_salary_certificate__id
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_salary_rule_wizard__id
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_tax_rate__id
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_tax_rate_import__id
+msgid "ID"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid "IDE:"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_funds__type_of_crate__ijm
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.d4e_inherit_hr_contract_view_form
+msgid "IJM"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_contract__ijm_cashier
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_contract_history__ijm_cashier
+msgid "IJM Cashier"
+msgstr "Caisse IJM"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_contract__ijm_code
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_contract_history__ijm_code
+msgid "IJM code"
+msgstr "Code IJM"
+
+#. module: d4e_ch_payroll
+#: model:ir.actions.act_window,name:d4e_ch_payroll.action_IJM_codes
+#: model:ir.ui.menu,name:d4e_ch_payroll.menu_hr_payroll_global_ijm_code
+msgid "IJM codes"
+msgstr "Code IJM"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_contract__ijm_contribution
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_contract_history__ijm_contribution
+msgid "IJM contribution"
+msgstr "Cotisation IJM"
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.tax_rate_wizard_form
+msgid "Import"
+msgstr "Importer"
+
+#. module: d4e_ch_payroll
+#: model:ir.ui.menu,name:d4e_ch_payroll.menu_tax_rate_wizard
+msgid "Import Tax Rate"
+msgstr "Importer les barèmes de l'impôt à la source"
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.d4e_inherit_hr_salary_rule_form
+msgid "Impressions"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_tax_rate__church_tax
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.d4e_inherit_hr_contract_view_form
+msgid "Impôt ecclésiastique"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.d4e_inherit_view_employee_form
+msgid "Impôt à la source"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_tax_rate__taxes_percent
+msgid "Impôts en %"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_tax_rate__francs_taxes
+msgid "Impôts en Francs"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_employee__bool_age_18
+msgid "In the year of his 18 years"
+msgstr "Dans l'année de ses 18 ans"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_employee__bool_age_25
+msgid "In the year of his 25 years"
+msgstr "Dans l'année de ses 25 ans"
+
+#. module: d4e_ch_payroll
+#: code:addons/d4e_ch_payroll/wizard/tax_rate_import.py:0
+#, python-format
+msgid "Incorrect format. Please try to save the file txt format first !"
+msgstr ""
+"Format incorrect. Essayez d'abord d'enregistrer le fichier sous le format "
+"txt !"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,help:d4e_ch_payroll.field_hr_payslip_send__parent_id
+msgid "Initial thread message."
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_send__printed
+msgid "Is Printed"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__canton__ju
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__canton__ju
+msgid "JU"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid "Jahr - Année - Anno"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_base_calcul__january
+msgid "January"
+msgstr "Janvier"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_base_calcul__july
+msgid "July"
+msgstr "Juillet"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_base_calcul__june
+msgid "June"
+msgstr "Juin"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__res_partner__canton__ju
+msgid "Jura"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid "Kantinenverpflegung / Lunch-Checks"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid "Kapitalleistungen - Prestations en capital - Prestazioni in capitale"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__l0
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__l0
+msgid "L0"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__l1
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__l1
+msgid "L1"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__l2
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__l2
+msgid "L2"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__l3
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__l3
+msgid "L3"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__l4
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__l4
+msgid "L4"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__l5
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__l5
+msgid "L5"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__l6
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__l6
+msgid "L6"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__l7
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__l7
+msgid "L7"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__l8
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__l8
+msgid "L8"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__l9
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__l9
+msgid "L9"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_funds__type_of_crate__laa
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.d4e_inherit_hr_contract_view_form
+msgid "LAA"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_contract__laa_contribution
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_contract_history__laa_contribution
+msgid "LAA contribution"
+msgstr "Cotisation LAA"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_contract__laa_fund
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_contract_history__laa_fund
+msgid "LAA fund"
+msgstr "Caisse LAA"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_funds__type_of_crate__laac
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.d4e_inherit_hr_contract_view_form
+msgid "LAAC"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_contract__laac_cashier
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_contract_history__laac_cashier
+msgid "LAAC Cashier"
+msgstr "Caisse LAAC"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_contract__laac_code
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_contract_history__laac_code
+msgid "LAAC code"
+msgstr "Code LAAC"
+
+#. module: d4e_ch_payroll
+#: model:ir.actions.act_window,name:d4e_ch_payroll.action_laac_codes
+#: model:ir.ui.menu,name:d4e_ch_payroll.menu_hr_payroll_global_laac_code
+msgid "LAAC codes"
+msgstr "Code LAAC"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_contract__laac_contribution
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_contract_history__laac_contribution
+msgid "LAAC contribution"
+msgstr "Cotisation LAAC"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_funds__type_of_crate__lpp
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.d4e_inherit_hr_contract_view_form
+msgid "LPP"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_contract__lpp_cashier
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_contract_history__lpp_cashier
+msgid "LPP Cashier"
+msgstr "Caisse LPP"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_contract__lpp_code
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_contract_history__lpp_code
+msgid "LPP code"
+msgstr "Code LPP"
+
+#. module: d4e_ch_payroll
+#: model:ir.actions.act_window,name:d4e_ch_payroll.action_LPP_codes
+#: model:ir.ui.menu,name:d4e_ch_payroll.menu_hr_payroll_global_bvg_code
+msgid "LPP codes"
+msgstr "Code LPP"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_contract__lpp_contribution
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_contract_history__lpp_contribution
+msgid "LPP contribution"
+msgstr "Cotisation LPP"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__canton__lu
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__canton__lu
+msgid "LU"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_base_calcul____last_update
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_codes_ijm____last_update
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_codes_laac____last_update
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_codes_lpp____last_update
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_cumulative_salary____last_update
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hierarchy_status____last_update
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_contract____last_update
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_contract_history____last_update
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_employee____last_update
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_funds____last_update
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payroll_structure____last_update
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip____last_update
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_input____last_update
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_input_type____last_update
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_line____last_update
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_line_copy____last_update
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_run____last_update
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_send____last_update
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_worked_days____last_update
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_rule_parameter____last_update
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_salary_rule____last_update
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_work_entry_type____last_update
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_npa_commune_ofs____last_update
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_report_d4e_ch_payroll_report_salary_certificate_template____last_update
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_res_config_settings____last_update
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_res_partner____last_update
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_salary_certificate____last_update
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_salary_rule_wizard____last_update
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_tax_rate____last_update
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_tax_rate_import____last_update
+msgid "Last Modified on"
+msgstr "Dernière modification le"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_base_calcul__write_uid
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_codes_ijm__write_uid
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_codes_laac__write_uid
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_codes_lpp__write_uid
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_cumulative_salary__write_uid
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hierarchy_status__write_uid
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_contract_history__write_uid
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_funds__write_uid
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_line_copy__write_uid
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_send__write_uid
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_npa_commune_ofs__write_uid
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_salary_certificate__write_uid
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_salary_rule_wizard__write_uid
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_tax_rate__write_uid
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_tax_rate_import__write_uid
+msgid "Last Updated by"
+msgstr "Dernière mise à jour par"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_base_calcul__write_date
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_codes_ijm__write_date
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_codes_laac__write_date
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_codes_lpp__write_date
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_cumulative_salary__write_date
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hierarchy_status__write_date
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_contract_history__write_date
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_funds__write_date
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_line_copy__write_date
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_send__write_date
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_npa_commune_ofs__write_date
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_salary_certificate__write_date
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_salary_rule_wizard__write_date
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_tax_rate__write_date
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_tax_rate_import__write_date
+msgid "Last Updated on"
+msgstr "Dernière mise à jour le"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_rule_parameter__last_parameter_value
+msgid "Last Value"
+msgstr "dernière valeur "
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_send__layout
+msgid "Layout"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model,name:d4e_ch_payroll.model_tax_rate
+msgid "Liste de  barèmes de l'impôt à la source"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_send__is_log
+msgid "Log an Internal Note"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid "Lohn"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__res_partner__canton__lu
+msgid "Lucerne"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__m0
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__m0
+msgid "M0"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__m1
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__m1
+msgid "M1"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__m2
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__m2
+msgid "M2"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__m3
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__m3
+msgid "M3"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__m4
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__m4
+msgid "M4"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__m5
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__m5
+msgid "M5"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__m6
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__m6
+msgid "M6"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__m7
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__m7
+msgid "M7"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__m8
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__m8
+msgid "M8"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__m9
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__m9
+msgid "M9"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__me
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__me
+msgid "ME"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_send__mail_activity_type_id
+msgid "Mail Activity Type"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_employee__gender__male
+msgid "Male"
+msgstr "Masculin"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_base_calcul__march
+msgid "March"
+msgstr "Mars"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_base_calcul__may
+msgid "May"
+msgstr "Mai"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_send__record_name
+msgid "Message Record Name"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,help:d4e_ch_payroll.field_hr_payslip_send__message_type
+msgid ""
+"Message type: email for email message, notification for system message, "
+"comment for other messages such as user replies"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.d4e_inherit_hr_contract_view_form
+msgid "Montants fixes divers"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__n0
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__n0
+msgid "N0"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__n1
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__n1
+msgid "N1"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__n2
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__n2
+msgid "N2"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__n3
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__n3
+msgid "N3"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__n4
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__n4
+msgid "N4"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__n5
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__n5
+msgid "N5"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__n6
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__n6
+msgid "N6"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__n7
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__n7
+msgid "N7"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__n8
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__n8
+msgid "N8"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__n9
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__n9
+msgid "N9"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__canton__ne
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__canton__ne
+msgid "NE"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__no
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__no
+msgid "NO"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_npa_commune_ofs__np_canton
+msgid "NP CANTON"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_npa_commune_ofs__np_numero
+msgid "NP NUMERO"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_npa_commune_ofs__np_ofs
+msgid "NP OFS"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_npa_commune_ofs__np_type
+msgid "NP TYPE"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_npa_commune_ofs__np_version
+msgid "NP VERSION"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_npa_commune_ofs__np_ville
+msgid "NP VILLE"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.actions.act_window,name:d4e_ch_payroll.npa_commune_ofs_action
+msgid "NPA Commune OFS List"
+msgstr "Liste NPA Commune OFS"
+
+#. module: d4e_ch_payroll
+#: model:ir.ui.menu,name:d4e_ch_payroll.npa_commune_ofs_menu
+msgid "NPA commune OFS"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__canton__nw
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__canton__nw
+msgid "NW"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hierarchy_status__name
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_line_copy__name
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_npa_commune_ofs__name
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.npa_commune_ofs_view_form
+msgid "Name"
+msgstr "Nom"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,help:d4e_ch_payroll.field_hr_payslip_send__record_name
+msgid "Name get of the related document."
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_funds__Name_of_fund_insurance
+msgid "Name of fund / insurance"
+msgstr "Nom du fonds / assurance"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_rule_parameter__category__national_data
+msgid "National data"
+msgstr "Données nationales"
+
+#. module: d4e_ch_payroll
+#: code:addons/d4e_ch_payroll/models/hr_payslip.py:0
+#, python-format
+msgid "Net Salary"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__res_partner__canton__ne
+msgid "Neuchâtel"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid "Neue AHV-Nr. - Nouveau No AVS - Nuovo N. AVS"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid ""
+"Nicht im Bruttolohn (gemass Ziffer 8) enthalten - Non comprises dans le "
+"salaire brut (au chiffre 8) - Non comprese nel salario lordo (sotto cifra 8)"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__res_partner__canton__nw
+msgid "Nidwald"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_send__no_auto_thread
+msgid "No threading for answers"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tax_source__not_submitted
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tax_source__not_submitted
+msgid "Not submitted"
+msgstr "Non soumis"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_payslip_line_copy__display_type__line_note
+msgid "Note"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_send__notify
+msgid "Notify followers"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,help:d4e_ch_payroll.field_hr_payslip_send__notify
+msgid "Notify followers of the document (mass post only)"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_base_calcul__november
+msgid "November"
+msgstr "Novembre"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_res_partner__npa_id
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_res_users__npa_id
+msgid "Npa"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.d4e_view_hr_payslip_form
+msgid "Number of Days"
+msgstr "Jour(s)"
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.d4e_view_hr_payslip_form
+msgid "Number of Hours"
+msgstr "Heure(s)"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_res_partner__num_commune_ofs
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_res_users__num_commune_ofs
+msgid "Numéro de commune OFS"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_employee__avs_13
+msgid "N° assurance sociale"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__canton__ow
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__canton__ow
+msgid "OW"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_contract__observation
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid "Observations"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.d4e_inherit_hr_contract_view_form
+msgid "Observations (reportées en rubrique 15 du certificat de salaire)"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__res_partner__canton__ow
+msgid "Obwald"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_base_calcul__october
+msgid "October"
+msgstr "Octobre"
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid "Ort und Datum - Lieu et date - Luogo e data"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid "Osservazioni"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_employee__gender__other
+msgid "Other"
+msgstr "Autre"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payroll_structure__input_line_type_ids
+msgid "Other Input Line"
+msgstr "Autre ligne d'entrée"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_contract__Other_flat_rate_costs
+msgid "Other flat-rate costs"
+msgstr "Autre frais forfaitaires"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_send__mail_server_id
+msgid "Outgoing mail server"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__p1
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__p1
+msgid "P1"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__p2
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__p2
+msgid "P2"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__p3
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__p3
+msgid "P3"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__p4
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__p4
+msgid "P4"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__p5
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__p5
+msgid "P5"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__p6
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__p6
+msgid "P6"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__p7
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__p7
+msgid "P7"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__p8
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__p8
+msgid "P8"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__p9
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__p9
+msgid "P9"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__pe
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__pe
+msgid "PE"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__pp
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__pp
+msgid "PP"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_contract__lpp_fixe_pp
+msgid "PP_Fixed LPP"
+msgstr "Cotisation LPP fixe - Part employeur"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_send__parent_id
+msgid "Parent Message"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_contract__private_share_service_car
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_employee__private_share_service_car
+msgid "Part privée voiture de service"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_line_copy__partner_id
+msgid "Partner"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid "Pasti alla mensa /buoni pasto"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model,name:d4e_ch_payroll.model_hr_payslip
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_input__payslip_id
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_line_copy__slip_employee_id
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_line_copy__slip_id
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_line_copy__slip_section_id
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_line_copy__slip_share_id
+msgid "Pay Slip"
+msgstr "Feuille de paie"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_line_copy__slip_line_id
+msgid "Pay Slip Line"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: code:addons/d4e_ch_payroll/models/hr_payslip.py:0
+#: code:addons/d4e_ch_payroll/models/hr_payslip.py:0
+#, python-format
+msgid "Payslip"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model,name:d4e_ch_payroll.model_hr_payslip_run
+msgid "Payslip Batches"
+msgstr "Lots de bulletins de paie"
+
+#. module: d4e_ch_payroll
+#: model:ir.model,name:d4e_ch_payroll.model_hr_payslip_input
+msgid "Payslip Input"
+msgstr "Entrée du bulletin"
+
+#. module: d4e_ch_payroll
+#: model:ir.model,name:d4e_ch_payroll.model_hr_payslip_input_type
+msgid "Payslip Input Type"
+msgstr "Type d'entrée de la fiche de paie"
+
+#. module: d4e_ch_payroll
+#: model:ir.model,name:d4e_ch_payroll.model_hr_payslip_line
+#: model:ir.model,name:d4e_ch_payroll.model_hr_payslip_line_copy
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.d4e_view_hr_payslip_form
+msgid "Payslip Line"
+msgstr "Ligne de bulletin de salaire"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip__line_ids_cp
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip__line_ids_employee_basis_ids
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip__line_ids_employee_section_ids
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip__line_ids_employee_share_ids
+msgid "Payslip Lines"
+msgstr "Lignes de bulletin de salaire"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_employee__hr_payslip_number
+msgid "Payslip Number"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model,name:d4e_ch_payroll.model_hr_payslip_send
+msgid "Payslip Send"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model,name:d4e_ch_payroll.model_hr_payslip_worked_days
+msgid "Payslip Worked Days"
+msgstr "Bulletin de paie jours travaillés"
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.account_payslip_send_wizard_form
+msgid "Payslip send & Print"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_line_copy__amount_percentage
+msgid "Percentage (%)"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_funds__phone
+msgid "Phone"
+msgstr "Téléphone"
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid "Prestations salariales accessoires"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid "Prestazioni accessorie al salario"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid "Previdenza professionale"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.account_payslip_send_wizard_form
+msgid "Preview as a PDF"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_send__is_print
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.account_payslip_send_wizard_form
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.salary_certificate_wizard_form
+msgid "Print"
+msgstr "Imprimer"
+
+#. module: d4e_ch_payroll
+#: model:ir.actions.act_window,name:d4e_ch_payroll.salary_certificate_wizard_action
+msgid "Print Employee Salary Certificate"
+msgstr "Imprimer le certificat de salaire"
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid "Prévoyance professionnelle"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__q9
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__q9
+msgid "Q9"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_line_copy__quantity
+msgid "Quantity"
+msgstr "Quantité"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_line_copy__quantity_copy
+msgid "Quantity Copy"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.d4e_view_hr_payslip_form
+msgid "Quantité / Montant"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_line_copy__rate
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_line_copy__rate_copy
+msgid "Rate (%)"
+msgstr "Taux (%)"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_salary_rule__rate_quantity
+msgid "Rate / Quantity"
+msgstr "Taux / Quantité"
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.account_payslip_send_wizard_form
+msgid "Recipients"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model,name:d4e_ch_payroll.model_npa_commune_ofs
+msgid "Record for Commune OFS for each Zip Code "
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_send__res_id
+msgid "Related Document ID"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_send__model
+msgid "Related Document Model"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_res_partner__employee_id
+msgid "Related Employee"
+msgstr "Employé associé"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_employee__partner_id
+msgid "Related Partner"
+msgstr "Partenaire associé"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_contract__rent_deduction
+msgid "Rent deduction"
+msgstr "Retenue pour loyer"
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid "Repas à la cantine / chèques-repas"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,help:d4e_ch_payroll.field_hr_payslip_send__reply_to
+msgid ""
+"Reply email address. Setting the reply_to bypasses the automatic thread "
+"creation."
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_send__reply_to
+msgid "Reply-To"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.d4e_inherit_hr_contract_view_form
+msgid "Retenues fixes"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_tax_rate__monthly_taxable_income
+msgid "Revenu mensuel imposable"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_res_config_settings__round
+msgid "Round"
+msgstr "Arrondi"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_salary_rule__rubrique_certificat
+msgid "Rubriques"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_line_copy__salary_rule_id
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_line_copy__salary_rule_id_copy
+msgid "Rule"
+msgstr "Règle"
+
+#. module: d4e_ch_payroll
+#: model:ir.actions.act_window,name:d4e_ch_payroll.wizard_rule
+msgid "Rule to add"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_base_calcul__rule_type
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_line__type
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_line_copy__type
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_salary_rule__rule_type
+msgid "Rule type"
+msgstr "Type de règle"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_salary_rule_wizard__rules_to_add
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.d4e_view_hr_payslip_form
+msgid "Rules"
+msgstr "Règles"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_contract__avs_ded_year
+msgid "Réserve des déductions AVS reportable sur l'année"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tabelle__sf
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tabelle__sf
+msgid "SF"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__canton__sg
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__canton__sg
+msgid "SG"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__canton__so
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__canton__so
+msgid "SO"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__canton__sz
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__canton__sz
+msgid "SZ"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__res_partner__canton__sg
+msgid "Saint-Gall"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.d4e_inherit_hr_contract_view_form
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.d4e_view_hr_payslip_form
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid "Salaire"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_payslip_line__payslip_rubrique__salaire_brut
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_payslip_line_copy__payslip_rubrique__salaire_brut
+msgid "Salaire Brut"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.d4e_inherit_hr_contract_view_form
+msgid "Salaire mensuel"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.d4e_inherit_hr_contract_view_form
+msgid "Salaires"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid "Salario"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.actions.report,name:d4e_ch_payroll.action_report_salary_certificate
+#: model:ir.ui.menu,name:d4e_ch_payroll.menu_salary_certificate
+msgid "Salary Certificate"
+msgstr "Certificat de salaire"
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.d4e_inherit_hr_contract_view_form
+msgid "Salary Information"
+msgstr "Informations sur le salaire"
+
+#. module: d4e_ch_payroll
+#: model:ir.model,name:d4e_ch_payroll.model_hr_salary_rule
+msgid "Salary Rule"
+msgstr "Règles salariales"
+
+#. module: d4e_ch_payroll
+#: model:ir.model,name:d4e_ch_payroll.model_hr_rule_parameter
+msgid "Salary Rule Parameter"
+msgstr "Paramètre de la règle de salariale"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payroll_structure__rule_ids
+msgid "Salary Rules"
+msgstr "Règles salariales"
+
+#. module: d4e_ch_payroll
+#: model:ir.model,name:d4e_ch_payroll.model_hr_payroll_structure
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.d4e_view_hr_payslip_form
+msgid "Salary Structure"
+msgstr "Structure salariale"
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.account_payslip_send_wizard_form
+msgid "Save as a new template"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.account_payslip_send_wizard_form
+msgid "Save as new template"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__res_partner__canton__sh
+msgid "Schaffhouse"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__res_partner__canton__sz
+msgid "Schwytz"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__base_calcul__rule_type__section
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_payslip_line_copy__display_type__line_section
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_salary_rule__rule_type__section
+msgid "Section"
+msgstr "Rubrique"
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.tax_rate_wizard_form
+msgid "Select your file :"
+msgstr "Sélectionnez votre fichier :"
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.account_payslip_send_wizard_form
+msgid "Send"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.account_payslip_send_wizard_form
+msgid "Send & Print"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: code:addons/d4e_ch_payroll/models/hr_payslip.py:0
+#: code:addons/d4e_ch_payroll/models/hr_payslip_run.py:0
+#, python-format
+msgid "Send Payslip"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.d4e_view_hr_payslip_form
+msgid "Send mail to employee"
+msgstr "Envoyer un mail à l'employé"
+
+#. module: d4e_ch_payroll
+#: code:addons/d4e_ch_payroll/models/hr_payslip_send.py:0
+#, python-format
+msgid "Send payslip"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_contract__seniority
+msgid "Seniority"
+msgstr "Ancienneté"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_base_calcul__september
+msgid "September"
+msgstr "Septembre"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_line_copy__sequence
+msgid "Sequence"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__res_partner__canton__so
+msgid "Soleure"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid "Spese effettive"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid "Spese forfettarie"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid "Spesenvergütungen - Allocation pour frais - Indennità per spese"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__base_calcul__rule_type__storage_data
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_salary_rule__rule_type__storage_data
+msgid "Storage data"
+msgstr "Donnée de stockage"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_funds__street
+msgid "Street"
+msgstr "Rue"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_send__subject
+msgid "Subject"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_contract__tax_source
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_contract_history__tax_source
+msgid "Subject to source tax"
+msgstr "Soumis à l'impôt à la source"
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.account_payslip_send_wizard_form
+msgid "Subject..."
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tax_source__submitted_with_scale
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tax_source__submitted_with_scale
+msgid "Submitted with scale"
+msgstr "Soumis avec barème"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__tax_source__submitted_without_scale
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__tax_source__submitted_without_scale
+msgid "Submitted without scale"
+msgstr "Soumis sans barème"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_send__subtype_id
+msgid "Subtype"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.ui.menu,name:d4e_ch_payroll.suiss_files_menu
+msgid "Swiss files"
+msgstr "Fichiers Suisse"
+
+#. module: d4e_ch_payroll
+#: model:ir.model,name:d4e_ch_payroll.model_report_d4e_ch_payroll_report_salary_certificate_template
+msgid "Switzerland salary certificate report"
+msgstr "Suisse rapport Certificat de salaire"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__canton__tg
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__canton__tg
+msgid "TG"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__canton__it
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__canton__it
+msgid "TI"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_contract__tabelle
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_contract_history__tabelle
+msgid "Tabelle"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model,name:d4e_ch_payroll.model_cumulative_salary
+msgid "Table to save salary per year and perception scale"
+msgstr ""
+"Tableau pour enregistrer le salaire par an et par Barème de perception"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_contract__tax_rate
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_contract_history__tax_rate
+msgid "Tax Rate"
+msgstr "Taux d'imposition"
+
+#. module: d4e_ch_payroll
+#: model:ir.actions.act_window,name:d4e_ch_payroll.tax_rate_wizard_action
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_tax_rate_import__file
+msgid "Tax Rate File"
+msgstr "fichier de Bareme impot à la source"
+
+#. module: d4e_ch_payroll
+#: code:addons/d4e_ch_payroll/wizard/tax_rate_import.py:0
+#: model:ir.actions.act_window,name:d4e_ch_payroll.tax_rate_action
+#, python-format
+msgid "Tax Rate List"
+msgstr "Bareme de l'Impot à la source"
+
+#. module: d4e_ch_payroll
+#: model:ir.ui.menu,name:d4e_ch_payroll.tax_rate_menu
+msgid "Tax Rates"
+msgstr "Impôt à la source"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_contract__tax_rate_source
+msgid "Tax rate at source"
+msgstr "Taux d'imposition à la source"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,help:d4e_ch_payroll.field_hr_payslip_line_copy__display_type
+msgid "Technical field for UX purpose."
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__res_partner__canton__ti
+msgid "Tessin"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,help:d4e_ch_payroll.field_hr_payslip_line_copy__code
+#: model:ir.model.fields,help:d4e_ch_payroll.field_hr_payslip_line_copy__code_copy
+msgid ""
+"The code of salary rules can be used as reference in computation of other "
+"rules. In that case, it is case sensitive."
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,help:d4e_ch_payroll.field_hr_payslip_line_copy__amount_select
+msgid "The computation method for the rule amount."
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: code:addons/d4e_ch_payroll/models/hr_payslip_send.py:0
+#, python-format
+msgid ""
+"The following payslip(s) will not be sent by email, because the customers "
+"don't have email address."
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,help:d4e_ch_payroll.field_hr_payslip_send__auto_delete
+msgid ""
+"This option permanently removes any track of email after it's been sent, "
+"including from the Technical menu in the Settings, in order to preserve "
+"storage space of your Odoo database."
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.constraint,message:d4e_ch_payroll.constraint_npa_commune_ofs__unique_NPA
+msgid "This record already exist !"
+msgstr "Ce record existe déjà !"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__res_partner__canton__tg
+msgid "Thurgovie"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip__date_to
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_line_copy__date_to
+msgid "To"
+msgstr "Vers"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_base_calcul__total
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_line_copy__total
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_line_copy__total_copy
+msgid "Total"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.d4e_view_hr_payslip_form
+msgid "Total Amount"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.d4e_view_hr_payslip_form
+msgid "Total Working Days"
+msgstr "Total jours travaillés"
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid "Transport gratuit entre le domicile et le lieu de travail"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid "Trasporto gratuito dal domicilio al luogo di lavoro"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__church_tax__true
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__church_tax__true
+msgid "True"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_send__message_type
+msgid "Type"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_funds__type_of_crate
+msgid "Type of crate"
+msgstr "Type de caisse"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__canton__ur
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__canton__ur
+msgid "UR"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid "Unentgeltiche Beförderung zwischen Wohn- du Arbeitsort"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payroll_structure__unpaid_work_entry_type_ids
+msgid "Unpaid Work Entry Type"
+msgstr "Type de prestation non rémunérée"
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid ""
+"Unregelmässige Leistungen - Prestations non périodiques - Prestazioni "
+"aperiodiche"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__res_partner__canton__ur
+msgid "Uri"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_send__use_active_domain
+msgid "Use active domain"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_send__template_id
+msgid "Use template"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,help:d4e_ch_payroll.field_hr_payslip_line_copy__sequence_copy
+msgid "Use to arrange calculation sequence"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,help:d4e_ch_payroll.field_hr_payslip_line__appears_on_payslip
+#: model:ir.model.fields,help:d4e_ch_payroll.field_hr_payslip_line_copy__appears_on_payslip
+msgid "Used to display the salary rule on payslip."
+msgstr "Utilisé pour montrer la règle de salaire sur la fiche de paie."
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__canton__vd
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__canton__vd
+msgid "VD"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__canton__vs
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__canton__vs
+msgid "VS"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__res_partner__canton__vs
+msgid "Valais"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_rule_parameter__category__variable
+msgid "Variable data according to contract"
+msgstr "Données variables selon contrat"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_rule_parameter__category__various
+msgid "Various"
+msgstr "Divers"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_contract__various1
+msgid "Various 1"
+msgstr "Divers 1"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_contract__various2
+msgid "Various 2"
+msgstr "Divers 2"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__res_partner__canton__vd
+msgid "Vaud"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_line__verification
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_line_copy__verification
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_salary_rule__verification
+msgid "Verification"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip__wage_type
+msgid "Wage Type"
+msgstr "Type de salaire"
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid "Weitere Gehaltsnebenleistungen"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,help:d4e_ch_payroll.field_hr_payslip_send__is_log
+msgid "Whether the message is an internal note (comment mode only)"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_contract__withholding_prosecution_office
+msgid "Withholding for prosecution office"
+msgstr "Retenue pour office des poursuites"
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.d4e_inherit_hr_contract_view_form
+msgid "Withholding tax"
+msgstr "Impôt à la source"
+
+#. module: d4e_ch_payroll
+#: model:ir.model,name:d4e_ch_payroll.model_salary_certificate
+msgid "Wizard to define data for the Salary Certificate Report"
+msgstr "Wizard pour définir les données du rapport de certificat de salaire"
+
+#. module: d4e_ch_payroll
+#: model:ir.model,name:d4e_ch_payroll.model_tax_rate_import
+msgid "Wizard to import tax rate file"
+msgstr "Wizard pour importer le fichier barèmes de l'impôt à la source"
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.d4e_view_hr_payslip_form
+msgid "Worked Days"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: code:addons/d4e_ch_payroll/models/hr_salary_rule.py:0
+#, python-format
+msgid "Wrong python condition defined for salary rule %s (%s)."
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: code:addons/d4e_ch_payroll/models/hr_salary_rule.py:0
+#, python-format
+msgid "Wrong range condition defined for salary rule %s (%s)."
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_salary_certificate__certif_year
+msgid "Year"
+msgstr "Année"
+
+#. module: d4e_ch_payroll
+#: code:addons/d4e_ch_payroll/models/hr_payslip.py:0
+#, python-format
+msgid "You can't validate a cancelled payslip."
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__laa_contribution__z0-not_subject_to_laa
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__laa_contribution__z0-not_subject_to_laa
+msgid "Z0-Not subject to LAA"
+msgstr "Z0-Non soumis LAA"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__laa_contribution__z1-_aap_and_aanp_insured_-_with_aanp_deductions
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__laa_contribution__z1-_aap_and_aanp_insured_-_with_aanp_deductions
+msgid "Z1- AAP and AANP insured - with AANP deductions"
+msgstr "Z1 - AAP et AANP assurés - avec déductions AANP"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__laa_contribution__z2_-_aap_and_aanp_insured_-_without_aanp_deduction
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__laa_contribution__z2_-_aap_and_aanp_insured_-_without_aanp_deduction
+msgid "Z2 - AAP and AANP insured - without AANP deduction"
+msgstr "Z2 - Assurés AAP et AANP - sans déduction AANP"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__laa_contribution__z3_-_aap_insured_only_-_without_aanp_deduction
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__laa_contribution__z3_-_aap_insured_only_-_without_aanp_deduction
+msgid "Z3 - AAP insured only - without AANP deduction"
+msgstr "Z3 - AAP assuré uniquement - sans déduction AANP"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__canton__zg
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__canton__zg
+msgid "ZG"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract__canton__zh
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__hr_contract_history__canton__zh
+msgid "ZH"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.d4e_inherit_res_partner_view_form_private
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.d4e_inherit_view_partner_form
+msgid "ZIP"
+msgstr "Code postal"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_funds__zip_Location
+msgid "Zip Location"
+msgstr "NPA / Localité"
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__res_partner__canton__zg
+msgid "Zoug"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields.selection,name:d4e_ch_payroll.selection__res_partner__canton__zh
+msgid "Zurich"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.d4e_inherit_hr_contract_view_form
+msgid "accident insurance"
+msgstr "Assurances accidents"
+
+#. module: d4e_ch_payroll
+#: model:ir.model,name:d4e_ch_payroll.model_base_calcul
+msgid "base.calcul"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.d4e_inherit_view_employee_form
+msgid "bases de calcul"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid "bis - au - al"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_line_copy__code_copy
+msgid "code"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model,name:d4e_ch_payroll.model_codes_ijm
+msgid "codes.ijm"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model,name:d4e_ch_payroll.model_codes_laac
+msgid "codes.laac"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model,name:d4e_ch_payroll.model_codes_lpp
+msgid "codes.lpp"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid "compresi indirizzo e numero di telefono esatti del datore di lavoro"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_base_calcul__employee_id
+msgid "employee"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_employee__employee_id_month_ids
+msgid "employee_id_month"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model,name:d4e_ch_payroll.model_hr_contract_history
+msgid "hr.contract.history"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model,name:d4e_ch_payroll.model_hr_funds
+msgid "hr.funds"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid "inkl. genauer Anschrift und telefonnummer des Arbeitgebers"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_line_copy__name_copy
+msgid "name"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_send__payslip_without_email
+msgid "payslip(s) that will not be sent"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_send__payslip_ids
+msgid "payslips"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid "qui ne concerne pas les chiffres 2 à 7 ci-dessous"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_base_calcul__salary_rule_id
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.d4e_view_hr_payslip_form
+msgid "salary"
+msgstr "Salaires"
+
+#. module: d4e_ch_payroll
+#: model:ir.model,name:d4e_ch_payroll.model_salary_rule_wizard
+msgid "salary.rule.wizard"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid "se non da indicare sotto cifre da 2 a 7 più sotto"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_line_copy__sequence_copy
+msgid "sequence"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid "soweit nicht unter Ziffer 2-7 aufzuführen"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_payslip_worked_days__hourly_rate
+msgid "taux horaire"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_contract__validity_date
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_hr_contract_history__validity_date
+msgid "validity date"
+msgstr "Date de validité"
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid "von - du - dal"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.report_salary_certificate_template
+msgid "y.c. adresse et numéro de téléphone exacts de l'employeur"
+msgstr ""
+
+#. module: d4e_ch_payroll
+#: model:ir.model.fields,field_description:d4e_ch_payroll.field_cumulative_salary__year
+msgid "year"
+msgstr "année"
+
+#. module: d4e_ch_payroll
+#: model_terms:ir.ui.view,arch_db:d4e_ch_payroll.hr_payslip_run_view_form
+msgid "Reset to draft"
+msgstr "réinitialiser au brouillon"

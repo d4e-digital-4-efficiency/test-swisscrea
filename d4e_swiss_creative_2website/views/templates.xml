@@ -1,0 +1,1784 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="assets_frontend" inherit_id="website.assets_frontend">
+        <xpath expr="script[last()]" position="after">
+            <script type="text/javascript" src="/d4e_swiss_creative_2website/static/src/js/products_advanced_filtre.js"></script>
+            <link rel="stylesheet" type="text/scss" href="/d4e_swiss_creative_2website/static/src/css/advanced_filtres.css"/>
+            <link rel="stylesheet" type="text/scss" href="/d4e_swiss_creative_2website/static/src/scss/advanced_filtres.scss"/>
+        </xpath>
+    </template>
+
+
+    <template id="portal.pager" name="Pager">
+        <ul t-if="pager['page_count'] &gt; 1" t-attf-class="#{ classname or '' } pagination m-0 #{_classes}" t-att-style="style or None">
+            <li t-attf-class="page-item #{'disabled' if pager['page']['num'] &lt; 5 else ''}">
+                 <t t-set="x" t-value="pager['page']['num'] - 5 if pager['page']['num'] &gt; 5 else 1"/>
+                <a t-att-href=" pager['pages'][x-1]['url']" t-attf-class="page-link #{extraLinkClass}" style="padding: 5px 10px;"><i class="fa fa-angle-double-left"></i></a>
+            </li>
+            <li t-attf-class="page-item #{'disabled' if pager['page']['num'] == 1 else ''}">
+                <a t-att-href=" pager['page_previous']['url'] if pager['page']['num'] != 1 else None" t-attf-class="page-link #{extraLinkClass}" style="padding: 5px 10px;"><i class="fa fa-angle-left"></i></a>
+            </li>
+
+            <li t-attf-class="page-item active" style="font-size: 20px;padding-top: 10px;color: black;">
+                <t>Page <b><t t-esc="pager['page']['num']"/></b> sur <b><t t-esc="pager['page_count']"/></b></t>
+            </li>
+            <li t-attf-class="page-item #{'disabled' if pager['page']['num'] == pager['page_count'] else ''}">
+                <a t-att-href="pager['page_next']['url'] if pager['page']['num'] != pager['page_count'] else None" t-attf-class="page-link #{extraLinkClass}" style="padding: 5px 10px;"><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li t-attf-class="page-item #{'disabled' if pager['page']['num'] == pager['page_count'] else ''}">
+                <t t-set="x" t-value="pager['page']['num'] + 5 if pager['page']['num'] &lt; pager['page_count']- 5 else pager['page_count']"/>
+                <a t-att-href=" pager['pages'][x-1]['url']" t-attf-class="page-link #{extraLinkClass}" style="padding: 5px 10px;"><i class="fa fa-angle-double-right"></i></a>
+            </li>
+        </ul>
+    </template>
+
+    <template id="website_sale.products_item" name="Products item">
+        <t t-set="product_href" t-value="keep(product.website_url, page=(pager['page']['num'] if pager['page']['num']&gt;1 else None))" />
+
+        <t t-set="combination_info" t-value="product._get_combination_info(only_template=True, add_qty=add_qty or 1, pricelist=pricelist)"/>
+
+
+            <div class="row">
+                <div class="col-md-6 col-xl-6" style="padding:0;padding-left: 9px;">
+                    <a t-att-href="product_href" class="d-block h-100" itemprop="url">
+                        <t t-set="image_holder" t-value="product._get_image_holder()"/>
+                        <span t-field="image_holder.image_1920"
+                            t-options="{'widget': 'image', 'preview_image': 'image_1024' if product_image_big else 'image_256'}"
+                            class="d-flex h-100 justify-content-center align-items-center"/>
+                    </a>
+                </div>
+                <div class="col-md-6 col-xl-6" style="padding:0;padding-right: 9px;position: relative;">
+                    <div>
+                        <h6 class="o_wsale_products_item_title">
+                            <b><a itemprop="name" t-att-href="product_href" t-att-content="product.name" t-field="product.name" style="color: black !important;font-size: 1.15rem;"/></b>
+                        </h6>
+                        <t t-if="product.get_producteur()">
+                            <a t-att-href="'/producteurs/%s' % slug(product.get_producteur())" style="color: black !important;"><t t-esc="product.get_producteur().name"/></a>
+                        </t>
+                        <t t-if="product.aoc">
+                           <div><b><t t-esc="product.aoc"/></b></div>
+                        </t>
+                        <t t-if="product.vin_type">
+                           <div><t t-esc="product.vin_type"/></div>
+                        </t>
+                        <t t-if="product.millesime">
+                           <div><t t-esc="product.millesime"/></div>
+                        </t>
+                    </div>
+                    <div style="position: absolute;bottom: 0;width: 95%;">
+                        <form t-if="product._is_add_to_cart_possible()" action="/shop/cart/update" method="POST">
+                            <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()" />
+                            <div class="js_product js_main_product">
+                                <t t-placeholder="select">
+                                    <input type="hidden" class="product_template_id" name="product_template_id" t-att-value="product.id" />
+                                    <t t-if="combination" t-call="sale.variants">
+                                        <t t-set="ul_class" t-value="'flex-column'" />
+                                        <t t-set="parent_combination" t-value="None" />
+                                    </t>
+                                    <t t-else="">
+                                        <ul class="d-none js_add_cart_variants" t-att-data-attribute_exclusions="{'exclusions: []'}"/>
+                                    </t>
+                                </t>
+                                <div itemprop="offers" itemscope="itemscope" itemtype="http://schema.org/Offer" class="product_price mt16">
+                                  <div class="oe_price_h4 css_editable_mode_hidden" style="font-size: 1em;">
+                                      <span t-attf-class="text-danger oe_default_price {{'' if combination_info['has_discounted_price'] else 'd-none'}}" style="text-decoration: line-through; white-space: nowrap;"
+                                          t-esc="combination_info['list_price']" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}"
+                                      />
+                                      <b class="oe_price" style="white-space: nowrap;" t-esc="combination_info['price']" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}"/>/<b class="oe_price" style="white-space: nowrap;font-size: 8px;" t-esc="product.uom_id.name"/>
+                                      <span itemprop="price" style="display:none;" t-esc="combination_info['price']"/>
+                                      <span itemprop="priceCurrency" style="display:none;" t-esc="website.currency_id.name"/>
+                                  </div>
+                                  <div class="css_non_editable_mode_hidden decimal_precision" t-att-data-precision="str(website.currency_id.decimal_places)" style="font-size: 1.2em;">
+                                    <span t-field="product.list_price"
+                                        t-options='{
+                                           "widget": "monetary",
+                                           "display_currency": product.currency_id,
+                                       }'/>/<t t-esc="product.uom_id.name"/>
+                                  </div>
+                                </div>
+                                <t t-if="product.contenance">
+                                   <div><t t-esc="product.contenance"/></div>
+                                </t>
+                                    <t t-if="product.qty_available > 0"><div style="color: green;"><span t-field="product.qty_available" t-options='{"widget": "float", "precision":0}'/> En stock </div></t>
+                                    <t t-else=""><div style="color: red;"><span t-field="product.qty_available" t-options='{"widget": "float", "precision":0}'/> En stock </div></t>
+
+                                <div style="display: flex;height: 30px;">
+                                    <p t-if="True" class="css_not_available_msg alert alert-warning">This combination does not exist.</p>
+                                    <div class="css_quantity input-group" contenteditable="false">
+                                        <div class="input-group-prepend">
+                                            <a t-attf-href="#" class="btn btn-secondary js_add_cart_json" aria-label="Remove one" title="Remove one" style="font-size: 10px;padding: 8px;background-color: white;">
+                                                <i class="fa fa-minus" style="color:black"></i>
+                                            </a>
+                                        </div>
+                                        <input type="text" class="form-control quantity" data-min="1" name="add_qty" t-att-value="add_qty or 1" style="width: 25px;height: 30px;color: black;border-bottom: 1px solid;border-top: 1px solid;"/>
+                                        <div class="input-group-append">
+                                            <a t-attf-href="#" class="btn btn-secondary float_left js_add_cart_json" aria-label="Add one" title="Add one" style="font-size: 10px;padding: 8px;background-color: white;">
+                                                <i class="fa fa-plus" style="color:black"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <a role="button" id="add_to_cart" class="btn btn-primary btn-lg mt16 js_check_product a-submit d-block d-sm-inline-block" href="#" style="margin-top: 0px !important;height: 30px;width: 50%;margin-left: 10%;padding:0;border-radius: 0;background-color: black;"><i class="fa fa-shopping-cart" style="color: white;"/></a>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="o_wsale_product_btn" style="display: none;"/>
+                    </div>
+                </div>
+
+            </div>
+        <!--</form>-->
+    </template>
+
+    <template id="website_cart_summary" inherit_id="website_sale.cart_lines">
+        <xpath expr="//table[@id='cart_products']//th[hasclass('td-qty')]" position="after">
+            <th class="border-top-0 td-qty text-center" width="25%" >Quantity Available</th>
+        </xpath>
+        <xpath expr="//table[@id='cart_products']//td[hasclass('td-qty')]" position="after">
+            <td class="text-center td-qty" width="25%" >
+                <div t-esc="line.product_id.qty_available"/>
+            </td>
+        </xpath>
+
+  </template>
+
+    <template id="products_advanced_filtre" name="Products advanced filtre" inherit_id="website_sale.products">
+        <xpath expr="//div[@id='products_grid_before']" position="replace">
+            <div t-if="enable_left_column" id="products_grid_before" class="col-lg-3 advanced_filtres">
+                <div t-if="len(filters)>0" class="accordion" t-attf-id="accordion_app_filtres" style="border-bottom: 1px solid #bbb;">
+                  <div class="card">
+                    <!--<div class="card-header" id="headingOne">-->
+                    <div class="card-header" t-attf-id="heading_app_filtres">
+                      <h2 class="mb-0">
+                        <a role="button" class="text-left btn btn-link" data-toggle="collapse" t-attf-data-target="#collapse_app_filtres" aria-expanded="false" t-attf-aria-controls="collapse_app_filtres">
+                          Filtres appliqués
+                        </a>
+                      </h2>
+                    </div>
+
+                    <div t-attf-id="collapse_app_filtres" t-attf-class="collapse #{'show' if len(filters)>0 else ''}" t-attf-aria-labelledby="heading_app_filtres" t-attf-aria-data-parent="accordion_app_filtres">
+                      <div class="card-body">
+                        <t t-foreach="adv_filtre" t-as="elem">
+                           <t t-if="filters.get(elem)">
+                               <div class="form-check appfiltre">
+                                    <input type="checkbox" class="form-check-input filled-in elemprappfiltre" t-attf-name="#{elem}" t-attf-id="app_#{elem}" checked="'checked'"/>
+                                    <label class="form-check-label small card-link-secondary" t-attf-for="app_#{elem}">
+                                        <t t-if="elem=='style'">
+                                          Style de vin
+                                        </t>
+                                        <t t-elif="elem=='vin_type'">
+                                          Type de vin
+                                        </t>
+                                        <t t-elif="elem=='contenance'">
+                                            <t t-esc="filters[elem][0].title()"/>
+                                        </t>
+                                        <t t-else="">
+                                          <t t-esc="elem.title()"/>
+                                        </t>
+                                    </label>
+                                    <t t-if="elem !='contenance'">
+                                    <t t-foreach="elem_value" t-as="dt">
+                                        <t t-if="(dt in filters[elem])">
+                                            <div style="margin-left: 15px;">
+                                                <input type="checkbox" class="form-check-input filled-in elemappfiltre" t-attf-parent="app_#{elem}" t-attf-name="#{dt}" t-attf-id="app_#{elem}_#{dt}" checked="'checked'"/>
+                                                <label class="form-check-label small text-uppercase card-link-secondary" t-attf-for="app_#{elem}_#{dt}">
+                                                    <t t-esc="dt"/>
+                                                </label>
+                                            </div>
+                                        </t>
+                                    </t>
+                                    </t>
+                               </div>
+                           </t>
+                        </t><a href="/shop" class="btn btn-link">Effacer tous les filtres</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion" t-attf-id="accordion_price" style="border-bottom: 1px solid #bbb;">
+                  <div class="card">
+                    <!--<div class="card-header" id="headingOne">-->
+                    <div class="card-header" t-attf-id="heading_price">
+                      <h2 class="mb-0">
+                        <a role="button" class="text-left btn btn-link" data-toggle="collapse" t-attf-data-target="#collapse_price" aria-expanded="false" t-attf-aria-controls="collapse_price">
+                          Prix
+                        </a>
+                      </h2>
+                    </div>
+
+                    <div t-attf-id="collapse_price" t-attf-class="collapse #{'show' if len(dom_price)>0 else ''}" t-attf-aria-labelledby="heading_price" t-attf-aria-data-parent="accordion_price">
+                      <div class="card-body">
+                        <!--<div class="container price-slider">-->
+                        <div class="price-slider">
+                            <div class="row">
+                                <div class="col-xs-6 caption" style="width: 50%;">
+                                  <span id="slider-range-value1">
+                                      <t t-if="len(dom_price)>0"><t t-esc="dom_price[0]" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}"/></t>
+                                      <t t-else=""><t t-esc="min_max_prices[0]" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}"/></t>
+                                  </span>
+                                </div>
+                                <div class="col-xs-6 caption" style="width: 50%;">
+                                  <span id="slider-range-value2">
+                                      <t t-if="len(dom_price)>0"><t t-esc="dom_price[-1]" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}"/></t>
+                                      <t t-else=""><t t-esc="min_max_prices[1]" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}"/></t>
+                                  </span>
+                                </div>
+                          </div>
+                          <input t-att-value="dom_price[0] if len(dom_price)>0 else min_max_prices[0]" t-att-min="min_max_prices[0]" t-att-max="min_max_prices[1]" type="range" step="0.5"/> <!--step="500"-->
+                          <input t-att-value="dom_price[-1] if len(dom_price)>0 else min_max_prices[1]" t-att-min="min_max_prices[0]" t-att-max="min_max_prices[1]" type="range" step="0.5"/> <!--step="500"-->
+                          <!--<svg width="100%" height="24">-->
+                            <!--<line x1="4" y1="0" x2="300" y2="0" stroke="#212121" stroke-width="12" stroke-dasharray="1 28"></line>-->
+                          <!--</svg>-->
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <t t-foreach="adv_filtre" t-as="elem">
+                    <div class="accordion" t-attf-id="accordion_#{elem}" style="border-bottom: 1px solid #bbb;">
+                      <div class="card">
+                        <div class="card-header" t-attf-id="heading_#{elem}">
+                          <h2 class="mb-0">
+                            <a role="button" class="text-left btn btn-link" data-toggle="collapse" t-attf-data-target="#collapse_#{elem}" aria-expanded="false" t-attf-aria-controls="collapse_#{elem}">
+                              <t t-if="elem=='style'">
+                                Style de vin
+                              </t>
+                              <t t-elif="elem=='vin_type'">
+                                Type de vin
+                              </t>
+                              <t t-else="">
+                                <t t-esc="elem.title()"/>
+                              </t>
+                            </a>
+                          </h2>
+                        </div>
+
+                        <div t-attf-id="collapse_#{elem}" t-attf-class="collapse #{'show' if filters.get(elem) else ''}" t-attf-aria-labelledby="heading_#{elem}" t-attf-aria-data-parent="accordion_#{elem}">
+                          <div class="card-body">
+                              <t t-if="elem == 'contenance'">
+                                  <div class="contenance_select">
+                                <select class="custom-select" name="contenance" t-attf-id="#{elem}">
+                                    <option  t-att-value="''" t-att-selected="undefined if (filters.get(elem)) else 'selected'"></option>
+                                    <t t-foreach="elem_value" t-as="key">
+                                        <option t-att-value="key" t-att-selected="'selected' if (filters.get(elem) and (filters[elem][0] == key)) else undefined">
+                                            <t t-esc="key"/>
+                                        </option>
+                                    </t>
+                                </select>
+                                  </div>
+                              </t>
+                            <t t-set="x" t-value="0"/>
+                            <t t-if="elem in ['cepage', 'style', 'accord']">
+                                <div role="search" class="input-group search_filtre" style="margin-bottom: 10px;">
+                                    <input type="search" t-attf-name="#{elem}" class="search-query form-control oe_search_box search_filtre_input" placeholder="Recherche…" value="" autocomplete="off"/>
+                                    <div class="input-group-append">
+                                        <button type="submit" class="btn btn-primary oe_search_button search_filtre_btn" title="Rechercher">
+                                            <i class="fa fa-search"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </t>
+                            <t t-foreach="elem_value" t-as="dt">
+                                <t t-if="elem != 'contenance'">
+                                    <t t-if="x &lt; 7">
+                                        <div class="form-check checkfiltre">
+                                            <t t-set="val" t-value="None"/>
+                                            <t t-if="filters.get(elem) and (dt in filters[elem])">
+                                                <t t-set="val" t-value="'checked'"/>
+                                            </t>
+                                            <input type="checkbox" class="form-check-input filled-in elemcheckfiltre" t-attf-parent="#{elem}" t-attf-name="#{dt}" t-attf-id="#{elem}_#{dt}" t-att-checked="val"/>
+                                            <label class="form-check-label small text-uppercase card-link-secondary" t-attf-for="#{elem}_#{dt}">
+                                                <t t-esc="dt"/>
+                                            </label>
+                                        </div>
+                                    </t>
+                                    <t t-if="x == 7">
+                                      <div>
+                                        <a role="button" class="text-left btn btn-link" data-toggle="collapse" t-attf-data-target="##{elem}_block" aria-expanded="false" t-attf-aria-controls="#{elem}_block">
+                                            <b><span class="collapsed">
+                                            + de choix
+                                          </span>
+                                          <span class="expanded">
+                                            - de choix
+                                          </span></b>
+                                        </a>
+                                      </div>
+                                    </t>
+                                    <t t-if="x &gt;= 7">
+                                        <div class="form-check collapse checkfiltre" t-attf-id="#{elem}_block">
+                                            <t t-set="val" t-value="None"/>
+                                            <t t-if="filters.get(elem) and (dt in filters[elem])">
+                                                <t t-set="val" t-value="'checked'"/>
+                                            </t>
+                                            <input type="checkbox" class="form-check-input filled-in elemcheckfiltre" t-attf-parent="#{elem}" t-attf-name="#{dt}" t-attf-id="#{elem}_#{dt}" t-att-checked="val"/>
+                                            <label class="form-check-label small text-uppercase card-link-secondary" t-attf-for="#{elem}_#{dt}">
+                                                <t t-esc="dt"/>
+                                            </label>
+                                        </div>
+                                    </t>
+                                    <t t-set="x" t-value="x+1"/>
+                                </t>
+                            </t>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </t>
+            </div>
+        </xpath>
+        <xpath expr="//t[@t-if='td_product']/td" position="attributes">
+            <attribute name="style" add="border: 1px solid lightgray;" separator=" "/>
+            <attribute name="t-attf-class" add="product_hover" separator=" "/>
+        </xpath>
+        <xpath expr="//div[hasclass('oe_website_sale')]" position="before">
+            <section class="s_wsale_products_searchbar bg-200 pt48 pb48 o_colored_level" data-vxml="001" data-snippet="s_products_searchbar" data-name="Products Search">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-lg-8 offset-lg-2 o_colored_level" style="text-align: center;color: white;">
+                      <h2 class="o_default_snippet_text" style="font-weight: 600;">Bienvenue au Shop en ligne</h2>
+                      <p class="o_default_snippet_text">Vous cherchez un vin en particulier ?</p>
+                      <form method="get" data-snippet="s_products_searchbar_input" class="o_wsale_products_searchbar_form o_wait_lazy_js s_wsale_products_searchbar_input" action="/shop">
+                        <div role="search" class="input-group">
+                          <input type="search" name="search" class="search-query form-control oe_search_box" data-limit="5" data-display-description="true" data-display-price="true" data-display-image="true" placeholder="Recherche…" style="border-radius: 0;"/>
+                          <div class="input-group-append">
+                            <button type="submit" class="btn btn-primary oe_search_button" aria-label="Rechercher" title="Rechercher" style="background-color: white;border: none;border-left: 1px solid red;border-radius: 0;">
+                              <i class="fa fa-search" style="color: red;"/>
+                            </button>
+                          </div>
+                        </div>
+                        <input name="order" type="hidden" class="o_wsale_search_order_by" value=""/>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+            </section>
+        </xpath>
+        <xpath expr="//table[hasclass('table-borderless')]" position="attributes">
+            <attribute name="style" add="border-collapse: separate;border-spacing: 10px;font-size: 12px;" separator=" "/>
+        </xpath>
+
+        <xpath expr="//div[hasclass('py-3')]" position="attributes">
+            <attribute name="class" add="justify-content-end" remove="justify-content-center" separator=" "/>
+        </xpath>
+        <xpath expr="//div[hasclass('products_pager')]" position="replace">
+            <div class="form-inline flex-md-nowrap row" style="border-bottom: 1px solid black;padding: 10px;">
+                <div class="col-md-3 col-xl-2"><h6 style="color: black;margin-bottom: -30px;">Filtres</h6></div>
+                <div class="col-md-9 col-xl-10 form-inline flex-md-nowrap justify-content-end">
+                    <div class="btn-group btn-group-toggle mt-2 ml-md-2 d-none d-sm-inline-flex o_wsale_apply_layout" data-toggle="buttons">
+                        <label t-attf-class="btn btn-secondary #{'active' if layout_mode != 'list' else None} fa fa-th-large o_wsale_apply_grid" title="Grid" style="background-color: black;">
+                            <input type="radio" name="wsale_products_layout" t-att-checked="'checked' if layout_mode != 'list' else None"/>
+                        </label>
+                        <label t-attf-class="btn btn-secondary #{'active' if layout_mode == 'list' else None} fa fa-th-list o_wsale_apply_list" title="List" style="background-color: black;">
+                            <input type="radio" name="wsale_products_layout" t-att-checked="'checked' if layout_mode == 'list' else None"/>
+                        </label>
+                    </div>
+                    <t t-set="list_price_desc_label">Catalog price: High to Low</t>
+                    <t t-set="list_price_asc_label">Catalog price: Low to High</t>
+                    <t t-set="name_asc_label">Name: A to Z</t>
+                    <t t-set="name_desc_label">Name: Z to A</t>
+                    <t t-set="website_sale_sortable" t-value="[
+                        (list_price_desc_label, 'list_price desc'),
+                        (list_price_asc_label, 'list_price asc'),
+                        (name_asc_label, 'name asc'),
+                        (name_desc_label, 'name desc')
+                    ]"/>
+                    <t t-set="website_sale_sortable_current" t-value="[sort for sort in website_sale_sortable if sort[1]==request.params.get('order', '')]"/>
+                    <div class="dropdown mt-2 ml-md-2 dropdown_sorty_by">
+                        <a role="button" href="#" class="dropdown-toggle btn btn-secondary" data-toggle="dropdown" style="background-color: black;color: white;">
+                            <span class="d-none d-lg-inline">
+                                <t t-if='len(website_sale_sortable_current)'>
+                                    Sorting by : <t t-raw='website_sale_sortable_current[0][0]'/>
+                                </t>
+                                <t t-else='1'>
+                                    Sort by
+                                </t>
+                            </span>
+                            <i class="fa fa-sort-amount-asc d-lg-none"/>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" role="menu" style="background-color: black;">
+                            <t t-foreach="website_sale_sortable" t-as="sortby">
+                                <a role="menuitem" rel="noindex,nofollow" t-att-href="keep('/shop', order=sortby[1])" class="dropdown-item"  style="color: white;">
+                                    <span t-raw="sortby[0]"/>
+                                </a>
+                            </t>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </xpath>
+    </template>
+
+    <template id="website_sale.product_quantity" inherit_id="website_sale.product" customize_show="True" name="Select Quantity">
+      <xpath expr="//a[@id='add_to_cart']" position="before">
+        <div class="css_quantity input-group" contenteditable="false">
+            <div class="input-group-prepend">
+                <a t-attf-href="#" class="btn btn-secondary js_add_cart_json" aria-label="Remove one" title="Remove one" style="background-color: white;">
+                    <i class="fa fa-minus" style="color: black;"></i>
+                </a>
+            </div>
+            <input type="text" class="form-control quantity" data-min="1" name="add_qty" t-att-value="add_qty or 1" style="color: black;border-bottom: 1px solid;border-top: 1px solid;"/>
+            <div class="input-group-append">
+                <a t-attf-href="#" class="btn btn-secondary float_left js_add_cart_json" aria-label="Add one" title="Add one" style="background-color: white;">
+                    <i class="fa fa-plus" style="color: black;"></i>
+                </a>
+            </div>
+        </div>
+      </xpath>
+    </template>
+
+    <template id="website_sale.product" name="Product" track="1">
+
+        <t t-set="combination" t-value="product._get_first_possible_combination()"/>
+        <t t-set="combination_info" t-value="product._get_combination_info(combination, add_qty=add_qty or 1, pricelist=pricelist)"/>
+        <t t-set="product_variant" t-value="product.env['product.product'].browse(combination_info['product_id'])"/>
+
+        <t t-call="website.layout">
+            <t t-set="additional_title" t-value="product.name" />
+            <div itemscope="itemscope" itemtype="http://schema.org/Product" id="wrap" class="js_sale">
+                <section t-attf-class="container py-2 oe_website_sale #{'discount' if combination_info['has_discounted_price'] else ''}" id="product_detail" t-att-data-view-track="view_track and '1' or '0'">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item">
+                                    <a t-att-href="keep(category=0)">Products</a>
+                                </li>
+                                <li t-if="category" class="breadcrumb-item">
+                                    <a t-att-href="keep('/shop/category/%s' % slug(category), category=0)" t-field="category.name" />
+                                </li>
+                                <li class="breadcrumb-item active">
+                                    <span t-field="product.name" />
+                                </li>
+                            </ol>
+                        </div>
+                        <div class="col-md-8">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5 col-xl-4">
+                            <t t-call="website_sale.shop_product_carousel"/>
+                        </div>
+                        <div class="col-md-7 col-xl-8" id="product_details">
+                            <b style="font-size: 3em;"><t t-esc="product.name"/></b>
+                            <div>
+                                <t t-if="product.get_producteur()">
+                                    <b style="font-size: 2em;"><t t-esc="product.get_producteur().name"/></b>
+                                    <br></br>
+                                </t>
+                                <div style="margin-top: 20px;margin-bottom: -10px;"><b>
+                                    <t t-if="product.tracking == 'lot' and product.millesime"><span t-esc="product.millesime"/></t>
+                                    <t t-if="product.millesime and product.contenance"> | <span t-esc="product.contenance"/></t>
+                                </b></div>
+                            </div>
+                            <hr/>
+                            <div class="row">
+                                <div class="col-md-6 col-xl-8" style="position: relative;">
+                                    <p style="margin-top: 15px;font-size: 17px;margin-bottom: 25px;"><t t-esc="product.website_desc"/></p>
+                                    <div id="div_add_to_cart" style="margin-bottom: 150px;">
+                                    </div>
+
+                                    <form t-if="product._is_add_to_cart_possible()" action="/shop/cart/update" method="POST" style="position: absolute;bottom: 0;width: 90%;">
+                                        <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()" />
+                                        <div class="js_product js_main_product">
+                                            <t t-placeholder="select">
+                                                <input type="hidden" class="product_id" name="product_id" t-att-value="product_variant.id" />
+                                                <input type="hidden" class="product_template_id" name="product_template_id" t-att-value="product.id" />
+                                                <t t-if="combination" t-call="sale.variants">
+                                                    <t t-set="ul_class" t-value="'flex-column'" />
+                                                    <t t-set="parent_combination" t-value="None" />
+                                                </t>
+                                                <t t-else="">
+                                                    <ul class="d-none js_add_cart_variants" t-att-data-attribute_exclusions="{'exclusions: []'}"/>
+                                                </t>
+                                            </t>
+                                            <t t-call="d4e_swiss_creative_2website.product_price" />
+                                            <div style="display: flex;">
+                                                <p t-if="True" class="css_not_available_msg alert alert-warning">This combination does not exist.</p>
+                                                <a role="button" id="add_to_cart" class="btn btn-primary btn-lg mt16 js_check_product a-submit d-block d-sm-inline-block" href="#" style="margin-top: 0px !important;width: 60%;height: 35px;margin-left: 20%;padding:0;background-color: black;color: white;"><i class="fa fa-shopping-cart" style="color: white;"/> Add to Cart</a>
+                                                <div id="product_option_block" style="display: none;"/>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <p t-elif="not product.active" class="alert alert-warning">This product is no longer available.</p>
+                                    <p t-else="" class="alert alert-warning">This product has no valid combination.</p>
+
+                                </div>
+                                <div class="col-md-6 col-xl-4" style="border-left: 2px solid #8080804a;position: inherit;padding-left: 0px;">
+                                    <div style="margin-bottom: 25px;">
+                                        <img src="/d4e_swiss_creative_2website/static/img/type.svg" alt="icon" style="max-width: 60px;vertical-align: sub;"/>
+                                        <div style="display: inline-block;margin-left: 10px;">
+                                            <span><b>Type de vin</b></span>
+                                            <div>
+                                                <t t-if="product.vin_type"><span t-field="product.vin_type"/></t>
+                                                <t t-else=""><p>Type du vin ici</p></t>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="margin-bottom: 25px;">
+                                        <img src="/d4e_swiss_creative_2website/static/img/cepage.svg" alt="icon" style="max-width: 60px;vertical-align: sub;"/>
+                                        <div style="display: inline-block;margin-left: 5px;">
+                                            <span><b>Cépages</b></span>
+                                            <div>
+                                                <t t-if="product.cepage"><span t-field="product.cepage"/></t>
+                                                <t t-else=""><p>Cépages ici</p></t>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="margin-bottom: 25px;">
+                                        <img src="/d4e_swiss_creative_2website/static/img/aoc.svg" alt="icon" style="max-width: 60px;vertical-align: sub;"/>
+                                        <div style="display: inline-block;margin-left: 5px;">
+                                            <span><b>AOC</b></span>
+                                            <div>
+                                                <t t-if="product.aoc"><span t-field="product.aoc"/></t>
+                                                <t t-else=""><p>AOC ici</p></t>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="margin-bottom: 25px;">
+                                        <img src="/d4e_swiss_creative_2website/static/img/style.svg" alt="icon" style="max-width: 60px;vertical-align: sub;"/>
+                                        <div style="display: inline-block;margin-left: 5px;">
+                                            <span><b>Style de Vin</b></span>
+                                            <t t-if="product.style_ids">
+                                                <t t-foreach="product.style_ids" t-as="style">
+                                                    <div><t t-esc="style.name"/></div>
+                                                </t>
+                                            </t>
+                                            <t t-else=""><p>Style de Vin ici</p></t>
+                                        </div>
+                                    </div>
+                                    <div style="margin-bottom: 25px;">
+                                        <img src="/d4e_swiss_creative_2website/static/img/accords.svg" alt="icon" style="max-width: 60px;vertical-align: sub;"/>
+                                        <div style="display: inline-block;margin-left: 5px;">
+                                            <span><b>Accords</b></span>
+                                            <t t-if="product.accord_ids">
+                                                <t t-foreach="product.accord_ids" t-as="accord">
+                                                    <div><t t-esc="accord.name"/></div>
+                                                </t>
+                                            </t>
+                                            <t t-else=""><p>Accords possibles ici</p></t>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="s_text_image pt32 o_colored_level pb0" data-snippet="s_image_text" data-name="Image - Text" style="background-color: #f7f7f7;margin-top: 50px;margin-bottom: 20px;">
+                    <t t-set="producteur" t-value="product.get_producteur()"/>
+                <div class="container">
+                    <h2 style="text-align: center; ">Le producteur<br/></h2>
+                  <div class="row align-items-center">
+                    <div class="col-lg-3 pt16 pb16 o_colored_level">
+                        <img t-if="producteur.web_image"  t-att-src="image_data_uri(producteur.web_image)" class="img img-fluid mx-auto" alt=""
+                             loading="lazy" style="text-align: left;width: 75%;" title="producteur.name"
+                             aria-describedby="tooltip334316"/>
+                        <img class="card-img-top" t-if="not producteur.web_image" src="/d4e_swiss_creative_2website/static/img/no_image.png" alt="Producteur Image" loading="lazy" style="text-align: left;width: 75%;"/>
+                    </div>
+                    <div class="col-lg-7 pt16 pb16 o_colored_level" style="padding-left: 0px;">
+                      <h4 class="o_default_snippet_text"><b><t t-esc="producteur.name"/></b></h4>
+                      <p class="o_default_snippet_text" style="overflow: hidden;text-overflow: ellipsis;-webkit-box-orient: vertical;-webkit-line-clamp: 5;display: -webkit-box;">
+                          <t t-esc="producteur.web_desc"/>
+                      </p>
+                    </div>
+                    <div class="col-lg-2 pt16 pb16 o_colored_level" style="margin-bottom: -100px;">
+                      <a t-att-href="'/producteurs/%s' % slug(producteur)" class="btn btn-primary" data-original-title="" title="" aria-describedby="tooltip673839" style="background-color: white;color: black;font-weight: bold;">En Savoir plus</a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+                <t t-set="cant_frs_prods" t-value="product.get_similar_products()" />
+                <t t-if="cant_frs_prods">
+                  <section class="s_title o_colored_level pb0 pt32" data-vcss="001" data-snippet="s_title" style="" data-name="Titre_section">
+                    <div class="s_allow_columns container">
+                      <h2 style="text-align: center; ">Produits similaires<br/></h2>
+                    </div>
+                  </section>
+                  <section class="s_dynamic_snippet_products s_dynamic pt24 pb24 o_colored_level d-none" data-name="Dynamic Products" data-number-of-elements-small-devices="1" data-carousel-interval="5000">
+                    <t t-set="x" t-value="0"/>
+                    <!--Carousel Wrapper-->
+                      <div id="multi-item-example" class="carousel slide carousel-multi-item container" data-ride="carousel">
+
+                        <!--Controls-->
+                        <div class="controls-top text-center">
+                          <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fa fa-chevron-left"/></a>
+                          <a class="btn-floating" href="#multi-item-example" data-slide="next"><i class="fa fa-chevron-right"/></a>
+                        </div>
+                        <!--/.Controls-->
+
+                        <!--Slides-->
+                        <div class="carousel-inner" role="listbox">
+
+                            <t t-foreach="cant_frs_prods" t-as="tr_cant_frs_prods">
+                            <t t-set="x" t-value="x+1"/>
+                          <!--First slide-->
+                          <div t-attf-class="carousel-item #{x == 1 and 'active' or None}">
+
+                            <div class="row">
+                                <t t-foreach="tr_cant_frs_prods" t-as="cant_frs_prod">
+                                <t t-set="prod" t-value="cant_frs_prod['prod']"/>
+                              <div class="col-md-4">
+                                <div class="product_hover" style="min-height: 350px;padding: 5% 0%;border: 1px solid lightgray;">
+                                    <div class="row" style="min-height: inherit;">
+                                        <t t-set="prod_href" t-value="keep(prod.website_url)" />
+                                        <div class="col-md-6 col-xl-6" style="padding:0;padding-left: 16px;">
+                                            <a t-att-href="prod_href" class="d-block h-100" itemprop="url">
+                                                <t t-set="image_holder" t-value="prod._get_image_holder()"/>
+                                                <span t-field="image_holder.image_1920"
+                                                    t-options="{'widget': 'image', 'preview_image': 'image_1024' if product_image_big else 'image_256'}"
+                                                    class="d-flex h-100 justify-content-center align-items-center"/>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-6 col-xl-6" style="padding:0;padding-right: 16px;position: relative;">
+                                            <div>
+                                                <h6 class="o_wsale_products_item_title">
+                                                    <b><a itemprop="name" t-att-href="prod_href" t-att-content="prod.name" t-field="prod.name" style="color: black !important;font-size: 1.15rem;"/></b>
+                                                </h6>
+                                                <t t-if="prod.get_producteur()">
+                                                    <a t-att-href="'/producteurs/%s' % slug(cant_frs_prod['cant_frs'])" style="color: black !important;"><t t-esc="cant_frs_prod['cant_frs'].name"/></a>
+                                                </t>
+                                                <t t-if="prod.aoc">
+                                                   <div><b><t t-esc="prod.aoc"/></b></div>
+                                                </t>
+                                                <t t-if="prod.vin_type">
+                                                   <div><t t-esc="prod.vin_type"/></div>
+                                                </t>
+                                                <t t-if="prod.millesime">
+                                                   <div><t t-esc="prod.millesime"/></div>
+                                                </t>
+                                            </div>
+                                            <div class="add_to_cart_button oe_website_sale" style="position: absolute;bottom: 0;width: 92%;">
+                                                <form t-if="prod._is_add_to_cart_possible()" action="/shop/cart/update" method="POST">
+                                                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()" />
+                                                    <div class="js_product js_main_product">
+                                                        <t t-placeholder="select">
+                                                            <input type="hidden" class="product_template_id" name="product_template_id" t-att-value="prod.id" />
+                                                            <t t-if="combination" t-call="sale.variants">
+                                                                <t t-set="ul_class" t-value="'flex-column'" />
+                                                                <t t-set="parent_combination" t-value="None" />
+                                                            </t>
+                                                            <t t-else="">
+                                                                <ul class="d-none js_add_cart_variants" t-att-data-attribute_exclusions="{'exclusions: []'}"/>
+                                                            </t>
+                                                        </t>
+                                                        <div itemprop="offers" itemscope="itemscope" itemtype="http://schema.org/Offer" class="product_price mt16">
+                                                          <div class="oe_price_h4 css_editable_mode_hidden" style="font-size: 1em;">
+                                                              <span t-attf-class="text-danger oe_default_price {{'' if combination_info['has_discounted_price'] else 'd-none'}}" style="text-decoration: line-through; white-space: nowrap;"
+                                                                  t-esc="combination_info['list_price']" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}"
+                                                              />
+                                                              <b class="oe_price" style="white-space: nowrap;" t-esc="combination_info['price']" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}"/>/<b class="oe_price" style="white-space: nowrap;font-size: 10px;" t-esc="prod.uom_id.name"/>
+                                                              <span itemprop="price" style="display:none;" t-esc="combination_info['price']"/>
+                                                              <span itemprop="priceCurrency" style="display:none;" t-esc="website.currency_id.name"/>
+                                                          </div>
+                                                          <h6 class="css_non_editable_mode_hidden decimal_precision" t-att-data-precision="str(website.currency_id.decimal_places)">
+                                                            <span t-field="prod.list_price"
+                                                                t-options='{
+                                                                   "widget": "monetary",
+                                                                   "display_currency": prod.currency_id,
+                                                               }'/>/<t t-esc="prod.uom_id.name"/>
+                                                          </h6>
+                                                        </div>
+                                                        <t t-if="prod.contenance">
+                                                           <div><t t-esc="prod.contenance"/></div>
+                                                        </t>
+                                                            <t t-if="prod.qty_available > 0"><div style="color: green;"><span t-field="prod.qty_available" t-options='{"widget": "float", "precision":0}'/> En stock </div></t>
+                                                            <t t-else=""><div style="color: red;"><span t-field="prod.qty_available" t-options='{"widget": "float", "precision":0}'/> En stock </div></t>
+
+                                                        <div style="display: flex;height: 30px;">
+                                                            <p t-if="True" class="css_not_available_msg alert alert-warning">This combination does not exist.</p>
+                                                            <div class="css_quantity input-group" contenteditable="false" style="width: 100%;">
+                                                                <div class="input-group-prepend">
+                                                                    <a t-attf-href="#" class="btn btn-secondary js_add_cart_json" aria-label="Remove one" title="Remove one" style="font-size: 10px;background-color: white;">
+                                                                        <i class="fa fa-minus" style="color: black"></i>
+                                                                    </a>
+                                                                </div>
+                                                                <input type="text" class="form-control quantity" data-min="1" name="add_qty" t-att-value="add_qty or 1" style="height: 30px;color: black;border-bottom: 1px solid;border-top: 1px solid;"/>
+                                                                <div class="input-group-append">
+                                                                    <a t-attf-href="#" class="btn btn-secondary float_left js_add_cart_json" aria-label="Add one" title="Add one" style="font-size: 10px;background-color: white;">
+                                                                        <i class="fa fa-plus" style="color: black"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                            <a role="button" id="add_to_cart" class="btn btn-primary btn-lg mt16 js_check_product a-submit d-block d-sm-inline-block" href="#" style="margin-top: 0px !important;height: 30px;width: 50%;margin-left: 10%;padding:0;border-radius: 0;background-color: black;"><i class="fa fa-shopping-cart" style="color: white;"/></a>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                                <div class="o_wsale_product_btn" style="display: none;"/>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                              </div>
+                                </t>
+                            </div>
+
+                          </div>
+                          <!--/.First slide-->
+                            </t>
+                        </div>
+                        <!--/.Slides-->
+                      </div>
+                      <!--/.Carousel Wrapper-->
+                  </section>
+                </t>
+                  <section class="s_text_block o_colored_level pb0 pt40" data-snippet="s_text_block" data-name="Bouton voir tout" style="">
+                <div class="s_allow_columns container">
+                  <p style="text-align: center; ">
+                    <a href="/shop" class="btn btn-primary" data-original-title="" title="" aria-describedby="tooltip673839">Voir la boutique complète</a>
+                  </p>
+                  <p>
+                    <br/>
+                  </p>
+                </div>
+              </section>
+                <div itemprop="description" t-field="product.website_description" class="oe_structure oe_empty mt16" id="product_full_description" style="display: none;"/>
+                <section class="s_numbers pt24 pb24 o_colored_level undefined" data-snippet="s_numbers" data-name="Numbers" style="background-color: rgb(255, 0, 0) !important;">
+                    <div class="container">
+                      <div class="row">
+                        <div class="text-center pt24 pb24 o_colored_level col-lg-4" style="">
+                          <span class="d-block fa fa-3x fa-credit-card mx-auto text-o-color-4" data-original-title="" title="" aria-describedby="tooltip758938" style=""/>
+                          <br/>
+                          <h6>
+                            <font style="" class="text-o-color-3">Payement en ligne sécurisé</font>
+                          </h6>
+                        </div>
+                        <div class="text-center pt24 pb24 o_colored_level col-lg-4">
+                          <span class="fa fa-3x fa-truck text-o-color-3" data-original-title="" title="" aria-describedby="tooltip981633" style=""/>
+                          <br/>
+                          <h6>
+                            <br/>
+                            <font style="" class="text-o-color-4">Livraison dans toute la Suisse</font>
+                          </h6>
+                        </div>
+                        <div class="text-center pt24 pb24 o_colored_level col-lg-4">
+                          <span class="fa fa-3x fa-star-o text-o-color-3" data-original-title="" title="" aria-describedby="tooltip602953" style=""/>
+                          <br/>
+                          <br/>
+                          <h6>
+                            <font style="" class="text-o-color-4">Prix producteur garanti</font>
+                          </h6>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                  <section class="s_newsletter_block pt32 pb32 o_colored_level undefined o_cc o_cc1" data-snippet="s_newsletter_block" style="" data-name="Bloc Newsletter">
+                    <div class="container">
+                      <div class="row">
+                        <div class="pt24 pb24 o_colored_level offset-lg-3 col-lg-7">
+                          <h2 class="o_default_snippet_text"><span class="fa fa-envelope-o"/>&amp;nbsp;Pour ne rien manquer.</h2>
+                          <p class="o_default_snippet_text">Laissez-nous votre email pour être informé des dernières nouveautés.</p>
+                          <div class="s_newsletter_subscribe_form js_subscribe" data-vxml="001" data-list-id="1" data-snippet="s_newsletter_subscribe_form">
+                            <div class="input-group">
+                              <input type="email" name="email" class="js_subscribe_email form-control" placeholder="Votre adresse email..."/>
+                              <span class="input-group-append">
+                                <a role="button" href="#" class="btn btn-primary js_subscribe_btn o_submit o_default_snippet_text">S'inscrire</a>
+                                <a role="button" href="#" class="btn btn-success js_subscribed_btn d-none o_submit o_default_snippet_text" disabled="disabled">Merci</a>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+            </div>
+        </t>
+    </template>
+
+    <template id="website_sale_stock.website_sale_stock_product" inherit_id="website_sale.product" priority="4">
+        <xpath expr="//div[@id='div_add_to_cart']" position="inside">
+          <t t-if="product.num_article">n° <t t-esc="product.num_article"/> | </t>
+            <t t-if="product.qty_available > 0"><div style="display: contents;color: green;"><span t-field="product.qty_available" t-options='{"widget": "float", "precision":0}'/> En stock </div></t>
+            <t t-else=""><div style="display: contents;color: red;"><span t-field="product.qty_available" t-options='{"widget": "float", "precision":0}'/> En stock </div></t>
+        </xpath>
+    </template>
+
+    <template id="website_sale.product_custom_text" inherit_id="website_sale.product" active="True" customize_show="True" name="Terms and Conditions">
+    </template>
+
+    <template id="product_price">
+      <div itemprop="offers" itemscope="itemscope" itemtype="http://schema.org/Offer" class="product_price mt16">
+          <h6 class="oe_price_h4 css_editable_mode_hidden">
+              <span t-attf-class="text-danger oe_default_price {{'' if combination_info['has_discounted_price'] else 'd-none'}}" style="text-decoration: line-through; white-space: nowrap;"
+                  t-esc="combination_info['list_price']" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}"
+              />
+              <b class="oe_price" style="white-space: nowrap;" t-esc="combination_info['price']" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}"/>/<b class="oe_price" style="white-space: nowrap;" t-esc="product.uom_id.name"/>
+              <span itemprop="price" style="display:none;" t-esc="combination_info['price']"/>
+              <span itemprop="priceCurrency" style="display:none;" t-esc="website.currency_id.name"/>
+          </h6>
+          <h6 class="css_non_editable_mode_hidden decimal_precision" t-att-data-precision="str(website.currency_id.decimal_places)">
+            <span t-field="product.list_price"
+                t-options='{
+                   "widget": "monetary",
+                   "display_currency": product.currency_id,
+               }'/>/<t t-esc="product.uom_id.name"/>
+          </h6>
+      </div>
+    </template>
+
+    <template id="producteurs" name="Producteurs">
+        <t t-call="website.layout">
+            <div id="wrap" class="oe_structure oe_empty">
+                <div class="container oe_website_sale">
+                    <section class="s_three_columns pt32 o_colored_level pb200" data-vcss="001" data-snippet="s_three_columns" data-name="Columns">
+                        <!--<div class="form-inline justify-content-center py-3">-->
+                          <!--<form class="mt8 float-right" role="search" t-attf-action="/producteurs" method="get">-->
+                              <!--<t t-call="website.website_search_box"/>-->
+                          <!--</form>-->
+                          <!--<t t-call="website.pager"/>-->
+                        <!--</div>-->
+                        <div class="container">
+                          <div t-if="producteurs" class="row d-flex align-items-stretch">
+                              <t t-foreach="producteurs" t-as="tr_producteurs">
+                                  <t t-foreach="tr_producteurs" t-as="td_producteurs">
+                                  <!--<t t-set="ncol" t-value="len(tr_producteurs)"/>-->
+                                    <t t-if="td_producteurs">
+                                        <t t-set="producteur_href" t-value="'/producteurs/' + slug(td_producteurs)"/>
+                                        <div class="col-lg-4 s_col_no_bgcolor pt16 pb16" style="max-height: 35rem;">
+                                          <div class="card bg-white h-100 product_hover">
+                                            <!--<a t-att-href="producteur_href" style="max-height: 55%;">-->
+                                            <a t-att-href="producteur_href">
+                                                <img class="card-img-top" t-if="td_producteurs.web_image" t-att-src="image_data_uri(td_producteurs.web_image)" alt="Producteur Image" loading="lazy" style="max-height: 100%;"/>
+                                                <!--<img class="card-img-top" t-if="not td_producteurs.web_image" src="/d4e_swiss_creative_2website/static/img/no_image.png" alt="Producteur Image" loading="lazy" style="max-height: 100%;padding: 25px 60px;"/>-->
+                                                <img class="card-img-top" t-if="not td_producteurs.web_image" src="/d4e_swiss_creative_2website/static/img/no_image.png" alt="Producteur Image" loading="lazy" style="max-height: 100%;"/>
+                                            </a>
+                                            <div class="card-body" style="position: relative;">
+                                              <h4 class="card-title o_default_snippet_text" style="width: max-content;">
+                                                  <b><a itemprop="name" t-att-href="producteur_href" t-att-content="td_producteurs.name" t-field="td_producteurs.name" style="color: black !important;font-size: 1.5rem;"/></b>
+                                              </h4>
+                                              <p class="card-text o_default_snippet_text" style="margin-bottom: 2rem;color:black">
+                                                  <t t-esc="td_producteurs.canton"/><t t-if="td_producteurs.canton and td_producteurs.aoc"> | </t><t t-esc="td_producteurs.aoc"/></p>
+                                              <div style="position: absolute;bottom: 10px;width: 88%;background-color: black;">
+                                                <a role="button" class="btn btn-primary" t-att-href="producteur_href" style="width: 100%;color: white;">
+                                                    <span class="">Les vins du domaine</span>
+                                                </a>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                    </t>
+                                    <td t-else=""/>
+                                  </t>
+                              </t>
+                          </div>
+                          <t t-else="">
+                                <div class="text-center text-muted">
+                                    <t t-if="not search">
+                                        <h3 class="mt8">Aucun producteur défini</h3>
+                                    </t>
+                                    <t t-else="">
+                                        <h3 class="mt8">Aucun résultat</h3>
+                                        <p>Aucun résultat pour "<strong t-esc='search'/>".</p>
+                                    </t>
+                                </div>
+                          </t>
+                        </div>
+                        <div class="form-inline justify-content-end py-3">
+                            <t t-call="website.pager"/>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <template id="producteur" name="Producteur">
+         <t t-call="website.layout">
+            <div id="wrap" class="oe_structure oe_empty">
+            <t t-if="producteur">
+              <section class="s_text_image pt32 o_colored_level pb0" data-snippet="s_image_text" data-name="Image - Text">
+                <div class="container">
+                  <div class="row align-items-center">
+                    <div class="col-lg-4 pt16 pb16 o_colored_level">
+                        <img t-if="producteur.web_image"  t-att-src="image_data_uri(producteur.web_image)" class="img img-fluid mx-auto" alt=""
+                             loading="lazy" style="text-align: left;width: 75%;" title="producteur.name"
+                             aria-describedby="tooltip334316"/>
+                        <img class="card-img-top" t-if="not producteur.web_image" src="/d4e_swiss_creative_2website/static/img/no_image.png" alt="Producteur Image" loading="lazy" style="text-align: left;width: 75%;"/>
+                    </div>
+                    <div class="col-lg-8 pt16 pb16 o_colored_level" style="color: black;">
+                          <b style="font-size: 3em;"><t t-esc="producteur.name"/></b>
+                        <h5 class="o_default_snippet_text"><b style="font-size: 1em;"><t t-esc="producteur.canton"/><t t-if="producteur.canton and producteur.aoc"> | </t><t t-esc="producteur.aoc"/></b></h5>
+                        <h6 class="o_default_snippet_text"><b>
+                            <t t-esc="producteur.street"/>
+                            <t t-esc="producteur.street2"/>
+                            <t t-esc="producteur.city"/>
+                            <t t-esc="producteur.state_id.name"/>
+                            <t t-esc="producteur.zip"/>
+                            <t t-esc="producteur.country_id.name"/>
+                        </b></h6>
+                        <br></br>
+                      <p class="o_default_snippet_text"><t t-esc="producteur.web_desc"/></p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            <t t-if="products">
+              <section class="s_title o_colored_level pt0 pb0" data-vcss="001" data-snippet="s_title" style="" data-name="Titre_section">
+                <div class="s_allow_columns container">
+                  <div class="s_hr text-left pt32 pb40" data-snippet="s_hr" data-name="Separator">
+                    <hr class="w-100 mx-auto" style="border-top-width: 1px; border-top-style: solid;"/>
+                  </div>
+                  <h2 style="text-align: center; ">Les vins du domaine<br/></h2>
+                </div>
+              </section>
+              <section class="s_text_image o_colored_level pb0 pt0" data-snippet="s_image_text" data-name="Image - Text" style="">
+                  <div class="container" style="display: flex;">
+                      <t t-set="product" t-value="products[0]"/>
+                      <t t-set="product_href" t-value="product.website_url" />
+                      <div class="row align-items-center product_hover" style="width: 550px;height: 350px;border: 1px solid #707070;">
+                        <div class="pt16 pb16 o_colored_level col-lg-6 text-center">
+                            <a t-att-href="product_href" class="d-block h-100" itemprop="url">
+                                <t t-set="image_holder" t-value="product._get_image_holder()"/>
+                                <span t-field="image_holder.image_256"
+                                    t-options="{'widget': 'image', 'preview_image': 'image_1024' if product_image_big else 'image_256'}"
+                                    class="d-flex h-100 justify-content-center align-items-center"/>
+                            </a>
+                        </div>
+                        <div class="pt16 pb16 o_colored_level col-lg-6" style="position: relative;height: 100%;color: black;">
+                          <h6><b>
+                              <a itemprop="name" t-att-href="product_href" t-att-content="product.name" t-field="product.name" style="color: black !important;font-size: 1.5rem;"/>
+                          </b></h6>
+                          <h6><t t-esc="producteur.name"/></h6>
+                          <h6><b><t t-esc="product.cepage"/><t t-if="product.cepage and product.vin_type"> | Type </t><t t-esc="product.vin_type"/></b></h6>
+                          <t t-set="combination" t-value="product._get_first_possible_combination()"/>
+                          <t t-set="combination_info" t-value="product._get_combination_info(combination, add_qty=add_qty or 1, pricelist=pricelist)"/>
+                          <t t-set="product_variant" t-value="product.env['product.product'].browse(combination_info['product_id'])"/>
+                            <div class="add_to_cart_button oe_website_sale" style="position: absolute;bottom: 5%;width: 90%;">
+                                <form action="/shop/cart/update" method="POST">
+                                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()" />
+                                    <input type="hidden" class="product_id" name="product_id" t-att-value="product_variant.id" />
+                                    <input type="hidden" class="product_template_id" name="product_template_id" t-att-value="product.id" />
+                                    <t t-call="d4e_swiss_creative_2website.product_price"/>
+                                    <a id="add_to_cart" role="button" class="btn btn-primary btn-block js_check_product o_js_add_to_cart a-submit" href="#" style="background-color: black;color: white;">
+                                        <i class="fa fa-shopping-cart" style="color:white;"></i> Acheter
+                                    </a>
+                                    <div id="product_option_block"/>
+                                </form>
+                            </div>
+                        </div>
+                      </div>
+                      <t t-if="len(products)>1">
+                          <t t-set="product" t-value="products[1]"/>
+                          <t t-set="product_href" t-value="product.website_url" />
+                          <div class="row align-items-center product_hover" style="width: 550px;height: 350px;margin-left: 20px;border: 1px solid #707070;">
+                        <div class="pt16 pb16 o_colored_level col-lg-6 text-center">
+                            <a t-att-href="product_href" class="d-block h-100" itemprop="url">
+                                <t t-set="image_holder" t-value="product._get_image_holder()"/>
+                                <span t-field="image_holder.image_256"
+                                    t-options="{'widget': 'image', 'preview_image': 'image_1024' if product_image_big else 'image_256'}"
+                                    class="d-flex h-100 justify-content-center align-items-center"/>
+                            </a>
+                        </div>
+                        <div class="pt16 pb16 o_colored_level col-lg-6" style="position: relative;height: 100%;color: black;">
+                          <h6><b><a itemprop="name" t-att-href="product_href" t-att-content="product.name" t-field="product.name" style="color: black !important;font-size: 1.5rem;"/></b></h6>
+                          <h6><t t-esc="producteur.name"/></h6>
+                          <h6><b><t t-esc="product.cepage"/><t t-if="product.cepage and product.vin_type"> | Type </t><t t-esc="product.vin_type"/></b></h6>
+                          <t t-set="combination" t-value="product._get_first_possible_combination()"/>
+                          <t t-set="combination_info" t-value="product._get_combination_info(combination, add_qty=add_qty or 1, pricelist=pricelist)"/>
+                          <t t-set="product_variant" t-value="product.env['product.product'].browse(combination_info['product_id'])"/>
+                            <div class="add_to_cart_button oe_website_sale" style="position: absolute;bottom: 5%;width: 90%;">
+                                <form action="/shop/cart/update" method="POST">
+                                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()" />
+                                    <input type="hidden" class="product_id" name="product_id" t-att-value="product_variant.id" />
+                                    <input type="hidden" class="product_template_id" name="product_template_id" t-att-value="product.id" />
+                                    <t t-call="d4e_swiss_creative_2website.product_price"/>
+                                    <a id="add_to_cart" role="button" class="btn btn-primary btn-block js_check_product o_js_add_to_cart a-submit" href="#" style="background-color: black;color: white;">
+                                        <i class="fa fa-shopping-cart" sttyle="color:white;"></i> Acheter
+                                    </a>
+                                    <div id="product_option_block"/>
+                                </form>
+                            </div>
+                        </div>
+                      </div>
+                      </t>
+                  <!--</t>-->
+                  </div>
+                <!--</t>-->
+              </section>
+            </t>
+            <t t-if="cant_frs_prods">
+              <section class="s_title o_colored_level pb0 pt32" data-vcss="001" data-snippet="s_title" style="" data-name="Titre_section">
+                <div class="s_allow_columns container">
+                  <h2 style="text-align: center; ">Autres suggestions<br/></h2>
+                </div>
+              </section>
+                <section class="s_dynamic_snippet_products s_dynamic pt24 pb24 o_colored_level d-none"
+                   data-name="Dynamic Products" data-number-of-elements-small-devices="1" data-carousel-interval="5000">
+                    <t t-set="x" t-value="0"/>
+                    <!--Carousel Wrapper-->
+                      <div id="multi-item-example" class="carousel slide carousel-multi-item container" data-ride="carousel">
+
+                        <!--Controls-->
+                        <div class="controls-top text-center">
+                          <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
+                          <a class="btn-floating" href="#multi-item-example" data-slide="next"><i class="fa fa-chevron-right"></i></a>
+                        </div>
+                        <!--/.Controls-->
+
+                        <!--Indicators-->
+                        <!--<ol class="carousel-indicators">-->
+                          <!--<li data-target="#multi-item-example" data-slide-to="0" class="active"></li>-->
+                          <!--<li data-target="#multi-item-example" data-slide-to="1"></li>-->
+                          <!--<li data-target="#multi-item-example" data-slide-to="2"></li>-->
+                        <!--</ol>-->
+                        <!--/.Indicators-->
+
+                        <!--Slides-->
+                        <div class="carousel-inner" role="listbox">
+
+                            <t t-foreach="cant_frs_prods" t-as="tr_cant_frs_prods">
+                            <t t-set="x" t-value="x+1"/>
+                          <!--First slide-->
+                          <div t-attf-class="carousel-item #{x == 1 and 'active' or None}">
+
+                            <div class="row">
+                                <t t-foreach="tr_cant_frs_prods" t-as="cant_frs_prod">
+                                <t t-set="prod" t-value="cant_frs_prod['prod']"/>
+                                <t t-set="prod_href" t-value="prod.website_url" />
+                              <div class="col-md-4">
+                                  <div class="product_hover" style="min-height: 350px;padding: 5% 0%;border: 1px solid lightgray;">
+                                    <div class="row" style="min-height: inherit;">
+                                        <div class="col-md-6 col-xl-6" style="padding:0;padding-left: 16px;">
+                                            <a t-att-href="prod_href" class="d-block h-100" itemprop="url">
+                                                <t t-set="image_holder" t-value="prod._get_image_holder()"/>
+                                                <span t-field="image_holder.image_1920"
+                                                    t-options="{'widget': 'image', 'preview_image': 'image_1024' if product_image_big else 'image_256'}"
+                                                    class="d-flex h-100 justify-content-center align-items-center"/>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-6 col-xl-6" style="padding:0;padding-right: 16px;position: relative;">
+                                            <div>
+                                                <h6 class="o_wsale_products_item_title">
+                                                    <b><a itemprop="name" t-att-href="prod_href" t-att-content="prod.name" t-field="prod.name" style="color: black !important;font-size: 1.15rem;"/></b>
+                                                </h6>
+                                                <t t-if="prod.get_producteur()">
+                                                    <a t-att-href="'/producteurs/%s' % slug(cant_frs_prod['cant_frs'])" style="color: black !important;"><t t-esc="cant_frs_prod['cant_frs'].name"/></a>
+                                                </t>
+                                                <t t-if="prod.aoc">
+                                                   <div><b><t t-esc="prod.aoc"/></b></div>
+                                                </t>
+                                                <t t-if="prod.vin_type">
+                                                   <div><t t-esc="prod.vin_type"/></div>
+                                                </t>
+                                                <t t-if="prod.millesime">
+                                                   <div><t t-esc="prod.millesime"/></div>
+                                                </t>
+                                            </div>
+                                            <div class="add_to_cart_button oe_website_sale" style="position: absolute;bottom: 0;width: 92%;">
+                                                <form t-if="prod._is_add_to_cart_possible()" action="/shop/cart/update" method="POST">
+                                                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()" />
+                                                    <div class="js_product js_main_product">
+                                                        <t t-placeholder="select">
+                                                            <input type="hidden" class="product_template_id" name="product_template_id" t-att-value="prod.id" />
+                                                            <t t-if="combination" t-call="sale.variants">
+                                                                <t t-set="ul_class" t-value="'flex-column'" />
+                                                                <t t-set="parent_combination" t-value="None" />
+                                                            </t>
+                                                            <t t-else="">
+                                                                <ul class="d-none js_add_cart_variants" t-att-data-attribute_exclusions="{'exclusions: []'}"/>
+                                                            </t>
+                                                        </t>
+                                                        <div itemprop="offers" itemscope="itemscope" itemtype="http://schema.org/Offer" class="product_price mt16">
+                                                          <div class="oe_price_h4 css_editable_mode_hidden" style="font-size: 1em;">
+                                                              <span t-attf-class="text-danger oe_default_price {{'' if combination_info['has_discounted_price'] else 'd-none'}}" style="text-decoration: line-through; white-space: nowrap;"
+                                                                  t-esc="combination_info['list_price']" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}"
+                                                              />
+                                                              <b class="oe_price" style="white-space: nowrap;" t-esc="combination_info['price']" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}"/>/<b class="oe_price" style="white-space: nowrap;font-size:10px;" t-esc="prod.uom_id.name"/>
+                                                              <span itemprop="price" style="display:none;" t-esc="combination_info['price']"/>
+                                                              <span itemprop="priceCurrency" style="display:none;" t-esc="website.currency_id.name"/>
+                                                          </div>
+                                                          <h6 class="css_non_editable_mode_hidden decimal_precision" t-att-data-precision="str(website.currency_id.decimal_places)">
+                                                            <span t-field="prod.list_price"
+                                                                t-options='{
+                                                                   "widget": "monetary",
+                                                                   "display_currency": prod.currency_id,
+                                                               }'/>/<t t-esc="prod.uom_id.name"/>
+                                                          </h6>
+                                                        </div>
+                                                        <t t-if="prod.contenance">
+                                                           <div><t t-esc="prod.contenance"/></div>
+                                                        </t>
+                                                            <t t-if="prod.qty_available > 0"><div style="color: green;"><span t-field="prod.qty_available" t-options='{"widget": "float", "precision":0}'/> En stock </div></t>
+                                                            <t t-else=""><div style="color: red;"><span t-field="prod.qty_available" t-options='{"widget": "float", "precision":0}'/> En stock </div></t>
+
+                                                        <div style="display: flex;height: 30px;">
+                                                            <p t-if="True" class="css_not_available_msg alert alert-warning">This combination does not exist.</p>
+                                                            <div class="css_quantity input-group" contenteditable="false" style="width: 100%;">
+                                                                <div class="input-group-prepend">
+                                                                    <a t-attf-href="#" class="btn btn-secondary js_add_cart_json" aria-label="Remove one" title="Remove one" style="font-size: 10px;background-color: white;">
+                                                                        <i class="fa fa-minus" style="color: black"></i>
+                                                                    </a>
+                                                                </div>
+                                                                <input type="text" class="form-control quantity" data-min="1" name="add_qty" t-att-value="add_qty or 1" style="height: 30px;color: black;border-bottom: 1px solid;border-top: 1px solid;"/>
+                                                                <div class="input-group-append">
+                                                                    <a t-attf-href="#" class="btn btn-secondary float_left js_add_cart_json" aria-label="Add one" title="Add one" style="font-size: 10px;background-color: white;">
+                                                                        <i class="fa fa-plus" style="color: black"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                            <a role="button" id="add_to_cart" class="btn btn-primary btn-lg mt16 js_check_product a-submit d-block d-sm-inline-block" href="#" style="margin-top: 0px !important;height: 30px;width: 50%;margin-left: 10%;padding:0;border-radius: 0;background-color: black;"><i class="fa fa-shopping-cart" style="color: white;"/></a>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                                <div class="o_wsale_product_btn" style="display: none;"/>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                              </div>
+                                </t>
+                            </div>
+
+                          </div>
+                          <!--/.First slide-->
+                            </t>
+                        </div>
+                        <!--/.Slides-->
+                      </div>
+                      <!--/.Carousel Wrapper-->
+                </section>
+            </t>
+              <section class="s_text_block o_colored_level pb0 pt40" data-snippet="s_text_block" data-name="Bouton voir tout" style="">
+                <div class="s_allow_columns container">
+                  <p style="text-align: center; ">
+                    <a href="/shop" class="btn btn-primary" data-original-title="" title="" aria-describedby="tooltip673839">Voir la boutique complète</a>
+                  </p>
+                  <p>
+                    <br/>
+                  </p>
+                </div>
+              </section>
+              <section class="s_title o_colored_level bg-200 pt32 pb24" data-vcss="001" data-snippet="s_title" style="" data-name="Titre_section">
+        <div class="s_allow_columns container">
+          <h2 style="text-align: center; ">Contactez le producteur<br/></h2>
+        </div>
+      </section>
+              <section class="s_website_form pt16 pb16 o_colored_level undefined bg-200" data-vcss="001" data-snippet="s_website_form" data-name="Form" style="">
+                <div class="container">
+                  <form action="/website_form/" method="post" enctype="multipart/form-data" class="o_mark_required" data-mark="*" data-success-mode="redirect" data-success-page="#" data-model_name="mail.mail">
+                    <div class="s_website_form_rows row s_col_no_bgcolor">
+                      <div class="form-group s_website_form_field col-12 col-lg-6 s_website_form_custom s_website_form_required  " data-type="char" data-name="Field">
+                        <label class="s_website_form_label d-none" style="width: 200px" for="4bexmjjuyhy">
+                          <span class="s_website_form_label_content"/>
+                          <span class="s_website_form_mark">                     *</span>
+                        </label>
+                        <input type="text" class="form-control s_website_form_input" name="" required="1" placeholder="Prénom" id="4bexmjjuyhy"/>
+                      </div>
+                      <div class="form-group s_website_form_field col-12 col-lg-6 s_website_form_custom   " data-type="tel" data-name="Field">
+                        <label class="s_website_form_label d-none" style="width: 200px" for="v5dbqqimua">
+                          <span class="s_website_form_label_content"/>
+                        </label>
+                        <input type="tel" class="form-control s_website_form_input" name="" placeholder="Nom" id="v5dbqqimua"/>
+                      </div>
+                      <div class="form-group s_website_form_field col-12 s_website_form_model_required col-lg-6" data-type="char" data-name="Field">
+                        <label class="s_website_form_label d-none" style="width: 200px" for="31nvg5y8cwx">
+                          <span class="s_website_form_label_content"/>
+                          <span class="s_website_form_mark">           *</span>
+                        </label>
+                        <input type="text" class="form-control s_website_form_input" name="email_from" required="true" placeholder="Téléphone" id="31nvg5y8cwx"/>
+                      </div>
+                      <div class="form-group s_website_form_field col-12 s_website_form_custom col-lg-6" data-type="char" data-name="Field">
+                        <label class="s_website_form_label d-none" style="width: 200px" for="xcsazf7ke9h">
+                          <span class="s_website_form_label_content"/>
+                        </label>
+                        <input type="text" class="form-control s_website_form_input" name="" placeholder="Adresse email" id="xcsazf7ke9h"/>
+                      </div>
+                      <div class="form-group s_website_form_field col-12  s_website_form_model_required  " data-type="char" data-name="Field">
+                        <label class="s_website_form_label d-none" style="width: 200px" for="pufzzr1sm3p">
+                          <span class="s_website_form_label_content"/>
+                          <span class="s_website_form_mark">         *</span>
+                        </label>
+                        <input type="text" class="form-control s_website_form_input" name="subject" required="true" placeholder="Sujet" id="pufzzr1sm3p"/>
+                      </div>
+                      <div class="form-group s_website_form_field col-12 s_website_form_custom s_website_form_required  " data-type="text" data-name="Field">
+                        <label class="s_website_form_label d-none" style="width: 200px" for="a6lwnipia8j">
+                          <span class="s_website_form_label_content"/>
+                          <span class="s_website_form_mark">            *</span>
+                        </label>
+                        <textarea class="form-control s_website_form_input" name="" required="1" placeholder="Message" id="a6lwnipia8j" rows="3"/>
+                      </div>
+                      <div class="form-group s_website_form_field col-12    s_website_form_dnone" data-name="Field">
+                        <div class="row s_col_no_resize s_col_no_bgcolor">
+                          <label class="col-form-label col-sm-auto s_website_form_label " style="width: 200px">
+                            <span class="s_website_form_label_content"/>
+                            <span title="Separate email addresses with a comma.">
+                              <i class="fa fa-info-circle"/>
+                            </span>
+                          </label>
+                          <div class="col-sm">
+                            <input type="hidden" class="form-control s_website_form_input" name="email_to" value="producteur.email"/>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group col-12 s_website_form_submit col-lg-12 text-center s_website_form_no_submit_label" data-name="Submit Button">
+                        <div style="width: 200px;" class="s_website_form_label"/>
+                        <a href="#" role="button" class="btn btn-lg btn-primary s_website_form_send" data-original-title="" title="" aria-describedby="tooltip265614">Envoyer</a>
+                        <span id="s_website_form_result"/>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </section>
+            </t>
+            </div>
+          </t>
+    </template>
+
+    <template id="pass_provino" name="Pass Provino">
+      <t t-call="website.layout">
+        <div id="wrap" class="oe_structure oe_empty">
+          <section class="s_cover parallax s_parallax_is_fixed pt96 pb96 o_colored_level undefined o_cc o_cc3" data-scroll-background-ratio="1" data-snippet="s_cover" data-name="Cover">
+            <span class="oe_img_bg s_parallax_bg" style="background-image: url(&quot;/d4e_swiss_creative_2website/static/img/wine-cellar-with-wine-bottle-and-glasses.jpeg&quot;); background-position: 50% 60.3206%;" data-original-id="1973" data-original-src="/d4e_swiss_creative_2website/static/img/wine-cellar-with-wine-bottle-and-glasses.jpeg" data-mimetype="image/jpeg" data-resize-width="1500"/>
+            <div class="o_we_bg_filter" style="background-color: rgba(0, 0, 0, 0.28) !important;"/>
+            <div class="container s_allow_columns">
+              <h1 style="text-align: center; ">
+                <b>
+                  Le Pass Dégustation Provino
+                </b>
+              </h1>
+              <p class="lead"><font style="font-size: 14px;">&amp;nbsp;</font>Le Pass ProVino, c'est plus de 200 artisans-vignerons qui vous ouvrent leurs portes. Partez à la découverte de notre région, de ses paysages et de son savoir-faire en profitant d'un accueil convivial et authentique chez les artisans.
+              </p>
+              <div style="text-align: center;">
+                <h6>
+                  <br/>
+                </h6>
+              </div>
+            </div>
+          </section>
+          <section class="s_text_block pt32 pb32 o_colored_level undefined bg-o-color-1" data-snippet="s_text_block" data-name="Text" style="">
+            <div class="container s_allow_columns">
+              <h3>
+                Découvrez l'excellence des vins du terroir romand!
+                <br/>
+              </h3>
+            </div>
+          </section>
+          <section class="s_text_image pt32 pb32 o_colored_level" data-snippet="s_image_text" data-name="Image - Text">
+            <div class="container">
+              <div class="row align-items-center">
+                <div class="col-lg-6 pt16 pb16 o_colored_level">
+                  <img src="/d4e_swiss_creative_2website/static/img/Pass_Degustation_Provino.png" class="img img-fluid mx-auto" alt="" loading="lazy" data-original-title="" title="" aria-describedby="tooltip398219" data-original-id="776" data-original-src="/d4e_swiss_creative_2website/static/img/Pass_Degustation_Provino.png" data-mimetype="image/png" data-resize-width="605"/>
+                </div>
+                <div class="col-lg-6 pt16 pb16 o_colored_level">
+                  <h3>
+                    Ce qu'offre le Pass
+                  </h3>
+                  <ul>
+                    <li>
+                      <p>
+                        4 jetons Dégustations
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        1 jeton Bouteille
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        220 caves à choix
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        Jetons transmissibles et illimités dans le temps
+                      </p>
+                    </li>
+                  </ul>
+                  <p>
+                    <a href="#" class="btn btn-primary mb-2" data-original-title="" title="" aria-describedby="tooltip997083">
+                      Commander mon pass
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="s_text_image pt32 o_colored_level undefined o_cc o_cc4 pb24" data-snippet="s_text_image" data-name="Text - Image">
+            <div class="container">
+              <div class="row align-items-center">
+                <div class="col-lg-6 p-5 rounded o_colored_level" style="border-color: rgb(70, 77, 83) !important; border-radius: 4px !important;">
+                  <h5>Développez votre passion pour les vins et profitez de ce voyage au pays des sens !&amp;nbsp;</h5>
+                  <h6>
+                    <br/>
+                  </h6>
+                  <p>Vous désirez approfondir vos connaissances en matière de dégustation ou tout simplement découvrir d’excellents vins issus du terroir romand ? Alors le Pass ProVino est fait pour vous !</p>
+                  <p>Avec votre Pass de dégustation en poche, vous partirez à la découverte de votre région, de ses paysages et de son savoir-faire. Plus de 200 vignerons romands vous ouvrent leurs portes. Vous apprendrez l’art de la dégustation de nectars raffinés et profiterez d’un accueil convivial et authentique auprès des artisans de la région.</p>
+                </div>
+                <div class="pt16 pb16 col-lg-5 offset-lg-1 o_colored_level">
+                  <img src="/d4e_swiss_creative_2website/static/img/ProVino2.png" class="img img-fluid mx-auto" alt="" loading="lazy" data-original-title="" title="" aria-describedby="tooltip565166" data-original-id="1976" data-original-src="/d4e_swiss_creative_2website/static/img/ProVino2.png" data-mimetype="image/png" data-resize-width="450"/>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="s_title o_colored_level pt40 pb4" data-vcss="001" data-snippet="s_title" style="" data-name="Titre_section">
+            <div class="s_allow_columns container">
+              <h2 style="text-align: center; ">Commander mon Pass Provino</h2>
+              <div class="s_hr text-left pt32 pb32" data-snippet="s_hr" data-name="Separator">
+                <hr class="w-100 mx-auto" style="border-top-width: 1px; border-top-style: solid;"/>
+              </div>
+            </div>
+          </section>
+          <section class="s_website_form pt16 o_colored_level pb48" data-vcss="001" data-snippet="s_website_form" data-name="Form">
+            <div class="container">
+              <form action="/website_form/" method="post" enctype="multipart/form-data" class="o_mark_required" data-mark="*" data-success-mode="redirect" data-success-page="/contactus-thank-you" data-model_name="mail.mail">
+                <div class="s_website_form_rows row s_col_no_bgcolor">
+                  <div class="form-group s_website_form_field col-12 col-lg-5 s_website_form_custom   " data-type="integer" data-name="Field">
+                    <label class="s_website_form_label" style="width: 200px" for="1ghez6y40r5">
+                      <span class="s_website_form_label_content">
+
+                          Nombre de pass
+
+                      </span>
+                    </label>
+                    <input type="number" class="form-control s_website_form_input" name="&#10;                    &#10;                      Nombre de pass&#10;                    &#10;                  " step="1" placeholder="" id="1ghez6y40r5"/>
+                  </div>
+                  <div class="form-group s_website_form_field col-12 s_website_form_custom col-lg-8" data-type="selection" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                      <label class=" col-sm-auto s_website_form_label " style="width: 200px" for="955c2nvj4x">
+                        <span class="s_website_form_label_content">
+                          <h6>
+                            <font style="font-size: 14px;">Civilité</font>
+                          </h6>
+                        </span>
+                      </label>
+                      <div class="col-sm">
+                        <div class="row s_col_no_resize s_col_no_bgcolor s_website_form_multiple" data-name="Civilité" data-display="horizontal">
+                          <div class="radio col-12 col-lg-4 col-md-6">
+                            <div class="form-check">
+                              <input type="radio" class="s_website_form_input form-check-input" id="hwwfjlr7r050" name="Civilité" value="Mme."/>
+                              <label class="form-check-label s_website_form_check_label" for="hwwfjlr7r050">
+                                <h6>
+                                  <font style="font-size: 14px;">
+                        Mme.
+                   &amp;nbsp;</font>
+                                </h6>
+                              </label>
+                            </div>
+                          </div>
+                          <div class="radio col-12 col-lg-4 col-md-6">
+                            <div class="form-check">
+                              <input type="radio" class="s_website_form_input form-check-input" id="hwwfjlr7r051" name="Civilité" value="M."/>
+                              <label class="form-check-label s_website_form_check_label" for="hwwfjlr7r051">
+                                <h6>
+                                  <font style="font-size: 14px;">
+                        M.
+                   &amp;nbsp;</font>
+                                </h6>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group s_website_form_field col-12 col-lg-6 s_website_form_custom s_website_form_required  " data-type="char" data-name="Field">
+                    <label class="s_website_form_label d-none" style="width: 200px" for="40lq7fwcaxs">
+                      <span class="s_website_form_label_content">
+
+                          Nom
+
+                      </span>
+                      <span class="s_website_form_mark">
+
+                          &amp;nbsp;*
+
+                      </span>
+                    </label>
+                    <input type="text" class="form-control s_website_form_input" name="&#10;                    &#10;                      Nom&#10;                    &#10;                  " required="1" placeholder="Nom Prénom" id="40lq7fwcaxs"/>
+                  </div>
+                  <div class="form-group s_website_form_field col-12 col-lg-6  s_website_form_model_required  " data-type="char" data-name="Field">
+                    <label class="s_website_form_label d-none" style="width: 200px" for="osysxmtkwn">
+                      <span class="s_website_form_label_content">
+                        <h6>
+                          <font style="font-size: 14px;">Adresse email</font>
+                        </h6>
+                      </span>
+                      <span class="s_website_form_mark">
+                        <h6>
+                          <font style="font-size: 14px;">&amp;nbsp;*</font>
+                        </h6>
+                      </span>
+                    </label>
+                    <input type="text" class="form-control s_website_form_input" name="email_from" required="true" placeholder="Adresse email" id="osysxmtkwn"/>
+                  </div>
+                  <div class="form-group s_website_form_field col-12 col-lg-12 s_website_form_custom s_website_form_required" data-type="char" data-name="Field">
+                    <label class="s_website_form_label d-none" style="width: 200px" for="1wzeg7rn9a7h">
+                      <span class="s_website_form_label_content">
+                        <h6>
+                          <font style="font-size: 14px;">Adresse</font>
+                        </h6>
+                      </span>
+                      <span class="s_website_form_mark">
+                        <h6>
+                          <font style="font-size: 14px;">&amp;nbsp;*</font>
+                        </h6>
+                      </span>
+                    </label>
+                    <input type="text" class="form-control s_website_form_input" name="Adresse" placeholder="Adresse" id="1wzeg7rn9a7h" required=""/>
+                  </div>
+                  <div class="form-group s_website_form_field col-12 col-lg-6 s_website_form_custom s_website_form_required" data-type="char" data-name="Field">
+                    <label class="s_website_form_label d-none" style="width: 200px" for="efyff4pr71f">
+                      <span class="s_website_form_label_content">
+                        <h6>
+                          <font style="font-size: 14px;">Code postal</font>
+                        </h6>
+                      </span>
+                      <span class="s_website_form_mark">
+                        <h6>
+                          <font style="font-size: 14px;">&amp;nbsp;*</font>
+                        </h6>
+                      </span>
+                    </label>
+                    <input type="text" class="form-control s_website_form_input" name="Code postal" placeholder="Code postal" id="efyff4pr71f" required=""/>
+                  </div>
+                  <div class="form-group s_website_form_field col-12 col-lg-6 s_website_form_custom s_website_form_required" data-type="char" data-name="Field">
+                    <label class="s_website_form_label d-none" style="width: 200px" for="8bd5sjl848x">
+                      <span class="s_website_form_label_content">
+                        <h6>
+                          <font style="font-size: 14px;">Ville</font>
+                        </h6>
+                      </span>
+                      <span class="s_website_form_mark">
+                        <h6>
+                          <font style="font-size: 14px;">&amp;nbsp;*</font>
+                        </h6>
+                      </span>
+                    </label>
+                    <input type="text" class="form-control s_website_form_input" name="Ville" placeholder="Ville" id="8bd5sjl848x" required=""/>
+                  </div>
+                  <div class="form-group s_website_form_field col-12  s_website_form_model_required  " data-type="char" data-name="Field">
+                    <label class="s_website_form_label d-none" style="width: 200px" for="rk6fb2f5o3j">
+                      <span class="s_website_form_label_content">
+                        <h6>
+                          <font style="font-size: 14px;">Subject</font>
+                        </h6>
+                      </span>
+                      <span class="s_website_form_mark">
+                        <h6>
+                          <font style="font-size: 14px;">&amp;nbsp;    *</font>
+                        </h6>
+                      </span>
+                    </label>
+                    <input type="text" class="form-control s_website_form_input" name="subject" required="true" placeholder="Sujet: Commande Pass Provino" id="rk6fb2f5o3j"/>
+                  </div>
+                  <div class="form-group s_website_form_field col-12 s_website_form_custom   " data-type="text" data-name="Field">
+                    <label class="s_website_form_label d-none" style="width: 200px" for="pcsu17rp76p">
+                      <span class="s_website_form_label_content">
+                        <h6>
+                          <font style="font-size: 14px;">Custom Texte long</font>
+                        </h6>
+                      </span>
+                    </label>
+                    <textarea class="form-control s_website_form_input" name="Custom Texte long" placeholder="Remarque" id="pcsu17rp76p" rows="3"/>
+                  </div>
+                  <div class="form-group s_website_form_field col-12    s_website_form_dnone" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                      <label class="col-form-label col-sm-auto s_website_form_label " style="width: 200px">
+                        <span class="s_website_form_label_content"/>
+                        <span title="Separate email addresses with a comma.">
+                          <i class="fa fa-info-circle"/>
+                        </span>
+                      </label>
+                      <div class="col-sm">
+                        <input type="hidden" class="form-control s_website_form_input" name="email_to" value="info@yourcompany.example.com"/>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group col-12 s_website_form_submit text-left s_website_form_no_submit_label" data-name="Submit Button">
+                    <div style="width: 200px;" class="s_website_form_label"/>
+                    <a href="#" role="button" class="s_website_form_send btn btn-primary" data-original-title="" title="" aria-describedby="tooltip604090">
+                      <h6>
+                        Commander
+                      </h6>
+                    </a>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </section>
+          <section class="s_tabs pt48 pb48 o_colored_level undefined o_cc o_cc4" data-vcss="001" data-snippet="s_tabs" data-name="Tabs">
+            <div class="container-fluid">
+              <div class="s_tabs_main">
+                <!--<div class="s_tabs_nav mb-3">-->
+                  <!--<ul class="nav nav-pills justify-content-center" role="tablist">-->
+                    <!--<li class="nav-item">-->
+                      <!--<a class="nav-link active" id="nav_tabs_link_1624538436090_43" data-toggle="tab" href="#nav_tabs_content_1624538436090_43" role="tab" aria-controls="nav_tabs_content_1624538436090_43" aria-selected="true" data-original-title="" title="" aria-describedby="tooltip710112">-->
+                        <!--<p data-original-title="" title="" aria-describedby="tooltip841469">-->
+                          <!--Liste des vignerons-->
+                        <!--</p>-->
+                      <!--</a>-->
+                    <!--</li>-->
+                    <!--<li class="nav-item">-->
+                      <!--<a class="nav-link" id="nav_tabs_link_1624538436090_44" data-toggle="tab" href="#nav_tabs_content_1624538436090_44" role="tab" aria-controls="nav_tabs_content_1624538436090_44" aria-selected="false" data-original-title="" title="">-->
+                        <!--<p data-original-title="" title="" aria-describedby="tooltip47106">-->
+                          <!--Liste des points de vente-->
+                        <!--</p>-->
+                      <!--</a>-->
+                    <!--</li>-->
+                  <!--</ul>-->
+                <!--</div>-->
+                <div class="s_tabs_content tab-content">
+                  <div class="tab-pane fade active show" id="nav_tabs_content_1624538436090_43" role="tabpanel" aria-labelledby="nav_tabs_link_1624538436090_43">
+                    <div class="oe_structure oe_empty" data-editor-message="GLISSEZ UN BLOC ICI">
+                      <section class="s_product_catalog oe_custom_bg pb32 pt16" style="" data-vcss="001" data-snippet="s_product_catalog" data-name="Pricelist">
+                        <div class="container">
+                          <h4 style="text-align: center; ">
+                            Liste des vignerons participants
+                          </h4>
+                          <h6>
+                            <font style="font-size: 14px;">&amp;nbsp;</font>
+                          </h6>
+                        <t t-if="lim>0">
+                            <t t-set="x" t-value="0"/>
+                            <t t-set="y" t-value="0"/>
+                          <div class="row">
+                            <div class="col-lg-6 pt16 o_colored_level pb0" style="">
+                              <t t-foreach="vignerons" t-as="vign">
+                                  <t t-if="(lim &gt; x) or lim==1" >
+                                      <h6>
+                                        <font style="font-size: 18px;">
+                                          <b><t t-esc="vign"/></b>
+                                        </font>
+                                      </h6>
+                                      <ul class="list-unstyled my-3">
+                                        <t t-foreach="vign_value" t-as="cave">
+                                            <li class="s_product_catalog_dish" data-name="Product">
+                                              <h6 class="s_product_catalog_dish_title d-flex align-items-baseline pb-2">
+                                                <span class="s_product_catalog_dish_name">
+                                                  <font style="font-size: 14px;"><t t-esc="cave"/></font>
+                                                </span>
+                                                <span class="ml-auto pl-2 s_product_catalog_dish_price">
+                                                  <br/>
+                                                </span>
+                                              </h6>
+                                              <div class="s_hr text-left pt8 pb16" data-snippet="s_hr" data-name="Separator">
+                                                <hr class="w-100 mx-auto" style="border-top-width: 1px; border-top-style: solid;"/>
+                                              </div>
+                                            </li>
+                                        </t>
+                                        <li class="s_product_catalog_dish" data-name="Product">
+                                          <h6 class="s_product_catalog_dish_title d-flex align-items-baseline pb-2">
+                                            <br/>
+                                          </h6>
+                                        </li>
+                                      </ul>
+                                      <t t-set="x" t-value="x+1"/>
+                                  </t>
+                              </t>
+                            </div>
+                            <div class="col-lg-6 pt16 pb16 o_colored_level" style="">
+                              <t t-foreach="vignerons" t-as="vign">
+                                  <t t-set="y" t-value="y+1"/>
+                                  <t t-if="(y &gt; lim)and (lim &gt; 1)">
+                                      <h6>
+                                        <font style="font-size: 18px;">
+                                          <b><t t-esc="vign"/></b>
+                                        </font>
+                                      </h6>
+                                      <ul class="list-unstyled my-3">
+                                          <t t-foreach="vign_value" t-as="cave">
+                                            <li class="s_product_catalog_dish" data-name="Product">
+                                              <h6 class="s_product_catalog_dish_title d-flex align-items-baseline pb-2">
+                                                <span class="s_product_catalog_dish_name">
+                                                  <font style="font-size: 14px;"><t t-esc="cave"/></font>
+                                                </span>
+                                                <span class="ml-auto pl-2 s_product_catalog_dish_price">
+                                                  <br/>
+                                                </span>
+                                              </h6>
+                                              <div class="s_hr text-left pt8 pb16" data-snippet="s_hr" data-name="Separator">
+                                                <hr class="w-100 mx-auto" style="border-top-width: 1px; border-top-style: solid;"/>
+                                              </div>
+                                            </li>
+                                          </t>
+                                        <li class="s_product_catalog_dish" data-name="Product">
+                                          <h6 class="s_product_catalog_dish_title d-flex align-items-baseline pb-2">
+                                            <br/>
+                                          </h6>
+                                        </li>
+                                      </ul>
+                                  </t>
+                              </t>
+                            </div>
+                          </div>
+                        </t>
+                        </div>
+                      </section>
+                    </div>
+                  </div>
+                  <!--<div class="tab-pane fade" id="nav_tabs_content_1624538436090_44" role="tabpanel" aria-labelledby="nav_tabs_link_1624538436090_44">-->
+                    <!--<div class="oe_structure oe_empty" data-editor-message="GLISSEZ UN BLOC ICI">-->
+                      <!--<section class="s_product_catalog oe_custom_bg pb32 pt16" style="" data-vcss="001" data-snippet="s_product_catalog" data-name="Liste_Vignerons">-->
+                        <!--<div class="container">-->
+                          <!--<h4 style="text-align: center; ">-->
+                            <!--Liste des points de vente-->
+                          <!--</h4>-->
+                          <!--<h6>-->
+                            <!--<font style="font-size: 14px;">&amp;nbsp;</font>-->
+                          <!--</h6>-->
+                          <!--<div class="row">-->
+                            <!--<div class="col-lg-6 pt16 o_colored_level pb0" style="">-->
+                              <!--<h6>-->
+                                <!--<font style="font-size: 18px;">-->
+                                  <!--<b>Vaud</b>-->
+                                <!--</font>-->
+                              <!--</h6>-->
+                              <!--<ul class="list-unstyled my-3">-->
+                                <!--<li class="s_product_catalog_dish" data-name="Product">-->
+                                  <!--<h6 class="s_product_catalog_dish_title d-flex align-items-baseline pb-2">-->
+                                    <!--<span class="o_default_snippet_text s_product_catalog_dish_name">-->
+                                      <!--<font style="font-size: 14px;">Nom de la Cave</font>-->
+                                    <!--</span>-->
+                                    <!--<span class="ml-auto pl-2 s_product_catalog_dish_price">-->
+                                      <!--<br/>-->
+                                    <!--</span>-->
+                                  <!--</h6>-->
+                                <!--</li>-->
+                                <!--<li class="s_product_catalog_dish" data-name="Product">-->
+                                  <!--<div class="s_hr text-left pt8 pb16" data-snippet="s_hr" data-name="Separator">-->
+                                    <!--<hr class="w-100 mx-auto" style="border-top-width: 1px; border-top-style: solid;"/>-->
+                                  <!--</div>-->
+                                  <!--<h6 class="s_product_catalog_dish_title d-flex align-items-baseline pb-2">-->
+                                    <!--<span class="s_product_catalog_dish_name">-->
+                                      <!--<span class="o_default_snippet_text s_product_catalog_dish_name">-->
+                                        <!--<font style="font-size: 14px;">Nom de la Cave</font>-->
+                                      <!--</span>-->
+                                      <!--<br/>-->
+                                    <!--</span>-->
+                                    <!--<span class="ml-auto pl-2 s_product_catalog_dish_price">-->
+                                      <!--<br/>-->
+                                    <!--</span>-->
+                                  <!--</h6>-->
+                                <!--</li>-->
+                                <!--<li class="s_product_catalog_dish" data-name="Product">-->
+                                  <!--<div class="s_hr text-left pt8 pb16" data-snippet="s_hr" data-name="Separator">-->
+                                    <!--<hr class="w-100 mx-auto" style="border-top-width: 1px; border-top-style: solid;"/>-->
+                                  <!--</div>-->
+                                  <!--<h6 class="s_product_catalog_dish_title d-flex align-items-baseline pb-2">-->
+                                    <!--<span class="s_product_catalog_dish_name">-->
+                                      <!--<span class="o_default_snippet_text s_product_catalog_dish_name">-->
+                                        <!--<font style="font-size: 14px;">Nom de la Cave</font>-->
+                                      <!--</span>-->
+                                      <!--<br/>-->
+                                    <!--</span>-->
+                                    <!--<span class="ml-auto pl-2 s_product_catalog_dish_price">-->
+                                      <!--<br/>-->
+                                    <!--</span>-->
+                                  <!--</h6>-->
+                                <!--</li>-->
+                                <!--<li class="s_product_catalog_dish" data-name="Product">-->
+                                  <!--<div class="s_hr text-left pt8 pb16" data-snippet="s_hr" data-name="Separator">-->
+                                    <!--<hr class="w-100 mx-auto" style="border-top-width: 1px; border-top-style: solid;"/>-->
+                                  <!--</div>-->
+                                  <!--<h6 class="s_product_catalog_dish_title d-flex align-items-baseline pb-2">-->
+                                    <!--<span class="s_product_catalog_dish_name">-->
+                                      <!--<span class="o_default_snippet_text s_product_catalog_dish_name">-->
+                                        <!--<font style="font-size: 14px;">Nom de la Cave</font>-->
+                                      <!--</span>-->
+                                    <!--</span>-->
+                                  <!--</h6>-->
+                                <!--</li>-->
+                              <!--</ul>-->
+                            <!--</div>-->
+                            <!--<div class="col-lg-6 pt16 pb16 o_colored_level" style="">-->
+                              <!--<h6>-->
+                                <!--<font style="font-size: 18px;">-->
+                                  <!--<b>Valais</b>-->
+                                <!--</font>-->
+                              <!--</h6>-->
+                              <!--<ul class="list-unstyled my-3">-->
+                                <!--<li class="s_product_catalog_dish" data-name="Product">-->
+                                  <!--<h6 class="s_product_catalog_dish_title d-flex align-items-baseline pb-2">-->
+                                    <!--<span class="o_default_snippet_text s_product_catalog_dish_name">-->
+                                      <!--<font style="font-size: 14px;">Nom de la Cave</font>-->
+                                    <!--</span>-->
+                                    <!--<span class="ml-auto pl-2 s_product_catalog_dish_price">-->
+                                      <!--<br/>-->
+                                    <!--</span>-->
+                                  <!--</h6>-->
+                                <!--</li>-->
+                                <!--<li class="s_product_catalog_dish" data-name="Product">-->
+                                  <!--<div class="s_hr text-left pt8 pb16" data-snippet="s_hr" data-name="Separator">-->
+                                    <!--<hr class="w-100 mx-auto" style="border-top-width: 1px; border-top-style: solid;"/>-->
+                                  <!--</div>-->
+                                  <!--<h6 class="s_product_catalog_dish_title d-flex align-items-baseline pb-2">-->
+                                    <!--<span class="s_product_catalog_dish_name">-->
+                                      <!--<span class="o_default_snippet_text s_product_catalog_dish_name">-->
+                                        <!--<font style="font-size: 14px;">Nom de la Cave</font>-->
+                                      <!--</span>-->
+                                      <!--<br/>-->
+                                    <!--</span>-->
+                                    <!--<span class="ml-auto pl-2 s_product_catalog_dish_price">-->
+                                      <!--<br/>-->
+                                    <!--</span>-->
+                                  <!--</h6>-->
+                                <!--</li>-->
+                                <!--<li class="s_product_catalog_dish" data-name="Product">-->
+                                  <!--<div class="s_hr text-left pt8 pb16" data-snippet="s_hr" data-name="Separator">-->
+                                    <!--<hr class="w-100 mx-auto" style="border-top-width: 1px; border-top-style: solid;"/>-->
+                                  <!--</div>-->
+                                  <!--<h6 class="s_product_catalog_dish_title d-flex align-items-baseline pb-2">-->
+                                    <!--<span class="s_product_catalog_dish_name">-->
+                                      <!--<span class="o_default_snippet_text s_product_catalog_dish_name">-->
+                                        <!--<font style="font-size: 14px;">Nom de la Cave</font>-->
+                                      <!--</span>-->
+                                      <!--<br/>-->
+                                    <!--</span>-->
+                                    <!--<span class="ml-auto pl-2 s_product_catalog_dish_price">-->
+                                      <!--<br/>-->
+                                    <!--</span>-->
+                                  <!--</h6>-->
+                                <!--</li>-->
+                                <!--<li class="s_product_catalog_dish" data-name="Product">-->
+                                  <!--<div class="s_hr text-left pt8 pb16" data-snippet="s_hr" data-name="Separator">-->
+                                    <!--<hr class="w-100 mx-auto" style="border-top-width: 1px; border-top-style: solid;"/>-->
+                                  <!--</div>-->
+                                  <!--<h6 class="s_product_catalog_dish_title d-flex align-items-baseline pb-2">-->
+                                    <!--<span class="s_product_catalog_dish_name">-->
+                                      <!--<span class="o_default_snippet_text s_product_catalog_dish_name">-->
+                                        <!--<font style="font-size: 14px;">Nom de la Cave</font>-->
+                                      <!--</span>-->
+                                      <!--<br/>-->
+                                    <!--</span>-->
+                                    <!--<span class="ml-auto pl-2 s_product_catalog_dish_price">-->
+                                      <!--<br/>-->
+                                    <!--</span>-->
+                                  <!--</h6>-->
+                                <!--</li>-->
+                                <!--<li class="s_product_catalog_dish" data-name="Product">-->
+                                  <!--<div class="s_hr text-left pt8 pb16" data-snippet="s_hr" data-name="Separator">-->
+                                    <!--<hr class="w-100 mx-auto" style="border-top-width: 1px; border-top-style: solid;"/>-->
+                                  <!--</div>-->
+                                  <!--<h6 class="s_product_catalog_dish_title d-flex align-items-baseline pb-2">-->
+                                    <!--<span class="s_product_catalog_dish_name">-->
+                                      <!--<span class="o_default_snippet_text s_product_catalog_dish_name">-->
+                                        <!--<font style="font-size: 14px;">Nom de la Cave</font>-->
+                                      <!--</span>-->
+                                      <!--<br/>-->
+                                    <!--</span>-->
+                                    <!--<br/>-->
+                                  <!--</h6>-->
+                                <!--</li>-->
+                                <!--<li class="s_product_catalog_dish" data-name="Product">-->
+                                  <!--<h6 class="s_product_catalog_dish_title d-flex align-items-baseline pb-2">-->
+                                    <!--<br/>-->
+                                  <!--</h6>-->
+                                <!--</li>-->
+                              <!--</ul>-->
+                            <!--</div>-->
+                          <!--</div>-->
+                        <!--</div>-->
+                      <!--</section>-->
+                    <!--</div>-->
+                  <!--</div>-->
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </t>
+    </template>
+
+
+</odoo>

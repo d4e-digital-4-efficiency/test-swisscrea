@@ -1,0 +1,9 @@
+sequence,name,code,id,is_leave,is_unforeseen
+1,Présence,WORK100,d4e_ch_payroll_data.PRESENCE_1,,
+25,Congé,LEAVE100,d4e_ch_payroll_data.CONGE_1,True,
+25,Congés non payés,LEAVE90,d4e_ch_payroll_data.CONENP_1,True,
+25,Maladie,LEAVE110,d4e_ch_payroll_data.MALADIE_1,True,True
+1,Nombre d'heures,WORK101,d4e_ch_payroll_data.NOMBREH_1,,
+25,Accident,LEAVE115,d4e_ch_payroll_data.ACCIDENT_1,True,True
+25,Maternité,LEAVE120,d4e_ch_payroll_data.MATERNITE_1,True,True
+25,"Armée,protection civile",LEAVE125,d4e_ch_payroll_data.ARMEE,True,True

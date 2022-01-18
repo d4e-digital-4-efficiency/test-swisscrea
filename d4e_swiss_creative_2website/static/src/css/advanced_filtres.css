@@ -1,0 +1,47 @@
+.advanced_filtres{
+    .mb-0 > a {
+      display: block;
+      position: relative;
+    }
+    .mb-0 > a:after {
+      content: "\f078"; /* fa-chevron-down */
+      font-family: 'FontAwesome';
+      position: absolute;
+      right: 0;
+    }
+    .mb-0 > a[aria-expanded="true"]:after {
+      content: "\f077"; /* fa-chevron-up */
+    }
+
+    .card-body > div > a[aria-expanded="false"] > b > .expanded,
+    .card-body > div > a[aria-expanded="true"] > b > .collapsed {
+      display: none;
+    }
+
+}
+
+.product_hover:hover {
+  border: 2px solid black !important;
+}
+
+.breadcrumb-item, .breadcrumb-item > a {
+    color: #b3b2b2 !important;
+}
+
+.page-link {
+    background-color: black !important;
+    color: white !important;
+    font-weight: 600 !important;
+    border: 2px solid #ffffff !important;
+}
+
+.page-item.active{
+    border: 2px solid #ffffff !important;
+}
+
+.page-link {
+    background-color: white !important;
+    color: black !important;
+    border: 0px solid #ffffff !important;
+    font-size: xx-large;
+}

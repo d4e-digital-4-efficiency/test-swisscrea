@@ -1,0 +1,61 @@
+name,code,category,id
+AVS - Plafond mensuel,plafond_avs_mensuel,,d4e_ch_payroll_data.hr_rule_parameter_2_98b057df
+AVS - Taux employé,taux_avs_employe,,d4e_ch_payroll_data.hr_rule_parameter_3_4cda1a97
+AVS - Taux employeur,taux_avs_employeur,,d4e_ch_payroll_data.hr_rule_parameter_4_8fd6aa68
+AC - Plafond mensuel,plafond_ac_mensuel,,d4e_ch_payroll_data.hr_rule_parameter_5_49e7d372
+AC - Taux employé,taux_ac_employe,,d4e_ch_payroll_data.hr_rule_parameter_6_4887f955
+AC - Taux employeur,taux_ac_employeur,,d4e_ch_payroll_data.hr_rule_parameter_7_c5b39983
+AC complémentaire - Taux employé,taux_accomp_employe,,d4e_ch_payroll_data.hr_rule_parameter_8_08a4ef4a
+AC complémentaire - Taux employeur,taux_accomp_employeur,,d4e_ch_payroll_data.hr_rule_parameter_9_34bb5bae
+IJM - Plafond mensuel,plafond_ijm_mensuel,,d4e_ch_payroll_data.hr_rule_parameter_10_06281d1c
+IJM - Femme - Taux employé,taux_ijm_f_employe,,d4e_ch_payroll_data.hr_rule_parameter_11_e7c3acec
+IJM - Femme - Taux employeur,taux_ijm_f_employeur,,d4e_ch_payroll_data.hr_rule_parameter_12_26d6bd1c
+LAA - Plafond mensuel,plafond_laa_mensuel,,d4e_ch_payroll_data.hr_rule_parameter_13_209c5a1a
+Assurance accident - A1- Taux employé,taux_laa_a1_employe,,d4e_ch_payroll_data.hr_rule_parameter_14_680310fd
+Assurance accident - A1 - Taux employeur,taux_laa_a1_employeur,,d4e_ch_payroll_data.hr_rule_parameter_15_ddc39b47
+Allocations familiales - Taux employé,taux_allocfam_employe,,d4e_ch_payroll_data.hr_rule_parameter_17_86807c13
+Allocations familiales - Taux employeur,taux_allocfam_employeur,,d4e_ch_payroll_data.hr_rule_parameter_18_66a2d6ed
+LPP - Plan A - Taux employé,taux_lpp_a_employe,,d4e_ch_payroll_data.hr_rule_parameter_19_0db8673f
+LPP - Plan A - Taux employeur,taux_lpp_a_employeur,,d4e_ch_payroll_data.hr_rule_parameter_20_1de66228
+LPP - Plafond mensuel,plafond_lpp_mensuel,,d4e_ch_payroll_data.hr_rule_parameter_21_0869e984
+LPP - Montant de coordination,montant_lpp_coordination,,d4e_ch_payroll_data.hr_rule_parameter_22_faca7712
+13ème salaire - Taux,taux_13eme,,d4e_ch_payroll_data.hr_rule_parameter_23_980e72fc
+Retraite Femme,age_retraite_femme,,d4e_ch_payroll_data.hr_rule_parameter_24_a426214b
+Retraite Homme,age_retraite_homme,,d4e_ch_payroll_data.hr_rule_parameter_25_0af7f452
+Frais de repas - Tarif unitaire,frais_repas,,d4e_ch_payroll_data.hr_rule_parameter_26_421aadaf
+Frais kilométrique - Tarif unitaire,frais_km,,d4e_ch_payroll_data.hr_rule_parameter_27_b08aa1cc
+Retraite anticipée - Taux employé,taux_retant_employe,,d4e_ch_payroll_data.hr_rule_parameter_28_4a07f39e
+Contribution professionnelle - Taux employé,taux_ctbpro_employé,,d4e_ch_payroll_data.hr_rule_parameter_29_e6b131a8
+Fonds cantonal formation professionnelle - Taux employé,taux_fond_prof_employe,variable,d4e_ch_payroll_data.hr_rule_parameter_30_b0b32ae1
+AVS - Frais administratif,avs_frais,,d4e_ch_payroll_data.hr_rule_parameter_31_149cd233
+Vacances dès 20 ans - Taux,vacances_20,,d4e_ch_payroll_data.hr_rule_parameter_32_df1f6939
+Vacances dès 50 ans - Taux,vacances_50,,d4e_ch_payroll_data.hr_rule_parameter_33_cc2e9f82
+Assurance accident - A2 - Taux employeur,taux_laa_a2_employeur,,d4e_ch_payroll_data.hr_rule_parameter_35_f47525a1
+Assurance accident - A3 - Taux employeur,taux_laa_a3_employeur,,d4e_ch_payroll_data.hr_rule_parameter_36_c23ed1b1
+Assurance accident - B1- Taux employé,taux_laa_b1_employe,,d4e_ch_payroll_data.hr_rule_parameter_37_5f1e5ecb
+Assurance accident - B1 - Taux employeur,taux_laa_b1_employeur,,d4e_ch_payroll_data.hr_rule_parameter_39_b9d1d8c0
+Assurance accident - B2 - Taux employeur,taux_laa_b2_employeur,,d4e_ch_payroll_data.hr_rule_parameter_40_133b8ff6
+Assurance accident - B3 - Taux employeur,taux_laa_b3_employeur,,d4e_ch_payroll_data.hr_rule_parameter_41_728ce536
+IJM - Homme - Taux employé,taux_ijm_m_employe,,d4e_ch_payroll_data.hr_rule_parameter_42_d6ed0624
+IJM - Homme - Taux employeur,taux_ijm_m_employeur,,d4e_ch_payroll_data.hr_rule_parameter_43_d4e96545
+LPP - Plan B - Taux employeur,taux_lpp_b_employeur,,d4e_ch_payroll_data.hr_rule_parameter_45_ef6ea15b
+LPP - Plan B - Taux employé,taux_lpp_b_employe,,d4e_ch_payroll_data.hr_rule_parameter_46_270322e3
+LPP - Plan C - Taux employeur,taux_lpp_c_employeur,,d4e_ch_payroll_data.hr_rule_parameter_47_d0e4e06d
+LPP - Plan C - Taux employé,taux_lpp_c_employe,,d4e_ch_payroll_data.hr_rule_parameter_49_b0e37ef6
+LPP - Plan D - Taux employeur,taux_lpp_d_employeur,,d4e_ch_payroll_data.hr_rule_parameter_50_9c9812b9
+LPP - Plan D - Taux employé,taux_lpp_d_employe,,d4e_ch_payroll_data.hr_rule_parameter_51_e25a9cd7
+LPP coordonnée - Dès 25 ans  - Taux employé,taux_lppc_25_employe,,d4e_ch_payroll_data.hr_rule_parameter_52_ae514129
+LPP coordonnée - Dès 25 ans - Taux employeur,taux_lppc_25_employeur,,d4e_ch_payroll_data.hr_rule_parameter_53_f67bcab3
+LPP coordonnée - Dès 35 ans - Taux employé,taux_lppc_35_employe,,d4e_ch_payroll_data.hr_rule_parameter_54_388b1fa9
+LPP coordonnée - Dès 35 ans - Taux employeur,taux_lppc_35_employeur,,d4e_ch_payroll_data.hr_rule_parameter_55_d6c40ef7
+LPP coordonnée - Dès 45 ans - Taux employé,taux_lppc_45_employe,,d4e_ch_payroll_data.hr_rule_parameter_56_e570e85a
+LPP coordonnée - Dès 45 ans - Taux employeur,taux_lppc_45_employeur,,d4e_ch_payroll_data.hr_rule_parameter_57_b1a18c72
+LPP coordonnée - Dès 55 ans - Taux employé,taux_lppc_55_employe,,d4e_ch_payroll_data.hr_rule_parameter_58_e147e8a6
+LPP coordonnée - Dès 55 ans - Taux employeur,taux_lppc_55_employeur,,d4e_ch_payroll_data.hr_rule_parameter_59_fae9213d
+Retraite anticipée - Taux employeur,taux_retant_employeur,,d4e_ch_payroll_data.hr_rule_parameter_62_821cc53a
+Contribution professionnelle - Taux employeur,taux_ctbpro_employeur,,d4e_ch_payroll_data.hr_rule_parameter_63_9e55a33f
+Fonds cantonal formation professionnelle - Taux employeur,taux_fond_prof_employeur,variable,d4e_ch_payroll_data.hr_rule_parameter_64_9c60a90d
+Cotisation CPS - Taux employé,taux_cps_employe,variable,d4e_ch_payroll_data.hr_rule_parameter_65_54003543
+Cotisation CPS - Taux employeur,taux_cps_employeur,variable,d4e_ch_payroll_data.hr_rule_parameter_66_f6ba661f
+Fonds cantonal formation continue - Taux employé,taux_fond_cont_employe,variable,d4e_ch_payroll_data.hr_rule_parameter_67_cd415210
+Fonds cantonal formation continue - Taux employeur,taux_fond_cont_employeur,variable,d4e_ch_payroll_data.hr_rule_parameter_69_6c43fbf5

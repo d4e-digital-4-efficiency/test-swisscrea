@@ -1,0 +1,16 @@
+.test-ribbon {
+    width: 140px !important;
+    top: 2px !important;
+    left: 1200px !important;
+    line-height: 12px !important;
+    -webkit-transform: rotate(0deg) !important;
+    -ms-transform: rotate(0deg) !important;
+    -moz-transform: rotate(0deg) !important;
+    -o-transform: rotate(0deg) !important;
+    transform: rotate(0deg) !important;
+
+}
+
+.test-ribbon b {
+    font-size: 50px !important;
+}

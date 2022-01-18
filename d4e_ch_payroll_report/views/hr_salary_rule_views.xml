@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="d4e_inherit_hr_salary_rule_form" model="ir.ui.view">
+            <field name="name">hr.salary.rule.form</field>
+            <field name="model">hr.salary.rule</field>
+            <field name="inherit_id" ref="d4e_ch_payroll.d4e_inherit_hr_salary_rule_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='rubrique_certificat']" position="replace">
+                    <group>
+                        <group>
+                            <separator string="Feuille de salaire"/>
+                            <field name="payslip_rubrique"/>
+                            <field name="payslip_imprime_opt"/>
+                        </group>
+
+                        <group>
+                            <separator string="Certificat de salaire"/>
+                            <field name="rubrique_certificat"/>
+                        </group>
+                    </group>
+                </xpath>
+
+            </field>
+        </record>
+
+    </data>
+</odoo>

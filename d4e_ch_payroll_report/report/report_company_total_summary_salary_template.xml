@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <template id="company_totsum_salary_template">
+            <t t-call="web.html_container">
+                <!--<t t-foreach="report_data['emp_ids']" t-as="emp">-->
+                    <!--<t t-call="web.external_layout">-->
+                        <div class="page">
+                            <t t-foreach="report_data['emp_ids']" t-as="emp">
+                            <style type="text/css">
+                                .headerlayout td {
+                                        padding: 0 !important;
+                                        vertical-align: top;
+                                        margin-bottom: 0;
+                                                }
+                            </style>
+                            <!--<t t-foreach="report_data['emp_ids']" t-as="emp">-->
+                                <table class="table table-borderless headerlayout" style="width:100%;">
+                                    <tr>
+                                        <td>
+                                            <h3>Compte Salaire <t t-esc="report_data['year']"/></h3>
+                                        </td>
+                                        <td>
+                                            <h3><t t-esc="emp.name"/></h3>
+                                        </td>
+                                        <td/>
+                                        <td/>
+                                        <td>
+                                            Date : <span t-esc="datetime.datetime.now().date().strftime('%m/%d/%Y')"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div t-field="emp.company_id.partner_id"
+                                                t-options='{"widget": "contact", "fields": ["address", "name", "phone"], "no_marker": True}'/>
+                                            <p t-if="emp.company_id.email"><t t-esc="emp.company_id.email"/></p>
+                                            <p t-if="emp.company_id.vat"><t t-esc="emp.company_id.country_id.vat_label or 'Tax ID'"/>: <span t-field="emp.company_id.vat"/></p>
+                                        </td>
+                                        <td>
+                                            <p>Date de naissance : <t t-esc="emp.birthday.strftime('%d/%m/%Y')"/></p>
+
+                                            <p>N° personnel : <t t-esc="emp.identification_id"/></p>
+                                            <p>N° assuré : <t t-esc="emp.avs_13"/></p>
+                                        </td>
+                                        <td>
+                                            Entrée(s)<p><t t-esc="emp.contract_id.date_start"/></p>
+                                        </td>
+                                        <td>
+                                            Sortie(s)<p><t t-esc="emp.contract_id.date_end"/></p>
+                                        </td>
+                                        <td>
+                                            <p>Page :</p>
+                                            <p>Janvier -Gratification </p>
+                                        </td>
+                                    </tr>
+
+                                </table>
+                                <br></br>
+
+
+                                <table class="table table-striped" style="font-size: 13px;width:100%;text-left">
+
+                                    <thead style="border-bottom : 1px solid black !important;">
+
+                                        <tr class="not-first-page" >
+
+                                            <td  colspan="4"><t t-esc="emp.name"/></td>
+                                            <td colspan="4">Date de naissance : <t t-esc="emp.birthday.strftime('%d/%m/%Y')"/></td>
+                                            <td colspan="4">N° personnel : <t t-esc="emp.identification_id"/></td>
+                                            <td  colspan="4">N° assuré : <t t-esc="emp.avs_13"/></td>
+                                        </tr>
+
+
+
+                                        <tr>
+                                            <th colspan="2" class="text-left" style="text-align: left;" width="20%">Rubriques</th>
+                                            <th class="text-left" style="text-align: left;" t-foreach="report_data['months']" t-as="month">  <t style="text-align: left;" t-esc="month"/></th>
+                                            <th style="text-align: left;" class="text-left">Total</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td colspan="15" style="border-bottom : 1px solid black !important;"></td></tr>
+                                        <t t-foreach="report_data['rubriques']" t-as="rub">
+                                            <!--<tr><td/><td colspan="5"><strong><t t-esc="rub[1]"/></strong></td></tr>-->
+                                            <t t-set="data" t-value="report_data['get_amounts'](emp, rub[0], report_data['year'])"/>
+                                            <!--<tr t-foreach="o.line_ids.filtered(lambda line: line.appears_on_payslip and line.code[:2] == 'R1')" t-as="line">-->
+                                            <t t-if="len(data['data'])>0">
+                                                <tr><td/><td class="text-left"><strong><t t-esc="data['rub']"/></strong></td></tr>
+                                                <tr t-foreach="data['data']" t-as="line" >
+
+<!--                                                <tr t-foreach="data['data']" t-as="line" t-if="data['data'].rule_type != 'storage data'">-->
+                                                <t t-set="total" t-value="0.0"/>
+                                                <td class="text-left">
+                                                    <t t-if="line['rule'].code[0] == 'R'">
+                                                        <t t-esc="line['rule'].code[1:]"/>
+                                                    </t>
+                                                    <t t-else="">
+                                                        <t t-esc="line['rule'].code"/>
+                                                    </t>
+                                                </td>
+                                                <td class="text-left"><span t-field="line['rule'].name"/></td>
+                                                <td class="text-right" t-foreach="report_data['months']" t-as="month">
+                                                <!--<td t-foreach="line['amounts']" t-as="amount">-->
+                                                    <t t-if="line['amounts'][month] != 0"><t t-esc="'%.2f' % line['amounts'][month]"/></t>
+                                                    <t t-set="total" t-value="total + line['amounts'][month]"/>
+                                                </td>
+                                                <td class="text-left"><span t-esc="'%.2f' % total"/></td>
+
+                                            </tr>
+
+                                            <tr>
+                                                <t t-set="total_sums" t-value="0.0"/>
+                                                <td/>
+                                                <td/>
+                                                <td class="text-right" t-foreach="report_data['months']" t-as="month">
+                                                    <t t-if="data['sums'][month] > 0"><t t-esc="'%.2f' % data['sums'][month]"/></t>
+                                                    <t t-set="total_sums" t-value="total_sums + data['sums'][month]"/>
+                                                </td>
+                                                <td class="text-left">
+                                                    <span t-esc="'%.2f' % total_sums"/>
+                                                </td>
+                                            </tr>
+                                            </t>
+                                        </t>
+                                        <tr><td colspan="15" style="border-bottom : 1px solid black !important;"></td></tr>
+                                        <!--<tr style="border-bottom : 1px solid black !important;"></tr>-->
+                                        <t t-set="data" t-value="report_data['get_amounts'](emp, 'none', report_data['year'])"/>
+                                            <!--<tr t-foreach="o.line_ids.filtered(lambda line: line.appears_on_payslip and line.code[:2] == 'R1')" t-as="line">-->
+                                            <t t-if="len(data['data'])>0">
+                                                <tr t-foreach="data['data']" t-as="line">
+                                                     <t t-if="line['rule'].rule_type != 'storage data'">
+                                                    <t t-set="total" t-value="0.0"/>
+                                                    <!--<td class="text-left">-->
+                                                        <!--<t t-if="line['rule'].code[0] == 'R'">-->
+                                                            <!--<t t-esc="line['rule'].code[1:]"/>-->
+                                                        <!--</t>-->
+                                                        <!--<t t-else="">-->
+                                                            <!--<t t-esc="line['rule'].code"/>-->
+                                                        <!--</t>-->
+                                                    <!--</td>-->
+                                                    <td/>
+                                                    <td class="text-left"><span t-field="line['rule'].name"/></td>
+                                                    <td class="text-right" t-foreach="report_data['months']" t-as="month">
+                                                    <!--<td t-foreach="line['amounts']" t-as="amount">-->
+                                                        <t t-if="line['amounts'][month] != 0"><t t-esc="'%.2f' % line['amounts'][month]"/></t>
+                                                        <t t-set="total" t-value="total + line['amounts'][month]"/>
+                                                    </td>
+                                                    <td class="text-left"><span t-esc="'%.2f' % total"/></td>
+                                                     </t>
+                                                </tr>
+                                            </t>
+                                    </tbody>
+                                </table>
+
+                                <div style="page-break-after: always;"/>
+                            </t>
+                        </div>
+                    <!--</t>-->
+                <!--</t>-->
+            </t>
+        </template>
+
+    </data>
+</odoo>

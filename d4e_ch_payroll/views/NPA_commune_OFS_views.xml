@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="npa_commune_ofs_view_form" model="ir.ui.view">
+        <field name="name">NPA Commune OFS Form</field>
+        <field name="model">npa.commune.ofs</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_title" aria-label="Name">
+                        <label for="name" class="oe_edit_only"/>
+                        <h1>
+                            <field name="name" class="oe_inline"/>
+                        </h1>
+                    </div>
+
+                    <group>
+                        <group>
+                            <field name="np_numero"/>
+                            <field name="np_canton"/>
+                            <field name="np_ofs"/>
+                        </group>
+                        <group>
+                            <field name="np_ville"/>
+                            <field name="np_type"/>
+                            <field name="np_version"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="npa_commune_ofs_view_list" model="ir.ui.view">
+        <field name="name">NPA Commune OFS List</field>
+        <field name="model">npa.commune.ofs</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom">
+                <field name="name"/>
+                <field name="np_numero"/>
+                <field name="np_ville"/>
+                <field name="np_canton"/>
+                <field name="np_type"/>
+                <field name="np_ofs"/>
+                <field name="np_version"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="npa_commune_ofs_action" model="ir.actions.act_window">
+        <field name="name">NPA Commune OFS List</field>
+        <field name="res_model">npa.commune.ofs</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    <menuitem name="Swiss files" id="suiss_files_menu" parent="hr_work_entry_contract.menu_hr_payroll_root" sequence="69"/>
+<!--    <menuitem name="NPA commune OFS" id="npa_commune_ofs_menu" parent="d4e_ch_payroll.suiss_files_menu" action="npa_commune_ofs_action" sequence="10"/>-->
+
+
+</odoo>

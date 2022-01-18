@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="d4e_inherit_view_employee_form" model="ir.ui.view">
+            <field name="name">hr.employee.form</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+<!--                <xpath expr="//div[@id='o_work_employee_container']" position='after'>-->
+<!--                    <group>-->
+<!--                        <div>-->
+<!--                            <h1>-->
+<!--                                <label for="observation" string="Observations (reportées en rubrique 15 du certificat de salaire)"/>-->
+<!--                            </h1>-->
+<!--                            <field name="observation" nolabel="1"/>-->
+<!--                        </div>-->
+<!--                    </group>-->
+<!--                </xpath>-->
+                <xpath expr="//field[@name='visa_expire']" position='after'>
+                    <field name="avs_13"/>
+                </xpath>
+                <xpath expr="//field[@name='coach_id']" position='after'>
+                    <field name="partner_id"  attrs="{'invisible': [('partner_id', '=',False )]}"/>
+                </xpath>
+                <xpath expr="//field[@name='birthday']" position='after'>
+                    <field name="emp_age"/>
+                    <field name="bool_age_18"/>
+                    <field name="bool_age_25"/>
+                    <field name="date_deb_benefic_rente"/>
+                </xpath>
+                <xpath expr="//group[@name='departure']" position='after'>
+                    <group>
+                        <field name="hierarchy_status_id"/>
+<!--                        <field name="date_deb_benefic_rente"/>-->
+                    </group>
+<!--                    <group name="montant" string="Montant">-->
+<!--                        <field name="currency_id" invisible="1"/>-->
+<!--                        <field name="private_share_service_car" widget="monetary" options="{'currency_field': 'currency_id'}"/>-->
+<!--                        <field name="lump_sum_representation_costs" widget="monetary" options="{'currency_field': 'currency_id'}"/>-->
+<!--                        <field name="allocation_for_child" widget="monetary" options="{'currency_field': 'currency_id'}"/>-->
+<!--                    </group>-->
+                </xpath>
+
+                <xpath expr="//notebook[last()]" position="inside">
+                    <page string="Impôt à la source" name="withholding_tax" invisible="1">
+                        <group><field name="perception_scale"/></group>
+                        <group string='Cumulative Salary' name="cumulative_salary">
+                            <field name="cumulative_salary_lines" widget="one2many" nolabel="1">
+                                <tree editable="bottom">
+                                    <field name="year"/>
+                                    <field name="perception_scale"/>
+                                    <field name="cumulative_salary"/>
+                                </tree>
+                            </field>
+                        </group>
+                    </page>
+                    <page string="bases de calcul" name="bases_de_calcul">
+                        <field name="employee_id_month_ids" readonly="1" />
+                    </page>
+                </xpath>
+                 <xpath expr="//field[@name='coach_id']" position='after'>
+                     <field name="hr_payslip_number" invisible="1"/>
+                </xpath>
+
+            </field>
+        </record>
+
+        <record id="hr.open_view_employee_list_my" model="ir.actions.act_window">
+            <field name="name">Employees</field>
+            <field name="res_model">hr.employee</field>
+            <field name="view_mode">kanban,tree,form,activity</field>
+            <field name="domain">[]</field>
+            <field name="context">{'chat_icon': True, 'domain_custom': True}</field>
+            <field name="view_id" eval="False"/>
+            <field name="search_view_id" ref="hr.view_employee_filter"/>
+            <field name="help" type="html">
+             <p class="o_view_nocontent_smiling_face">
+               Add a new employee
+             </p><p>
+               With just a quick glance on the Odoo employee screen, you
+               can easily find all the information you need for each person;
+               contact data, job position, availability, etc.
+             </p>
+            </field>
+        </record>
+
+    </data>
+</odoo>

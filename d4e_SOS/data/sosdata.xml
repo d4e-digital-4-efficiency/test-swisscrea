@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<odoo>
+    <data noupdate="1" >
+        <record id="default_sos_client" model="sos.client">
+        </record>
+    </data>
+</odoo>

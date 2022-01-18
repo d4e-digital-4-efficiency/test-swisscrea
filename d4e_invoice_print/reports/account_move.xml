@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="l10n_ch_swissqr_qrimage_template" inherit_id="l10n_ch.l10n_ch_swissqr_template">
+         <xpath expr="//div[hasclass('swissqr_title')]" position="after">
+                <div  t-if="o.qr_image">
+                    <img  t-att-src="image_data_uri(o.qr_image)"  width="100%" height="810px"  style="padding-top: 320px;"/>
+                </div>
+        </xpath>
+    </template>
+
+    <record id="account.account_invoices" model="ir.actions.report">
+        <field name="binding_model_id" eval="False" />
+    </record>
+
+    <record id="account.account_invoices_without_payment" model="ir.actions.report">
+        <field name="binding_model_id" eval="False" />
+    </record>
+
+    <record id="account.action_account_original_vendor_bill" model="ir.actions.report">
+        <field name="binding_model_id" eval="False" />
+    </record>
+
+    <record id="report_account_invoices_with_isr" model="ir.actions.report">
+        <field name="name">Invoices with ISR</field>
+        <field name="model">account.move</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">d4e_invoice_print.account_invoices_with_isr</field>
+        <field name="print_report_name">(object._get_report_base_filename())</field>
+        <field name="attachment">(object.state == 'posted') and ((object.name or 'INV').replace('/','_')+'.pdf')</field>
+        <field name="groups_id" eval="[(4, ref('account.group_account_invoice')), (4, ref('account.group_account_readonly'))]" />
+    </record>
+
+    <record id="report_account_invoices_with_qr" model="ir.actions.report">
+        <field name="name">Invoices with QR</field>
+        <field name="model">account.move</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">d4e_invoice_print.account_invoices_with_qr</field>
+        <field name="print_report_name">(object._get_report_base_filename())</field>
+        <field name="attachment">(object.state == 'posted') and ((object.name or 'INV').replace('/','_')+'.pdf')</field>
+        <field name="groups_id" eval="[(4, ref('account.group_account_invoice')), (4, ref('account.group_account_readonly'))]" />
+    </record>
+</odoo>

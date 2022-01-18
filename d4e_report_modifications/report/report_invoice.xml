@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="paperformat_invoice" model="report.paperformat">
+            <field name="name">Invoice A4</field>
+            <field name="margin_left">1</field>
+            <field name="margin_right">1</field>
+            <field name="margin_top">50</field>
+            <field name="margin_bottom">5</field>
+            <field name="header_spacing">37</field>
+            <field name="default" eval="True" />
+            <field name="orientation">Portrait</field>
+            <field name="header_spacing">55</field>
+        </record>
+        <record id="account.account_invoices" model="ir.actions.report">
+            <field name="paperformat_id" ref="d4e_report_modifications.paperformat_invoice"/>
+        </record>
+
+
+        <template id="external_layout_standard_invoice">
+
+        <div t-attf-class="header o_company_#{company.id}_layout" t-att-style="report_header_style">
+            <div class="row" style="padding-top: 50px; ">
+                <div class="col-6" name="company_address">
+                    <div>
+                        <strong> <span t-field="company.partner_id.name" style="font-size: 15px; font-weight: bold; " /> </strong>
+                        <span t-field="company.partner_id.street" style="font-size: 13px;"/>
+                        <br></br>
+                        <span t-field="company.partner_id.city" style="font-size: 13px; padding: 0px; margin: 0px;"/> <span t-field="company.partner_id.zip" style="font-size: 13px; padding: 0px"/>
+                        <br></br>
+                        Tel: <span t-field="company.partner_id.phone" style="font-size: 13px; padding: 0px; margin: 0px;"/>
+                        <br></br>
+                        <span t-field="company.partner_id.email" style="font-size: 13px; padding: 0px; margin: 0px;"/>
+                        <br></br>
+                        <span t-field="company.partner_id.website" style="font-size: 13px; padding: 0px; margin: 0px;"/>
+                        <br></br>
+                        <span t-field="company.partner_id.vat" style="font-size: 13px; padding: 0px; margin: 0px;"/>
+                    </div>
+                </div>
+                <div class="col-12 mb4" style="margin-right: 0px; margin-left:150px; float:right;">
+                    <img t-if="company.logo" t-att-src="image_data_uri(company.logo)" style="max-height: 100px;" alt="Logo"/>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div t-attf-class="article o_report_layout_standard o_company_#{company.id}_layout"  t-att-data-oe-model="o and o._name" t-att-data-oe-id="o and o.id" t-att-data-oe-lang="o and o.env.context.get('lang')">
+            <div class="pt-5">
+                <t t-call="web.address_layout"/>
+            </div>
+            <t t-raw="0"/>
+        </div>
+    </template>
+
+        <template id="external_layout_invoice">
+            <t t-if="not o" t-set="o" t-value="doc"/>
+
+            <t t-if="not company">
+                <t t-if="company_id">
+                    <t t-set="company" t-value="company_id"/>
+                </t>
+                <t t-elif="o and 'company_id' in o and o.company_id.sudo()">
+                    <t t-set="company" t-value="o.company_id.sudo()"/>
+                </t>
+                <t t-else="else">
+                    <t t-set="company" t-value="res_company"/>
+                </t>
+            </t>
+            <t t-call="d4e_report_modifications.external_layout_standard_invoice"><t t-raw="0"/></t>
+
+     </template>
+
+
+        <template id="account.report_invoice_document">
+            <t t-call="d4e_report_modifications.external_layout_invoice">
+                <t t-set="o" t-value="o.with_context(lang=lang)" />
+                <t t-set="split_total_amount" t-value="o.split_total_amount()"/>
+                <t t-set="print_bank" t-value="o.company_id.l10n_ch_isr_print_bank_location"/>
+                <t t-set="partner" t-value="o.partner_id or (o.move_lines and o.move_lines[0].partner_id) or False"/>
+                 <t t-if="partner" name="partner_header">
+                </t>
+
+                <t t-if="partner" name="partner_header">
+                    <t t-set="address">
+                        <div
+                        t-options='{"widget": "contact", "no_marker": True}'>
+                            <t t-if="not partner.is_company" ><span t-field="partner.parent_id.name" style="font-size: 13px;" /></t>
+                            <br></br>
+                            <t t-if="not partner.is_company" ><span t-field="partner.title" style="font-size: 13px;" /> </t>
+                            <span t-field="partner.name" style="font-size: 13px;" />
+                            <br></br>
+                            <span t-field="partner.street" style="font-size: 13px;"/>
+                            <br></br>
+                            <span t-field="partner.city" style="font-size: 13px; padding: 0px; margin: 0px;"/> <span t-field="partner.zip" style="font-size: 13px; padding: 0px"/>
+                            </div>
+                   </t>
+                </t>
+                <div class="page" style="width:100%;">
+                    <div style="border:1px solid; width: 300px;" >
+                        <span style="font-size : 0.8rem; font-weight: bold; margin-left: 15px;">Invoice N°</span>
+                        <span style="font-size : 0.8rem; font-weight: bold;" t-esc="'%04d' %  o.sequence_number"/>
+                    </div>
+                    <div>
+                        <span t-if="o.ref" style="margin-left: 15px; font-weight: bold; font-size : 0.8rem;">Customer Reference :</span> <span t-field="o.ref"/>
+                        <br></br>
+                        <t t-if="o.invoice_date">
+                            <t t-set="date" t-value="o.invoice_date.strftime('%d.%m.%Y')"/>
+                            <strong t-if="o.date" style="margin-left: 15px; font-size : 0.8rem">Date:</strong> <t t-esc="date" style="padding-right: 30px; margin-right: 20px; font-size : 0.8rem;"/>
+                        </t>
+                    </div>
+                    <div class="oe_structure"/>
+                    <div name="expiration_date">
+                    </div>
+
+                    <t t-set="display_discount" t-value="any(l.discount for l in o.invoice_line_ids)"/>
+
+                    <table style="width: 100%; margin-top: 10px; font-size : 0.7rem !important">
+                        <style>
+                            th, td {
+                                margin: 5px;
+                                padding: 5px;
+                            }
+                        </style>
+                            <thead>
+                                <tr>
+                                    <th style="border: 1px solid black; text-align:left;"><strong>Description</strong></th>
+                                    <th style="border: 1px solid black; text-align:left;"><strong>Quantity</strong></th>
+                                    <th style="border: 1px solid black; text-align:right;"><strong>Price</strong></th>
+                                    <th style="border: 1px solid black; text-align:center;"><strong>VAT</strong></th>
+                                    <th style="border: 1px solid black; text-align:right;"><strong>Amount (H.T)</strong></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-set="amount_total_line" t-value="0"/>
+                                <tr t-foreach="o.invoice_line_ids" t-as="line">
+
+                                    <t t-set="amount_total_line" t-value="amount_total_line + line.price_subtotal"/>
+                                    <td style="text-align:left;">
+                                        <span t-field="line.name"/>
+                                    </td>
+                                    <td style="text-align:left;">
+                                        <span t-field="line.quantity"/>
+                                    </td>
+                                    <td style="text-align:right;">
+                                        <span t-field="line.price_unit"/>
+                                    </td>
+
+                                    <td style="text-align:center;">
+                                        <span t-field="line.tax_ids"/>
+                                    </td>
+
+
+                                    <td style="text-align:right;">
+                                        <span t-field="line.price_subtotal"/>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td style="border-top: 1px solid black;">
+                                        <t t-set="tax_rate" t-value="(o.amount_tax / o.amount_untaxed) * 100"/>
+                                        Tax excluded <span t-esc=" '%.2f' %  tax_rate"/> % / <span t-field="o.amount_untaxed"/> : <span t-field="o.amount_tax"/>
+                                    </td>
+                                    <td style="border-top: 1px solid black;"></td>
+                                    <td style="border-top: 1px solid black; width=20px; font-weight: bold;">Net Total</td>
+                                    <td style="border-top: 1px solid black;"></td>
+                                    <td style="border-top: 1px solid black;">
+                                        <span t-esc="'%.2f' %  amount_total_line"/>
+                                        <t t-esc="o.company_id.currency_id.symbol"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td style="font-weight: bold;">VAT</td>
+                                    <td></td>
+                                    <td>
+                                        <span t-field="o.amount_tax"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td style="font-weight: bold;">Round</td>
+                                    <td></td>
+                                    <td><span t-esc=" '%.2f' %  tax_rate"/></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td style="border-top: 1px solid black; width=20px; font-weight: bold;">Total</td>
+                                    <td style="border-top: 1px solid black;"></td>
+                                    <td style="border-top: 1px solid black;">
+                                        <span style="font-weight: bold;" t-field="o.amount_total"/>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                        <br></br>
+                        <p style="font-size : 0.7rem !important" t-if="o.move_type in ('out_invoice', 'in_refund') and o.payment_reference" name="payment_communication">
+                            Please use the following communication for your payment : <b><span t-field="o.payment_reference"/></b>
+                        </p>
+                        <div style="width:100%; padding-bottom: 120px; font-size : 0.7rem !important">
+                            <br></br>
+                            <t t-if="o.invoice_payment_term_id">Net payment to <span t-field="o.invoice_payment_term_id"/></t>
+                            <br></br>
+                            With our thanks
+                            <br></br>
+<!--                            Team .....-->
+<!--                            <br></br>-->
+                        </div>
+                    <script>document.body.className += " l10n_ch_isr";</script>
+                    <div id="isr" t-att-class="'isr-print-bank' if print_bank else None" style="position:relative ;page-break-inside: avoid !important; top: 0mm; margin-top = 20mm; ">
+
+
+                            <div id="voucher">
+                                <t t-if="print_bank">
+                            <div id="voucher-for-bank">
+                                <p t-if="not o.company_id.l10n_ch_isr_preprinted_bank">
+                                    <t t-esc="o.partner_bank_id.bank_id.name"/><br />
+                                    <t t-esc="o.partner_bank_id.bank_id.zip"/>
+                                    <t t-esc="o.partner_bank_id.bank_id.city"/>
+                                </p>
+                            </div>
+                        </t>
+                            <div id="voucher-for-contact">
+                            <p id="voucher-for_name" t-field="o.company_id.display_name"/>
+                            <p id="voucher-for_address1" t-field="o.company_id.street"/>
+                            <p id="voucher-for_address2" t-field="o.company_id.street2"/>
+                            <p id="voucher-for_address3">
+                                <t t-esc="o.company_id.zip"/>
+                                <t t-esc="o.company_id.city"/>
+                            </p>
+                        </div>
+
+                        <div id="voucher-bank" t-if="not print_bank or not o.company_id.l10n_ch_isr_preprinted_account">
+                            <p id="voucher-bank_ref" t-field="o.l10n_ch_isr_subscription_formatted"/>
+                        </div>
+
+                        <p id="voucher-amount_units" t-esc="split_total_amount[0]"/>
+                        <p id="voucher-amount_cents" t-esc="split_total_amount[1]"/>
+
+                        <div id="voucher-by">
+                            <p id="voucher-by_reference_number" t-field="o.l10n_ch_isr_number"/>
+                            <address id="voucher-by_customer_address" t-field="o.partner_id" t-options='{"widget": "contact", "fields": ["address","name"], "no_marker": True}' />
+                        </div>
+                    </div>
+                            <div id="slip">
+
+                        <t t-if="print_bank">
+                            <div id="slip-for-bank">
+                                <p t-if="not o.company_id.l10n_ch_isr_preprinted_bank">
+                                    <t t-esc="o.partner_bank_id.bank_id.name"/><br />
+                                    <t t-esc="o.partner_bank_id.bank_id.zip"/>
+                                    <t t-esc="o.partner_bank_id.bank_id.city"/>
+                                </p>
+                            </div>
+                        </t>
+
+                        <div id="slip-for-contact">
+                            <p id="slip-for_name" t-field="o.company_id.display_name"/>
+                            <p id="slip-for_address1" t-field="o.company_id.street"/>
+                            <p id="slip-for_address2" t-field="o.company_id.street2"/>
+                            <p id="slip-for_address3">
+                                <t t-esc="o.company_id.zip"/>
+                                <t t-esc="o.company_id.city"/>
+                            </p>
+                        </div>
+
+                        <div id="slip-bank" t-if="not print_bank or not o.company_id.l10n_ch_isr_preprinted_account">
+                            <p id="slip-bank_ref" t-field="o.l10n_ch_isr_subscription_formatted"/>
+                        </div>
+
+                        <p id="slip-amount_units" t-esc="split_total_amount[0]"/>
+                        <p id="slip-amount_cents" t-esc="split_total_amount[1]"/>
+
+                        <div id="slip-reference">
+                            <p id="slip-reference_number" t-field="o.l10n_ch_isr_number_spaced"/>
+                        </div>
+
+                        <div id="slip-by">
+                            <address id="slip-by_customer_address" t-field="o.partner_id" t-options='{"widget": "contact", "fields": ["address","name"], "no_marker": True}' />
+                        </div>
+
+                        <div id="slip-optical-line">
+                            <div t-attf-style="top: {{ o.company_id.l10n_ch_isr_scan_line_top }}mm; left: {{ o.company_id.l10n_ch_isr_scan_line_left }}mm;">
+                                <div t-foreach="o.l10n_ch_isr_optical_line" t-as="char" t-esc="char" t-attf-style="right: {{ round((char_size - char_index - 1) * 0.1, 1) }}in"/>
+                            </div>
+                        </div>
+                    </div>
+                        </div>
+
+
+                </div>
+
+
+                <div id="total"></div>
+                <div name="reference"></div>
+            </t>
+            <t t-set="split_total_amount" t-value="o.split_total_amount()"/>
+            <t t-set="print_bank" t-value="o.company_id.l10n_ch_isr_print_bank_location"/>
+
+        </template>
+
+    </data>
+</odoo>

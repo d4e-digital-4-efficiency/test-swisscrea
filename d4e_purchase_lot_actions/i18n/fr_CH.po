@@ -1,0 +1,27 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* d4e_purchase_lot_actions
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-14 16:01+0000\n"
+"PO-Revision-Date: 2021-09-14 16:01+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: d4e_purchase_lot_actions
+#: model:ir.actions.server,name:d4e_purchase_lot_actions.action_purchase_confirm_demands
+msgid "Confirm Orders"
+msgstr "Confirmer les commandes"
+
+
+#. module: d4e_purchase_lot_actions
+#: model:ir.actions.server,name:d4e_purchase_lot_actions.action_purchase_send_demands
+msgid "Send POs by Email"
+msgstr "Envoyer les Commandes par email"

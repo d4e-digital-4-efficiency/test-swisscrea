@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <template id="report_account_avs">
+            <t t-call="web.html_container">
+                <div class="page">
+                    <h1 class="text-center">Décompte AVS</h1>
+                    <br></br>
+                    <br></br>
+
+                    <table class="table table-bordered" style="font-size: 13px;width:100%;text-left">
+
+                        <thead style="border-bottom : 1px solid black !important;">
+                            <th class="text-left" style="text-align: left;" width="20%">N° assurance
+                                sociale
+                            </th>
+
+                            <th class="text-left" style="text-align: left;" width="20%">Du</th>
+                            <th class="text-left" style="text-align: left;" width="20%">Au</th>
+                            <th class="text-left" style="text-align: left;" width="15%">Cumul AVS</th>
+                            <th class="text-left" style="text-align: left;" width="15%">Cumul AC</th>
+                            <th class="text-left" style="text-align: left;" width="15%">Cumul ACC</th>
+                            <th class="text-left" style="text-align: left;" width="10%">M/F</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="15" style="border-bottom : 1px solid black !important;"></td>
+                            </tr>
+                            <t t-foreach="report_data['emps_data']" t-as="emp">
+                                <tr>
+                                    <td class="text-left">
+                                        <t t-esc="emp['emp_id'].avs_13"/>
+                                    </td>
+                                    <td class="text-left">
+                                        <t t-esc="emp['date_from']"/>
+                                    </td>
+                                    <td class="text-left">
+                                        <t t-esc="emp['date_to']"/>
+                                    </td>
+                                    <td class="text-left">
+                                        <t t-esc="emp['acc_avs']"/>
+                                    </td>
+                                    <td class="text-left">
+                                        <t t-esc="emp['acc_ac']"/>
+                                    </td>
+                                    <td class="text-left">
+                                        <t t-esc="emp['acc_acc']"/>
+                                    </td>
+                                    <td class="text-left">
+                                        <t t-esc="emp['emp_id'].gender[0].capitalize()"/>
+                                    </td>
+                                </tr>
+                            </t>
+                        </tbody>
+                    </table>
+                    <!--                <div style="page-break-after: always;"/>-->
+                </div>
+            </t>
+        </template>
+    </data>
+</odoo>

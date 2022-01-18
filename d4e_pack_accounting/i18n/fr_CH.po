@@ -1,0 +1,315 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* d4e_pack_accounting
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-06 11:05+0000\n"
+"PO-Revision-Date: 2021-09-06 11:05+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: d4e_pack_accounting
+#: model_terms:ir.ui.view,arch_db:d4e_pack_accounting.view_move_form
+#: model_terms:ir.ui.view,arch_db:d4e_pack_accounting.view_order_form
+msgid "Add a Title"
+msgstr "Ajouter un titre "
+
+#. module: d4e_pack_accounting
+#: model_terms:ir.ui.view,arch_db:d4e_pack_accounting.view_move_form
+#: model_terms:ir.ui.view,arch_db:d4e_pack_accounting.view_order_form
+msgid "Add a subtotal"
+msgstr "Ajouter un sous-total"
+
+#. module: d4e_pack_accounting
+#: model:ir.model,name:d4e_pack_accounting.model_res_bank
+msgid "Bank"
+msgstr "Banque"
+
+#. module: d4e_pack_accounting
+#: model:ir.model,name:d4e_pack_accounting.model_res_partner_bank
+#: model:ir.ui.menu,name:d4e_pack_accounting.menu_action_res_partner_bank_form
+msgid "Bank Accounts"
+msgstr "Comptes bancaires"
+
+#. module: d4e_pack_accounting
+#: model:ir.ui.menu,name:d4e_pack_accounting.menu_config_banks_list
+msgid "Banks List"
+msgstr "Liste des banques "
+
+#. module: d4e_pack_accounting
+#: model_terms:ir.ui.view,arch_db:d4e_pack_accounting.view_move_form
+msgid "Bill Reference"
+msgstr "N° de facture"
+
+#. module: d4e_pack_accounting
+#: model_terms:ir.ui.view,arch_db:d4e_pack_accounting.report_invoice_order_document_inherit
+msgid "Cancelled Invoice"
+msgstr "Facture annulée"
+
+#. module: d4e_pack_accounting
+#: model:ir.model.fields,field_description:d4e_pack_accounting.field_res_partner__postal_number_city_id
+#: model:ir.model.fields,field_description:d4e_pack_accounting.field_res_users__postal_number_city_id
+#: model_terms:ir.ui.view,arch_db:d4e_pack_accounting.res_partner_view_form_inherit
+msgid "City"
+msgstr "Ville"
+
+#. module: d4e_pack_accounting
+#: model_terms:ir.ui.view,arch_db:d4e_pack_accounting.res_partner_view_form_inherit
+msgid "Country"
+msgstr "Pays"
+
+#. module: d4e_pack_accounting
+#: model_terms:ir.ui.view,arch_db:d4e_pack_accounting.report_invoice_order_document_inherit
+msgid "Credit Note"
+msgstr "Note de crédit"
+
+#. module: d4e_pack_accounting
+#: model_terms:ir.ui.view,arch_db:d4e_pack_accounting.view_move_form
+msgid "Customer"
+msgstr "Client"
+
+#. module: d4e_pack_accounting
+#: model:ir.model.fields,field_description:d4e_pack_accounting.field_res_partner__customer_no
+#: model:ir.model.fields,field_description:d4e_pack_accounting.field_res_users__customer_no
+msgid "Customer no."
+msgstr "N° de contact"
+
+#. module: d4e_pack_accounting
+#: model:ir.model.fields,field_description:d4e_pack_accounting.field_account_move__display_name
+#: model:ir.model.fields,field_description:d4e_pack_accounting.field_account_move_line__display_name
+#: model:ir.model.fields,field_description:d4e_pack_accounting.field_postal_number__display_name
+#: model:ir.model.fields,field_description:d4e_pack_accounting.field_res_bank__display_name
+#: model:ir.model.fields,field_description:d4e_pack_accounting.field_res_partner__display_name
+#: model:ir.model.fields,field_description:d4e_pack_accounting.field_res_partner_bank__display_name
+#: model:ir.model.fields,field_description:d4e_pack_accounting.field_sale_order__display_name
+#: model:ir.model.fields,field_description:d4e_pack_accounting.field_sale_order_line__display_name
+msgid "Display Name"
+msgstr "Nom affiché"
+
+#. module: d4e_pack_accounting
+#: model:ir.model.fields,field_description:d4e_pack_accounting.field_account_move_line__display_type
+#: model:ir.model.fields,field_description:d4e_pack_accounting.field_sale_order_line__display_type
+msgid "Display Type"
+msgstr "Type d'affichage"
+
+#. module: d4e_pack_accounting
+#: model_terms:ir.ui.view,arch_db:d4e_pack_accounting.report_invoice_order_document_inherit
+msgid "Draft Invoice"
+msgstr "Facture en brouillon"
+
+#. module: d4e_pack_accounting
+#: model:ir.model.constraint,message:d4e_pack_accounting.constraint_account_move_line_check_non_accountable_fields_null
+msgid ""
+"Forbidden unit price, account and quantity on non-accountable invoice line"
+msgstr ""
+"Prix unitaire, compte et quantité interdits sur une ligne de facture non comptabilisable"
+
+#. module: d4e_pack_accounting
+#: model_terms:ir.ui.view,arch_db:d4e_pack_accounting.res_partner_view_form_inherit
+msgid "Increment"
+msgstr "Incrémenter"
+
+#. module: d4e_pack_accounting
+#: model:ir.model.fields,field_description:d4e_pack_accounting.field_account_bank_statement_line__internal_reference
+#: model:ir.model.fields,field_description:d4e_pack_accounting.field_account_move__internal_reference
+#: model:ir.model.fields,field_description:d4e_pack_accounting.field_account_payment__internal_reference
+msgid "Internal Reference"
+msgstr "Référence interne"
+
+#. module: d4e_pack_accounting
+#: model_terms:ir.ui.view,arch_db:d4e_pack_accounting.report_invoice_order_document_inherit
+msgid "Invoice"
+msgstr "Facture"
+
+#. module: d4e_pack_accounting
+#: model:ir.model,name:d4e_pack_accounting.model_account_move
+msgid "Journal Entry"
+msgstr "Pièce comptable"
+
+#. module: d4e_pack_accounting
+#: model:ir.model,name:d4e_pack_accounting.model_account_move_line
+msgid "Journal Item"
+msgstr "Écriture comptable"
+
+#. module: d4e_pack_accounting
+#: model:ir.model.fields,field_description:d4e_pack_accounting.field_account_move____last_update
+#: model:ir.model.fields,field_description:d4e_pack_accounting.field_account_move_line____last_update
+#: model:ir.model.fields,field_description:d4e_pack_accounting.field_postal_number____last_update
+#: model:ir.model.fields,field_description:d4e_pack_accounting.field_res_bank____last_update
+#: model:ir.model.fields,field_description:d4e_pack_accounting.field_res_partner____last_update
+#: model:ir.model.fields,field_description:d4e_pack_accounting.field_res_partner_bank____last_update
+#: model:ir.model.fields,field_description:d4e_pack_accounting.field_sale_order____last_update
+#: model:ir.model.fields,field_description:d4e_pack_accounting.field_sale_order_line____last_update
+msgid "Last Modified on"
+msgstr "Dernière modification le"
+
+#. module: d4e_pack_accounting
+#: model:ir.model.fields,field_description:d4e_pack_accounting.field_postal_number__ortbez18
+msgid "Localité"
+msgstr "Localité"
+
+#. module: d4e_pack_accounting
+#: model:ir.model.constraint,message:d4e_pack_accounting.constraint_account_move_line_check_accountable_required_fields
+msgid "Missing required account on accountable invoice line."
+msgstr "Absence du compte requis sur la ligne de facture imputable."
+
+#. module: d4e_pack_accounting
+#: model:ir.model.fields,field_description:d4e_pack_accounting.field_res_partner__phone_2
+#: model:ir.model.fields,field_description:d4e_pack_accounting.field_res_users__phone_2
+msgid "Phone 2"
+msgstr "Téléphone 2"
+
+#. module: d4e_pack_accounting
+#. openerp-web
+#: code:addons/d4e_pack_accounting/static/src/js/message.js:0
+#, python-format
+msgid ""
+"Please complete your bank information or your changes will be discarded."
+msgstr ""
+
+#. module: d4e_pack_accounting
+#: model:ir.model,name:d4e_pack_accounting.model_postal_number
+#: model_terms:ir.ui.view,arch_db:d4e_pack_accounting.view_postal_number_tree
+msgid "Postal Number"
+msgstr "Localités"
+
+#. module: d4e_pack_accounting
+#: model:ir.ui.menu,name:d4e_pack_accounting.menu_config_postal_list
+#: model:ir.ui.menu,name:d4e_pack_accounting.menu_config_postal_numbers
+msgid "Postal numbers"
+msgstr "Localités"
+
+#. module: d4e_pack_accounting
+#: model:ir.model,name:d4e_pack_accounting.model_sale_order
+msgid "Sales Order"
+msgstr "Bon de commande"
+
+#. module: d4e_pack_accounting
+#: model:ir.model,name:d4e_pack_accounting.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Ligne de bons de commande"
+
+#. module: d4e_pack_accounting
+#: code:addons/d4e_pack_accounting/models/account_move.py:0
+#: code:addons/d4e_pack_accounting/models/account_move.py:0
+#: code:addons/d4e_pack_accounting/models/account_move.py:0
+#: code:addons/d4e_pack_accounting/models/sale_order.py:0
+#: code:addons/d4e_pack_accounting/models/sale_order.py:0
+#, python-format
+msgid "Sub-Total-manuel:      "
+msgstr "Sous-Total-manuel:      "
+
+#. module: d4e_pack_accounting
+#: code:addons/d4e_pack_accounting/models/account_move.py:0
+#: code:addons/d4e_pack_accounting/models/account_move.py:0
+#, python-format
+msgid "Sub-Total:    "
+msgstr "Sous-Total:      "
+
+#. module: d4e_pack_accounting
+#: code:addons/d4e_pack_accounting/models/account_move.py:0
+#: code:addons/d4e_pack_accounting/models/account_move.py:0
+#: code:addons/d4e_pack_accounting/models/sale_order.py:0
+#: code:addons/d4e_pack_accounting/models/sale_order.py:0
+#: code:addons/d4e_pack_accounting/models/sale_order.py:0
+#: code:addons/d4e_pack_accounting/models/sale_order.py:0
+#, python-format
+msgid "Sub-Total:      "
+msgstr "Sous-Total:      "
+
+#. module: d4e_pack_accounting
+#: model:ir.model.fields.selection,name:d4e_pack_accounting.selection__account_move_line__display_type__line_sub_total
+#: model:ir.model.fields.selection,name:d4e_pack_accounting.selection__account_move_line__display_type__line_subtotal
+#: model:ir.model.fields.selection,name:d4e_pack_accounting.selection__sale_order_line__display_type__line_sub_total
+#: model:ir.model.fields.selection,name:d4e_pack_accounting.selection__sale_order_line__display_type__line_subtotal
+msgid "Subtotal"
+msgstr "Sous-total"
+
+#. module: d4e_pack_accounting
+#: model:ir.model.fields,field_description:d4e_pack_accounting.field_res_bank__swissbank_id
+msgid "Swissbank"
+msgstr ""
+
+#. module: d4e_pack_accounting
+#: model:ir.model.fields,help:d4e_pack_accounting.field_account_move_line__display_type
+#: model:ir.model.fields,help:d4e_pack_accounting.field_sale_order_line__display_type
+msgid "Technical field for UX purpose."
+msgstr "Champ technique utilisé à des fins ergonomiques"
+
+#. module: d4e_pack_accounting
+#: model:ir.model.constraint,message:d4e_pack_accounting.constraint_account_move_line_check_amount_currency_balance_sign
+msgid ""
+"The amount expressed in the secondary currency must be positive when account"
+" is debited and negative when account is credited. If the currency is the "
+"same as the one from the company, this amount must strictly be equal to the "
+"balance."
+msgstr ""
+
+#. module: d4e_pack_accounting
+#. openerp-web
+#: code:addons/d4e_pack_accounting/static/src/js/message.js:0
+#, python-format
+msgid ""
+"The record has been modified, your changes will be discarded. Do you want to"
+" proceed?"
+msgstr ""
+
+#. module: d4e_pack_accounting
+#: code:addons/d4e_pack_accounting/models/res_bank.py:0
+#, python-format
+msgid ""
+"The selected bank does not contain BIC / SWIFT, please choose another bank "
+"or change the bank information."
+msgstr ""
+"La banque sélectionnée ne contient pas de BIC/SWIFT, veuillez choisir une "
+"autre banque ou modifier les informations de la banque."
+
+#. module: d4e_pack_accounting
+#: model:ir.model.fields.selection,name:d4e_pack_accounting.selection__account_move_line__display_type__line_title
+#: model:ir.model.fields.selection,name:d4e_pack_accounting.selection__sale_order_line__display_type__line_title
+msgid "Titre"
+msgstr ""
+
+#. module: d4e_pack_accounting
+#: model:ir.model.fields,field_description:d4e_pack_accounting.field_postal_number__plz_typ
+msgid "Type de NPA"
+msgstr ""
+
+#. module: d4e_pack_accounting
+#: model_terms:ir.ui.view,arch_db:d4e_pack_accounting.view_move_form
+msgid "Vendor"
+msgstr "Fournisseur"
+
+#. module: d4e_pack_accounting
+#: model_terms:ir.ui.view,arch_db:d4e_pack_accounting.report_invoice_order_document_inherit
+msgid "Vendor Bill"
+msgstr "Facture fournisseur"
+
+#. module: d4e_pack_accounting
+#: model_terms:ir.ui.view,arch_db:d4e_pack_accounting.report_invoice_order_document_inherit
+msgid "Vendor Credit Note"
+msgstr "Note de crédit de fournisseur"
+
+#. module: d4e_pack_accounting
+#. openerp-web
+#: code:addons/d4e_pack_accounting/static/src/js/message.js:0
+#, python-format
+msgid "Warning"
+msgstr "Avertissement"
+
+#. module: d4e_pack_accounting
+#: model:ir.model.constraint,message:d4e_pack_accounting.constraint_account_move_line_check_credit_debit
+msgid "Wrong credit or debit value in accounting entry !"
+msgstr "Valeur erronée au crédit ou au débit de la pièce comptable !"
+
+#. module: d4e_pack_accounting
+#: model:ir.actions.act_window,name:d4e_pack_accounting.action_postal_numbers
+msgid "postal number"
+msgstr "Localités"

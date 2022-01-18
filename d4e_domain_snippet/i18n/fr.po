@@ -1,0 +1,152 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* d4e_domain_snippet
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-08 15:23+0000\n"
+"PO-Revision-Date: 2021-11-08 15:23+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: d4e_domain_snippet
+#: model_terms:ir.ui.view,arch_db:d4e_domain_snippet.snippet_options
+msgid "1 Element"
+msgstr "1 Élément"
+
+#. module: d4e_domain_snippet
+#: model_terms:ir.ui.view,arch_db:d4e_domain_snippet.snippet_options
+msgid "10 Elements"
+msgstr "10 Éléments"
+
+#. module: d4e_domain_snippet
+#: model_terms:ir.ui.view,arch_db:d4e_domain_snippet.snippet_options
+msgid "2 Elements"
+msgstr "2 Éléments"
+
+#. module: d4e_domain_snippet
+#: model_terms:ir.ui.view,arch_db:d4e_domain_snippet.snippet_options
+msgid "3 Elements"
+msgstr "3 Éléments"
+
+#. module: d4e_domain_snippet
+#: model_terms:ir.ui.view,arch_db:d4e_domain_snippet.snippet_options
+msgid "4 Elements"
+msgstr "4 Éléments"
+
+#. module: d4e_domain_snippet
+#: model_terms:ir.ui.view,arch_db:d4e_domain_snippet.snippet_options
+msgid "5 Elements"
+msgstr "5 Éléments"
+
+#. module: d4e_domain_snippet
+#: model_terms:ir.ui.view,arch_db:d4e_domain_snippet.snippet_options
+msgid "6 Elements"
+msgstr "6 Éléments"
+
+#. module: d4e_domain_snippet
+#: model_terms:ir.ui.view,arch_db:d4e_domain_snippet.snippet_options
+msgid "7 Elements"
+msgstr "7 Éléments"
+
+#. module: d4e_domain_snippet
+#: model_terms:ir.ui.view,arch_db:d4e_domain_snippet.snippet_options
+msgid "8 Elements"
+msgstr "8 Éléments"
+
+#. module: d4e_domain_snippet
+#: model_terms:ir.ui.view,arch_db:d4e_domain_snippet.snippet_options
+msgid "9 Elements"
+msgstr "9 Éléments"
+
+#. module: d4e_domain_snippet
+#: model_terms:ir.ui.view,arch_db:d4e_domain_snippet.snippet_options
+msgid "<i class=\"fa fa-clone\"/> Duplicate Carousel Item"
+msgstr "<i class=\"fa fa-clone\"/> Cloner le bloc"
+
+#. module: d4e_domain_snippet
+#: model_terms:ir.ui.view,arch_db:d4e_domain_snippet.res_domain_template
+msgid "<strong>Our domains</strong>"
+msgstr "<strong>Nos domains</strong>"
+
+#. module: d4e_domain_snippet
+#: model:ir.model.fields,field_description:d4e_domain_snippet.field_res_domain__create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: d4e_domain_snippet
+#: model:ir.model.fields,field_description:d4e_domain_snippet.field_res_domain__create_date
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: d4e_domain_snippet
+#: model:ir.model.fields,field_description:d4e_domain_snippet.field_res_domain__description
+msgid "Description"
+msgstr ""
+
+#. module: d4e_domain_snippet
+#: model:ir.model.fields,field_description:d4e_domain_snippet.field_res_domain__display_name
+msgid "Display Name"
+msgstr "Affichage"
+
+#. module: d4e_domain_snippet
+#: model:ir.actions.act_window,name:d4e_domain_snippet.res_domain_act_window
+#: model:ir.ui.menu,name:d4e_domain_snippet.menu_res_domain_act_window
+msgid "Domains"
+msgstr "Domaines"
+
+#. module: d4e_domain_snippet
+#: model_terms:ir.ui.view,arch_db:d4e_domain_snippet.snippets
+msgid "Dynamic, Domain"
+msgstr "Dynamique, Domaine"
+
+#. module: d4e_domain_snippet
+#: model:ir.model.fields,field_description:d4e_domain_snippet.field_res_domain__id
+msgid "ID"
+msgstr ""
+
+#. module: d4e_domain_snippet
+#: model:ir.model.fields,field_description:d4e_domain_snippet.field_res_domain__image
+msgid "Image"
+msgstr ""
+
+#. module: d4e_domain_snippet
+#: model:ir.model.fields,field_description:d4e_domain_snippet.field_res_domain__is_published
+msgid "Is published"
+msgstr "Est publié"
+
+#. module: d4e_domain_snippet
+#: model:ir.model.fields,field_description:d4e_domain_snippet.field_res_domain____last_update
+msgid "Last Modified on"
+msgstr "Dernière modification le"
+
+#. module: d4e_domain_snippet
+#: model:ir.model.fields,field_description:d4e_domain_snippet.field_res_domain__write_uid
+msgid "Last Updated by"
+msgstr "Dernière mise à jour par"
+
+#. module: d4e_domain_snippet
+#: model:ir.model.fields,field_description:d4e_domain_snippet.field_res_domain__write_date
+msgid "Last Updated on"
+msgstr "Dernière mise à jour le"
+
+#. module: d4e_domain_snippet
+#: model:ir.model.fields,field_description:d4e_domain_snippet.field_res_domain__name
+msgid "Name"
+msgstr "Nom"
+
+#. module: d4e_domain_snippet
+#: model_terms:ir.ui.view,arch_db:d4e_domain_snippet.snippet_options
+msgid "Number of elements"
+msgstr "Nombre des blocs"
+
+#. module: d4e_domain_snippet
+#: model:ir.model,name:d4e_domain_snippet.model_res_domain
+msgid "res.domain"
+msgstr ""

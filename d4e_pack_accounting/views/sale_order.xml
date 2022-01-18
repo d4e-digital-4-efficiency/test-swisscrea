@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="sale_order_line_view_form_readonly" model="ir.ui.view">
+        <field name="name">sale.order.line.form.readonly</field>
+        <field name="model">sale.order.line</field>
+        <field name="inherit_id" ref="sale.sale_order_line_view_form_readonly"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='order_id']" position="after">
+                <field name="new_line" invisible="1"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_order_form" model="ir.ui.view">
+        <field name="name">sale.order.form</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//control" position="inside">
+                <create name="add_title_control" string="Add a Title" context="{'default_display_type': 'line_title'}"/>
+                <create name="add_subtotal_control" string="Add a subtotal" context="{'default_display_type': 'line_subtotal', 'default_name': 'Sous-Total-manuel: 00'}"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

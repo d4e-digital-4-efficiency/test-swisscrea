@@ -1,0 +1,4 @@
+name,id,type_id/id,schedule_pay,unpaid_work_entry_type_ids/id
+Standard,d4e_ch_payroll_data.Standard_structure,d4e_ch_payroll_data.Standard,monthly,"d4e_ch_payroll_data.PRESENCE_1,d4e_ch_payroll_data.CONGE_1,d4e_ch_payroll_data.CONENP_1,d4e_ch_payroll_data.ARMEE,d4e_ch_payroll_data.MALADIE_1,d4e_ch_payroll_data.NOMBREH_1,d4e_ch_payroll_data.ACCIDENT_1,d4e_ch_payroll_data.MATERNITE_1"
+Salaire mensuel,d4e_ch_payroll_data.mensuel_structure,d4e_ch_payroll_data.mensuel,monthly,,
+Salaire horaire,d4e_ch_payroll_data.horaire_structure,d4e_ch_payroll_data.horaire,monthly,"d4e_ch_payroll_data.NOMBREH_1",

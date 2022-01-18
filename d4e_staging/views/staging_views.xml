@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<odoo>
+
+    <template
+        id="assets_backend"
+        name="test assets"
+        inherit_id="web_environment_ribbon.assets_backend">
+        <xpath expr="." position="inside">
+            <link
+                rel="stylesheet"
+                href="/d4e_staging/static/src/css/ribbon.css"
+            />
+            <script
+                type="text/javascript"
+                src="/web_environment_ribbon/static/src/js/ribbon.js"
+            />
+        </xpath>
+    </template>
+
+<!--    <template id="_assets_primary_variables_inh_odoo_theme_backend" inherit_id="web._assets_primary_variables">-->
+<!--        <xpath expr="." position="inside">-->
+<!--            <link rel="stylesheet" type="text/scss" href="/d4e_staging/static/src/scss/theme_style.scss"/>-->
+<!--        </xpath>-->
+<!--    </template>-->
+</odoo>

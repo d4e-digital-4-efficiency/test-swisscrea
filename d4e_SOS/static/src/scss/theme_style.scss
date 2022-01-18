@@ -1,0 +1,27 @@
+.o_main_navbar{ background-image: linear-gradient(to right ,#0ac7a2, #00a1af);}
+
+.o_main_navbar > ul > li > a:hover, .o_main_navbar > ul > li > label:hover {
+    /* background-color: #68465f; */
+    background-color: #2a2a2a;
+}
+
+.o_main_navbar {
+    border-bottom: 1px solid #2a2a2a;
+    background-color: #2a2a2a;
+}
+
+.o_main_navbar .show .dropdown-toggle {
+    background-color: #2a2a2a;
+}
+
+.o_main_navbar > a:hover, .o_main_navbar > a:focus, .o_main_navbar > button:hover, .o_main_navbar > button:focus {
+    background-color: #2a2a2a;
+}
+
+// .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+//     background-color: #34495e !important;
+// }
+
+// .o_app_icon {
+//     background-image: url(/d4e_SOS/static/description/icon.png)!important;
+// }

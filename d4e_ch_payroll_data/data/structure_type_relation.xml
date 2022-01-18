@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="d4e_ch_payroll_data.Standard" model="hr.payroll.structure.type">
+            <field name="default_struct_id" eval="ref('d4e_ch_payroll_data.Standard_structure')"/>
+        </record>
+        <record id="d4e_ch_payroll_data.mensuel" model="hr.payroll.structure.type">
+            <field name="default_struct_id" eval="ref('d4e_ch_payroll_data.mensuel_structure')"/>
+        </record>
+        <record id="d4e_ch_payroll_data.horaire" model="hr.payroll.structure.type">
+            <field name="default_struct_id" eval="ref('d4e_ch_payroll_data.horaire_structure')"/>
+        </record>
+
+    </data>
+</odoo>

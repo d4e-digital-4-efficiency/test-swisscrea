@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="action_report_avs_account" model="ir.actions.report">
+            <field name="name">report AVS account</field>
+            <field name="model">hr.payslip</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">d4e_ch_payroll_report.report_account_avs</field>
+            <field name="report_file">d4e_ch_payroll_report.report_account_avs</field>
+            <field name="binding_type">report</field>
+        </record>
+    </data>
+</odoo>

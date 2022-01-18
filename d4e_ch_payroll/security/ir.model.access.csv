@@ -1,0 +1,40 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hierarchy_status_user,hierarchy.status user,model_hierarchy_status,hr.group_hr_user,1,1,1,1
+access_hierarchy_status_system_user,hierarchy.status system user,model_hierarchy_status,base.group_user,0,0,0,0
+access_npa_Communeofs_normal_user,npa.commune.ofs user,model_npa_commune_ofs,hr.group_hr_user,1,1,1,1
+access_npa_communeofs_system_user,npa.commune.ofs system user,model_npa_commune_ofs,base.group_user,0,0,0,0
+access_npa_Communeofs_portal,npa.commune.ofs.portal,model_npa_commune_ofs,base.group_portal,1,0,1,0
+access_npa_Communeofs_user,npa.commune.ofs.user,model_npa_commune_ofs,base.group_user,1,1,1,0
+access_npa_Communeofs_system,npa.commune.ofs.system,model_npa_commune_ofs,base.group_system,1,1,1,1
+access_salary_certificate_normal_user,salary.certificate user,model_salary_certificate,hr.group_hr_user,1,1,1,1
+access_salary_certificate_system_user,salary.certificate system user,model_salary_certificate,base.group_user,0,0,0,0
+access_salary_certificate_portal,salary.certificate.portal,model_salary_certificate,base.group_portal,1,0,1,0
+access_salary_certificate_user,salary.certificate.user,model_salary_certificate,base.group_user,1,1,1,0
+access_salary_certificate_system,salary.certificate.system,model_salary_certificate,base.group_system,1,1,1,1
+access_tax_rate_normal_user,tax.rate user,model_tax_rate,hr.group_hr_user,1,1,1,1
+access_tax_rate_system_user,tax.rate system user,model_tax_rate,base.group_user,0,0,0,0
+access_tax_rate_portal,tax.rate.portal,model_tax_rate,base.group_portal,1,0,1,0
+access_tax_rate_user,tax.rate.user,model_tax_rate,base.group_user,1,1,1,0
+access_tax_rate_system,tax.rate.system,model_tax_rate,base.group_system,1,1,1,1
+access_tax_rate_import_normal_user,tax.rate.import user,model_tax_rate_import,hr.group_hr_user,1,1,1,1
+access_tax_rate_import_system_user,tax.rate.import system user,model_tax_rate_import,base.group_user,0,0,0,0
+access_tax_rate_import_portal,tax.rate.import.portal,model_tax_rate_import,base.group_portal,1,0,1,0
+access_tax_rate_import_user,tax.rate.import.user,model_tax_rate_import,base.group_user,1,1,1,0
+access_tax_rate_import_system,tax.rate.import.system,model_tax_rate_import,base.group_system,1,1,1,1
+access_cumulative_salary_normal_user,cumulative.salary user,model_cumulative_salary,hr.group_hr_user,1,1,1,1
+access_cumulative_salary_system_user,cumulative.salary system user,model_cumulative_salary,base.group_user,0,0,0,0
+access_cumulative_salary_portal,cumulative.salary.portal,model_cumulative_salary,base.group_portal,1,0,1,0
+access_cumulative_salary_user,cumulative.salary.user,model_cumulative_salary,base.group_user,1,1,1,0
+access_cumulative_salary_system,cumulative.salary.system,model_cumulative_salary,base.group_system,1,1,1,1
+access_hr_fund,access.hr.fund,model_hr_funds,,1,1,1,1
+access_codes_laac,access.codes.laac,model_codes_laac,,1,1,1,1
+access_codes_ijm,access.codes.ijm,model_codes_ijm,,1,1,1,1
+access_codes_lpp,access.codes.lpp,model_codes_lpp,,1,1,1,1
+access_codes_history,access.codes.history,model_hr_contract_history,,1,1,1,1
+access_codes_history_payslip_line,access.codes.history.payslip.line,model_hr_payslip_line_copy,,1,1,1,1
+access_base_calcul,access.base.calcul,model_base_calcul,,1,1,1,1
+access_salary_rule_wizard,access.salary.rule.wizard,model_salary_rule_wizard,,1,1,1,1
+access_hr_payslip_send,access.hr.payslip.send,model_hr_payslip_send,,1,1,1,1
+
+
+

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+      <function name="write" model="ir.model.data">
+          <function name="search" model="ir.model.data">
+              <value
+                      eval="[('module', '=', 'account_followup'), ('name', '=', 'demo_followup_line2')]" />
+          </function>
+          <value eval="{'noupdate': False}" />
+      </function>
+        <record id="account_followup.demo_followup_line2" model="account_followup.followup.line" forcecreate="False">
+            <field name="name">Second reminder letter and email</field>
+            <field name="delay">30</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="send_email">True</field>
+            <field name="print_letter">True</field>
+            <field name="description">
+                    We still have no news of your payments regarding the invoices below,
+                    We would be grateful if you could contact our accounting department to trace them.
+
+
+            </field>
+        </record>
+      <function name="write" model="ir.model.data">
+          <function name="search" model="ir.model.data">
+              <value
+                      eval="[('module', '=', 'account_followup'), ('name', '=', 'demo_followup_line2')]" />
+          </function>
+          <value eval="{'noupdate': True}" />
+      </function>
+
+      <function name="write" model="ir.model.data">
+          <function name="search" model="ir.model.data">
+              <value
+                      eval="[('module', '=', 'account_followup'), ('name', '=', 'demo_followup_line3')]" />
+          </function>
+          <value eval="{'noupdate': False}" />
+      </function>
+            <record id="account_followup.demo_followup_line3" model="account_followup.followup.line" forcecreate="False">
+                <field name="name">Third reminder: phone the customer</field>
+                <field name="delay">40</field>
+                <field name="company_id" ref="base.main_company"/>
+                <field eval="False" name="send_email"/>
+                <field name="manual_action">True</field>
+                <field name="manual_action_type_id" ref="mail.mail_activity_data_call"/>
+                <field name="manual_action_note">Call the customer on the phone! </field>
+                <field name="description">
+                    We still have no news of your payments regarding the invoices below,
+                    We would be grateful if you could contact our accounting department to trace them.
+
+
+                </field>
+            </record>
+      <function name="write" model="ir.model.data">
+          <function name="search" model="ir.model.data">
+              <value
+                      eval="[('module', '=', 'account_followup'), ('name', '=', 'demo_followup_line3')]" />
+          </function>
+          <value eval="{'noupdate': True}" />
+      </function>
+
+      <function name="write" model="ir.model.data">
+          <function name="search" model="ir.model.data">
+              <value
+                      eval="[('module', '=', 'account_followup'), ('name', '=', 'demo_followup_line4')]" />
+          </function>
+          <value eval="{'noupdate': False}" />
+      </function>
+            <record id="account_followup.demo_followup_line4" model="account_followup.followup.line">
+                <field name="name">Urging reminder email</field>
+                <field name="delay">50</field>
+                <field name="company_id" ref="base.main_company"/>
+                <field name="send_email">True</field>
+                <field name="description">
+                    We still have no news of your payments regarding the invoices below,
+                    We would be grateful if you could contact our accounting department to trace them.
+
+
+                </field>
+            </record>
+      <function name="write" model="ir.model.data">
+          <function name="search" model="ir.model.data">
+              <value
+                      eval="[('module', '=', 'account_followup'), ('name', '=', 'demo_followup_line4')]" />
+          </function>
+          <value eval="{'noupdate': True}" />
+      </function>
+
+      <function name="write" model="ir.model.data">
+          <function name="search" model="ir.model.data">
+              <value
+                      eval="[('module', '=', 'account_followup'), ('name', '=', 'demo_followup_line5')]" />
+          </function>
+          <value eval="{'noupdate': False}" />
+      </function>
+            <record id="account_followup.demo_followup_line5" model="account_followup.followup.line">
+                <field name="name">Urging reminder letter</field>
+                <field name="delay">60</field>
+                <field name="company_id" ref="base.main_company"/>
+                <field eval="False" name="send_email"/>
+                <field name="print_letter">True</field>
+                <field name="description">
+                    We still have no news of your payments regarding the invoices below,
+                    We would be grateful if you could contact our accounting department to trace them.
+
+
+                </field>
+            </record>
+      <function name="write" model="ir.model.data">
+          <function name="search" model="ir.model.data">
+              <value
+                      eval="[('module', '=', 'account_followup'), ('name', '=', 'demo_followup_line5')]" />
+          </function>
+          <value eval="{'noupdate': True}" />
+      </function>
+    </data>
+</odoo>

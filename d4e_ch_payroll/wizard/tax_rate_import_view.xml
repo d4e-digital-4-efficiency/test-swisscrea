@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="tax_rate_wizard_form" model="ir.ui.view">
+            <field name="name">tax.rate.wizard.form</field>
+            <field name="model">tax.rate.import</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <separator string="Select your file :" colspan="2"/>
+                        <field name="file" filename="filename"/>
+                    </group>
+                    <footer>
+                        <button string="Import" name="import_file" type="object" class="oe_highlight"/>
+                        <button string="Cancel" class="btn btn-secondary" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="tax_rate_wizard_action" model="ir.actions.act_window">
+            <field name="name">Tax Rate File</field>
+            <field name="res_model">tax.rate.import</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem id="menu_tax_rate_wizard"
+            name="Import Tax Rate"
+            action="tax_rate_wizard_action"
+            parent="d4e_ch_payroll.suiss_files_menu"
+            sequence="30"/>
+
+    </data>
+</odoo>

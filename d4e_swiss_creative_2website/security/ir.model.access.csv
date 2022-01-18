@@ -1,0 +1,11 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_supplier_invoice_sale_generator,supplier.invoice.sale.generator,model_supplier_invoice_sale_generator,sales_team.group_sale_salesman,1,1,1,0
+access_supplier_invoice_sale_generator_manager,supplier.invoice.sale.generator.manager,model_supplier_invoice_sale_generator,sales_team.group_sale_manager,1,1,1,1
+access_sale_recap_mail,sale.recap.mail,model_sale_recap_mail,sales_team.group_sale_salesman,1,1,1,0
+access_sale_recap_mail_manager,sale.recap.mail.manager,model_sale_recap_mail,sales_team.group_sale_manager,1,1,1,1
+access_wine_style,wine.style,model_wine_style,,1,1,1,0
+access_wine_style_portal,wine.style,model_wine_style,base.group_portal,1,0,0,0
+access_wine_style_manager,wine.style.manager,model_wine_style,base.group_system,1,1,1,1
+access_wine_accord,wine.accord,model_wine_accord,,1,1,1,0
+access_wine_accord_portal,wine.accord,model_wine_accord,base.group_portal,1,0,0,0
+access_wine_accord_manager,wine.accord.manager,model_wine_accord,base.group_system,1,1,1,1

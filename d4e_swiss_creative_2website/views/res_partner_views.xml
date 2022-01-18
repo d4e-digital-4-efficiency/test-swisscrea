@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="custom_view_partner_form_inherit_website" model="ir.ui.view">
+            <field name="name">res.partner.form.website.inherit</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="website.view_partner_form_inherit_website"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='website_id']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="custom_view_partner_form_inherit_websites" model="ir.ui.view">
+            <field name="name">res.partner.form.website.inherit</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook[last()]" position="inside">
+                    <page name='ecommerce' string="eCommerce">
+                        <field name="web_image" widget="image" class="oe_avatar" />
+                        <group>
+                            <field name="canton"/>
+                            <field name="aoc"/>
+                            <field name="pass_provino"/>
+                            <field name="website_ids" widget="many2many_tags" options="{'no_create': True}"/>
+                            <field name="web_desc"/>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

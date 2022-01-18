@@ -1,0 +1,37 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* d4e_payment_method
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-09 09:37+0000\n"
+"PO-Revision-Date: 2021-03-09 09:37+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: d4e_payment_method
+#: model:res.groups,name:d4e_payment_method.group_payment_method_manager
+msgid "Account Payment Method Manager"
+msgstr "Gestionnaire des modes de paiement du compte"
+
+#. module: d4e_payment_method
+#: model_terms:ir.ui.view,arch_db:d4e_payment_method.account_payment_method_view_search
+msgid "Group By"
+msgstr "Par groupe"
+
+#. module: d4e_payment_method
+#: model:ir.actions.act_window,name:d4e_payment_method.account_payment_method_act_window
+#: model:ir.ui.menu,name:d4e_payment_method.account_payment_method_menu
+msgid "Payment Methods"
+msgstr "Méthodes de Payement"
+
+#. module: d4e_payment_method
+#: model_terms:ir.ui.view,arch_db:d4e_payment_method.account_payment_method_view_search
+msgid "Payment Type"
+msgstr "Type de paiement"

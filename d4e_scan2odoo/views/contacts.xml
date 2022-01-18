@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="res_partner_form_capture">
+            <field name="name">res.partner.form.capture</field>
+            <field name="inherit_id" ref="account.view_partner_property_form"/>
+            <field name="model">res.partner</field>
+            <field name="arch" type="xml">
+                <field name="property_account_payable_id" position="after">
+                    <field name="default_charge_account_for_capture"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>

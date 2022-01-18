@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="supp_invoice_recap_template">
+        <t t-call="web.html_container">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <div class="text-center">
+                            <h2>Facturation fournisseur des produits vendus</h2>
+                            <t t-if="supplier"><h4>Fournisseur : <t t-esc="supplier"/></h4></t>
+                            <h4> Mois : <t t-esc="month"/></h4>
+                        </div>
+                        <table class="table table-sm" style="margin-top: 5em;">
+                            <thead>
+                                <tr>
+                                    <th width="2%"></th>
+                                    <th width="2%"></th>
+                                    <th>Produit</th>
+                                    <th>Quantité Vendue</th>
+                                    <th>Unité</th>
+                                    <!--<th>Fournisseur</th>-->
+                                    <th>Prix/Unité</th>
+                                    <th>Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-foreach="data" t-as="dt">
+                                    <t t-set="site_tot" t-value="0"/>
+                                    <tr>
+                                        <td colspan="7" style="background-color: #c1c1c1;">
+                                            <t t-esc="dt['website']"/>
+                                        </td>
+                                    </tr>
+                                    <t t-foreach="dt['lst']" t-as="line">
+                                        <tr style="background-color: #e2e2e2">
+                                            <td/>
+                                            <td colspan="6">
+                                                <t t-esc="line"/>
+                                            </td>
+                                        </tr>
+                                        <t t-foreach="line_value" t-as="l">
+                                            <t t-set="line_tot" t-value="0"/>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td><t t-esc="l['product']"/></td>
+                                                <td><t t-esc="l['qte']"/></td>
+                                                <td><t t-esc="l['unit']"/></td>
+                                                <!--<td><t t-esc="line['supp']"/></td>-->
+                                                <td><t t-esc="'%.2f' % l['price']"/> <t t-esc="dt['currency_id']"/></td>
+                                                <t t-set="line_tot" t-value="l['qte'] * l['price']"/>
+                                                <td><strong><t t-esc="'%.2f' % line_tot"/> <t t-esc="dt['currency_id']"/></strong></td>
+                                            </tr>
+                                        <t t-set="site_tot" t-value="site_tot+line_tot"/>
+                                        </t>
+                                    </t>
+                                    <tr>
+                                        <td colspan="6"></td>
+                                        <td>
+                                            <strong><t t-esc="'%.2f' % site_tot"/> <t t-esc="dt['currency_id']"/></strong>
+                                        </td>
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
+                    </div>
+                </t>
+        </t>
+    </template>
+
+</odoo>

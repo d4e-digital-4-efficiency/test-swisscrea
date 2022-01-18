@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="hierarchy_status_cadre" model="hierarchy.status">
+          <field name="name">Cadre</field>
+        </record>
+
+        <record id="hierarchy_status_nncadre" model="hierarchy.status">
+          <field name="name">Non Cadre</field>
+        </record>
+
+        <record id="hierarchy_status_mmbre_admin" model="hierarchy.status">
+          <field name="name">Membre de l'administration</field>
+        </record>
+
+    </data>
+</odoo>

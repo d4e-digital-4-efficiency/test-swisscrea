@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<odoo>
+
+    <function model="hr.payslip" name="update_hr_payslip_lines_copy">
+        <value model="hr.payslip"
+               eval="obj().search([('line_ids_employee_section_ids', '=', False), ('line_ids_employee_basis_ids', '=', False), ('line_ids_employee_share_ids', '=', False)]).ids"/>
+    </function>
+    <function model="hr.payslip" name="get_date_from_year">
+        <value model="hr.payslip" eval="obj().search([]).ids"/>
+    </function>
+ <function model="ir.translation" name="write">
+        <value model="ir.translation"
+               eval="obj().env['ir.translation'].search([('value', '=', 'Paramètres de la règle'),('name', '=', 'ir.ui.menu,name')]).ids"/>
+        <value eval="{'value': 'Paramètres'}"/>
+    </function>
+     <function model="ir.translation" name="write">
+        <value model="ir.translation"
+               eval="obj().env['ir.translation'].search([('value', '=', 'Rule categories')]).ids"/>
+        <value eval="{'value': 'Catégories de règles'}"/>
+    </function>
+
+
+    <function model="hr.rule.parameter.value" name="parameter_company_value">
+        <value model="hr.rule.parameter.value"
+               eval="obj().search([]).ids"/>
+    </function>
+
+</odoo>

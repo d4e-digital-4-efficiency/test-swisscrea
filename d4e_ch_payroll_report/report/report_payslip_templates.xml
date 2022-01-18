@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<template id="hr_payroll.report_payslip">
+    <t t-call="web.html_container">
+        <t t-foreach="docs" t-as="o">
+            <!--<t t-call="web.internal_layout">-->
+            <t t-call="web.external_layout">
+                <t t-set="address">
+                    <div><t t-esc="o.employee_id.name"/></div>
+                    <div t-field="o.employee_id.address_home_id" t-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;address&quot;], &quot;no_marker&quot;: True}"/>
+                    <!--<p t-if="doc.partner_id.vat"><t t-esc="doc.company_id.country_id.vat_label or 'Tax ID'"/>: <span t-field="doc.partner_id.vat"/></p>-->
+                </t>
+                <br></br>
+                <div class="page">
+
+                    <style type="text/css">
+                        .table td {
+                                padding: 0 !important;
+                                padding-left: 13px !important;
+                                }
+                        .pad_allig {padding-left: 13px;}
+                    </style>
+
+                    <!--<h2 t-field="o.name"/>-->
+                    <h2 class="pad_allig">Décompte de Salaire - <span t-field="o.date_from" t-options='{"format": "MMMM y"}'/></h2>
+                    <div class="pad_allig">Période : <span t-field="o.date_from"/>-<span t-field="o.date_to"/></div>
+<!--                    <div class="pad_allig">Traitement : <span t-field="o.compute_date"/></div>-->
+                    <div class="pad_allig">N°assurance sociale :<span t-field="o.employee_id.avs_13"/></div>
+
+                    <table class="table table-borderless">
+                        <thead style="border-bottom : 1px solid black;">
+                            <tr>
+<!--                                <th colspan="2" width="45%">Rubriques et genres de salaires</th>-->
+                                <th colspan="2" width="45%">Rubriques</th>
+                                <th class="text-right">Coeff./taux</th>
+                                <th class="text-right">Base, Salaire</th>
+                                <th class="text-right">Montant</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <t t-set="tot_brut" t-value="0.0"/>
+                            <tr t-if ="(o.line_ids.filtered(lambda line: line.salary_rule_id.id in o._get_salary_rules_by_section('salaire_brut') and ((line.salary_rule_id.payslip_imprime_opt == 'tj_imprime') or
+                                    ((line.salary_rule_id.payslip_imprime_opt == 'none_zero_imprime') and (line.total != 0.0)))))" ><td colspan="5" style="padding-top: 12px !important;"><strong>Salaire Brut</strong></td></tr>
+                            <t t-set="rules" t-value="o._get_salary_rules_by_section('salaire_brut')"/>
+                            <!--<tr t-foreach="o.line_ids.filtered(lambda line: line.appears_on_payslip and line.code[:2] == 'R1')" t-as="line">-->
+                            <tr t-foreach="o.line_ids.filtered(lambda line: line.salary_rule_id.id in rules)" t-as="line">
+                                <t t-if="(line.salary_rule_id.payslip_imprime_opt == 'tj_imprime') or
+                                    ((line.salary_rule_id.payslip_imprime_opt == 'none_zero_imprime') and (line.total != 0.0))">
+                                    <td width="5%"><t t-esc="line.code[1:]"/></td>
+                                    <td><span t-field="line.name"/>  <span t-field="line.note"/> </td>
+                                    <td class="text-right">
+                                        <t t-if="line.quantity != 1.0"><span t-field="line.quantity"/></t>
+                                        <t t-else=""><t t-esc=" '%.2f' % line.rate"/> <span t-if="'result_rate' in line.salary_rule_id.amount_python_compute">%</span></t>
+                                    </td>
+                                    <td class="text-right"><span t-esc=" '%.2f' % line.amount"/></td>
+                                    <td class="text-right"><span t-esc="line.total"
+                                          t-options='{"widget": "monetary", "display_currency": o.company_id.currency_id}'/></td>
+                                    <t t-set="tot_brut" t-value="tot_brut + line.total"/>
+                                </t>
+                            </tr>
+                            <tr>
+<!--                                <td colspan="4"><strong>Total Salaire Brut</strong></td>-->
+                                <td colspan="4" t-if ="(o.line_ids.filtered(lambda line: line.salary_rule_id.id in o._get_salary_rules_by_section('salaire_brut') and ((line.salary_rule_id.payslip_imprime_opt == 'tj_imprime') or
+                                    ((line.salary_rule_id.payslip_imprime_opt == 'none_zero_imprime') and (line.total != 0.0)))))" style="height: 2em;"><strong>Total Salaire Brut</strong></td>
+                                <td t-if ="(o.line_ids.filtered(lambda line: line.salary_rule_id.id in o._get_salary_rules_by_section('salaire_brut') and ((line.salary_rule_id.payslip_imprime_opt == 'tj_imprime') or
+                                    ((line.salary_rule_id.payslip_imprime_opt == 'none_zero_imprime') and (line.total != 0.0)))))" class="text-right"><strong><span t-esc="tot_brut"
+                                  t-options='{"widget": "monetary", "display_currency": o.company_id.currency_id}'/></strong></td>
+                            </tr>
+
+                            <t t-set="tot_charges" t-value="0.0"/>
+                            <tr t-if ="(o.line_ids.filtered(lambda line: line.salary_rule_id.id in o._get_salary_rules_by_section('charges_sociales') and ((line.salary_rule_id.payslip_imprime_opt == 'tj_imprime') or
+                                    ((line.salary_rule_id.payslip_imprime_opt == 'none_zero_imprime') and (line.total != 0.0)))))" style="height: 2em;"><td colspan="5" style="vertical-align: bottom;"><strong>Charges sociales</strong></td></tr>
+<!--                            <t t-set="rules_section" t-value="o._get_salary_rules_by_section()"/>-->
+                            <t t-set="rules" t-value="o._get_salary_rules_by_section('charges_sociales')"/>
+                            <!--<tr t-foreach="o.line_ids.filtered(lambda line: line.appears_on_payslip and (len(line.code) == 5) and (line.code[:2] == 'R5') and (int(line.code[3:]) &lt; 81))" t-as="line">-->
+                            <tr t-foreach="o.line_ids.filtered(lambda line: line.salary_rule_id.id in rules)" t-as="line">
+                                <t t-if="(line.salary_rule_id.payslip_imprime_opt == 'tj_imprime') or
+                                    ((line.salary_rule_id.payslip_imprime_opt == 'none_zero_imprime') and (line.total != 0.0))">
+                                    <td width="5%"><t t-esc="line.code[1:]"/></td>
+                                    <td><span t-field="line.name"/>  <span t-field="line.note"/> </td>
+                                    <td class="text-right">
+                                        <t t-if="line.quantity != 1.0"><span t-field="line.quantity"/></t>
+                                        <t t-else=""><t t-esc=" '%.2f' % line.rate"/><span t-if="'result_rate' in line.salary_rule_id.amount_python_compute">%</span></t>
+                                    </td>
+                                    <td class="text-right"><span t-esc=" '%.2f' % line.amount"/></td>
+                                    <td class="text-right"><span t-esc="line.total"
+                                          t-options='{"widget": "monetary", "display_currency": o.company_id.currency_id}'/></td>
+                                    <t t-set="tot_charges" t-value="tot_charges + line.total"/>
+                                </t>
+                            </tr>
+                            <tr>
+                                <td colspan="4" t-if ="(o.line_ids.filtered(lambda line: line.salary_rule_id.id in o._get_salary_rules_by_section('charges_sociales') and ((line.salary_rule_id.payslip_imprime_opt == 'tj_imprime') or
+                                    ((line.salary_rule_id.payslip_imprime_opt == 'none_zero_imprime') and (line.total != 0.0)))))" style="height: 2em;"><strong>Total Charges sociales</strong></td>
+
+                                <td   t-if ="(o.line_ids.filtered(lambda line: line.salary_rule_id.id in o._get_salary_rules_by_section('charges_sociales') and ((line.salary_rule_id.payslip_imprime_opt == 'tj_imprime') or
+                                    ((line.salary_rule_id.payslip_imprime_opt == 'none_zero_imprime') and (line.total != 0.0)))))" class="text-right"><strong><span t-esc="tot_charges"
+                                  t-options='{"widget": "monetary", "display_currency": o.company_id.currency_id}'/></strong></td>
+                            </tr>
+                            <t t-set="tot_divers" t-value="0.0"/>
+                            <t t-set="tot" t-value="tot_brut + tot_charges"/>
+                            <tr t-if ="(o.line_ids.filtered(lambda line: line.salary_rule_id.id in o._get_salary_rules_by_section('divers') and ((line.salary_rule_id.payslip_imprime_opt == 'tj_imprime') or
+                                    ((line.salary_rule_id.payslip_imprime_opt == 'none_zero_imprime') and (line.total != 0.0)))))"  style="height: 2em;"><td colspan="5" style="vertical-align: bottom;"><strong>Divers</strong></td></tr>
+<!--                            </t>-->
+                            <t t-set="rules" t-value="o._get_salary_rules_by_section('divers')"/>
+                            <!--<tr t-foreach="o.line_ids.filtered(lambda line: line.appears_on_payslip and ((len(line.code) != 5) or (line.code[:2] not in ['R1', 'R5']) or ((len(line.code) == 5) and (line.code[:2] == 'R5') and (int(line.code[3:]) &gt; 80))))" t-as="line">-->
+                            <tr t-foreach="o.line_ids.filtered(lambda line: line.salary_rule_id.id in rules)" t-as="line">
+                                <t t-if="(line.salary_rule_id.payslip_imprime_opt == 'tj_imprime') or
+                                    ((line.salary_rule_id.payslip_imprime_opt == 'none_zero_imprime') and (line.total != 0.0))">
+                                    <td width="5%">
+                                        <t t-if="line.code[:1] == 'R'"><t t-esc="line.code[1:]"/></t>
+                                        <t t-else=""><t t-esc="line.code"/></t>
+                                    </td>
+                                    <td><span t-field="line.name"/>  <span t-field="line.note"/></td>
+                                    <td class="text-right">
+                                        <t t-if="line.quantity != 1.0"><span t-field="line.quantity"/></t>
+                                        <t t-else=""><t t-esc=" '%.2f' % line.rate"/><span t-if=" 'result_rate' in line.salary_rule_id.amount_python_compute">%</span></t>
+                                    </td>
+                                    <td class="text-right"><span t-esc=" '%.2f' % line.amount"/></td>
+                                    <td class="text-right"><span t-esc=" line.total"
+                                          t-options='{"widget": "monetary", "display_currency": o.company_id.currency_id}'/></td>
+                                    <t t-set="tot_divers" t-value="tot_divers + line.total"/>
+                                    <t t-set="tot" t-value="tot + line.total"/>
+                                </t>
+                            </tr>
+                              <tr>
+                                 <td colspan="4" t-if ="(o.line_ids.filtered(lambda line: line.salary_rule_id.id in o._get_salary_rules_by_section('divers') and ((line.salary_rule_id.payslip_imprime_opt == 'tj_imprime') or
+                                    ((line.salary_rule_id.payslip_imprime_opt == 'none_zero_imprime') and (line.total != 0.0)))))" style="height: 2em;"><strong>Total Divers</strong></td>
+                                <td t-if ="(o.line_ids.filtered(lambda line: line.salary_rule_id.id in o._get_salary_rules_by_section('divers') and ((line.salary_rule_id.payslip_imprime_opt == 'tj_imprime') or
+                                    ((line.salary_rule_id.payslip_imprime_opt == 'none_zero_imprime') and (line.total != 0.0)))))" class="text-right"><strong><span t-esc="tot_divers"
+                                  t-options='{"widget": "monetary", "display_currency": o.company_id.currency_id}'/></strong></td>
+                            </tr>
+                            <tr style="border-top: 1px solid black;">
+                                <td width="5%"><strong></strong></td>
+                                <td style="padding-left: 10px !important;"><span t-field="o.employee_id.bank_account_id.acc_number" /></td>
+                                <td/>
+                                <td width="14%" style="border-bottom: 2px solid black;text-align: left;"><strong>Salaire Net</strong></td>
+                                <td class="text-right" style="border-bottom: 2px solid black;"><strong><span t-esc="tot"
+                                    t-options='{"widget": "monetary", "display_currency": o.company_id.currency_id}'/></strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </t>
+        </t>
+    </t>
+</template>
+</odoo>

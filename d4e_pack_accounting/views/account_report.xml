@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_invoice_order_document_inherit" inherit_id="account.report_invoice_document">
+        <xpath expr="//h2[1]" position="replace">
+            <h2 style="font-size: 2.0em;">
+                <span t-if="o.move_type == 'out_invoice' and o.state == 'posted'">Invoice</span>
+                <span t-if="o.move_type == 'out_invoice' and o.state == 'draft'">Draft Invoice</span>
+                <span t-if="o.move_type == 'out_invoice' and o.state == 'cancel'">Cancelled Invoice</span>
+                <span t-if="o.move_type == 'out_refund'">Credit Note </span>
+                <span t-if="o.move_type == 'in_refund'">Vendor Credit Note </span>
+                <span t-if="o.move_type == 'in_invoice'">Vendor Bill </span>
+                <span t-if="o.name != '/'" t-field="o.name"/>
+            </h2>
+        </xpath>
+        <xpath expr="//tbody[1]/t[3]/tr/t[3]" position="after">
+            <t t-if="line.display_type == 'line_title' or line.display_type == 'line_subtotal'">
+                <td colspan="99">
+                    <b><span t-field="line.name" /></b>
+                </td>
+            </t>
+        </xpath>
+    </template>
+</odoo>

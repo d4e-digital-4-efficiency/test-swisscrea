@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_company_total_summary_salary_account_normal_user,company.total.summary.salary.account user,model_company_total_summary_salary_account,hr.group_hr_user,1,1,1,1
+access_company_total_summary_salary_account_system_user,company.total.summary.salary.account system user,model_company_total_summary_salary_account,base.group_user,0,0,0,0
+access_company_total_summary_salary_account_portal,company.total.summary.salary.account.portal,model_company_total_summary_salary_account,base.group_portal,1,0,1,0
+access_company_total_summary_salary_account_user,company.total.summary.salary.account.user,model_company_total_summary_salary_account,base.group_user,1,1,1,0
+access_company_total_summary_salary_account_system,company.total.summary.salary.account.system,model_company_total_summary_salary_account,base.group_system,1,1,1,1
+access_account_avs,account.avs,model_account_avs,,1,1,1,1

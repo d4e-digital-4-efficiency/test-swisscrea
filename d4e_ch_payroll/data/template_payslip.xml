@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="hr_payroll.mail_template_new_payslip" model="mail.template">
+            <field name="report_template" ref="hr_payroll.action_report_payslip"/>
+            <field name="body_html" type="xml">
+                <div>
+                    Bonjour,
+                    <br/>
+                    <br/>
+                    Vous trouverez ci-joint votre dernière fiche de salaire.
+                    <br/>
+                    <br/>
+                    Meilleures salutations
+                    <br/>
+                    Les ressources humaines
+                    <br/>
+                </div>
+            </field>
+            <field name="subject">${object.employee_id.name}, nouvelle fiche de salaire</field>
+        </record>
+
+    </data>
+</odoo>

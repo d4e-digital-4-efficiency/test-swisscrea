@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="hr_payroll_account.hr_contract_view_form" model="ir.ui.view">
+            <field name="name">hr.contract.view.form.inherit</field>
+            <field name="model">hr.contract</field>
+            <field name="inherit_id" ref="hr_contract.hr_contract_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group[@name='duration_group']" position="inside">
+                    <field name="analytic_account_id"
+                           domain="['|', ('company_id', '=', company_id), ('company_id', '=', False)]"
+                           groups="analytic.group_analytic_accounting"/>
+                    <field name="analytical_labels"/>
+                </xpath>
+                <xpath expr="//group[@name='duration_group']" position="attributes">
+                    <attribute name="invisible">0</attribute>
+                </xpath>
+            </field>
+        </record>
+        <record id="d4e_inherit_hr_contract_view_form" model="ir.ui.view">
+            <field name="name">hr.contract.form</field>
+            <field name="model">hr.contract</field>
+            <field name="inherit_id" ref="hr_contract.hr_contract_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='date_end']" position='after'>
+                    <field name="seniority"/>
+                </xpath>
+                <xpath expr="//group[@name='main_info']" position='after'>
+                    <group col="4">
+                        <!--                        <label for="tax_rate_source"/>-->
+                        <!--                        <div class="o_row" name="tax_rate_source">-->
+                        <!--                            <field name="tax_rate_source" nolabel="1"/>-->
+                        <!--                            <span>%</span>-->
+                        <!--                        </div>-->
+                        <field name="avs_ded_year" invisible="1"/>
+                    </group>
+                    <group>
+                        <group name="salaire" string="Salaire">
+                            <field name="currency_id" invisible="1"/>
+                            <field name="private_share_service_car" widget="monetary"
+                                   options="{'currency_field': 'currency_id'}"/>
+                            <field name="lump_sum_representation_costs" widget="monetary"
+                                   options="{'currency_field': 'currency_id'}"/>
+
+
+                            <field name="Car_flat_fee" widget="monetary"
+                                   options="{'currency_field': 'currency_id'}"/>
+                            <field name="Flat_rate_for_expatriates" widget="monetary"
+                                   options="{'currency_field': 'currency_id'}"/>
+                            <field name="Other_flat_rate_costs" widget="monetary"
+                                   options="{'currency_field': 'currency_id'}"/>
+                            <field name="allocation_for_child" widget="monetary"
+                                   options="{'currency_field': 'currency_id'}"/>
+                            <field name="rent_deduction" widget="monetary"
+                                   options="{'currency_field': 'currency_id'}"/>
+                            <field name="withholding_prosecution_office" widget="monetary"
+                                   options="{'currency_field': 'currency_id'}"/>
+                            <field name="various1" widget="monetary"
+                                   options="{'currency_field': 'currency_id'}"/>
+                            <field name="various2" widget="monetary"
+                                   options="{'currency_field': 'currency_id'}"/>
+                            <field name="lpp_fixe" widget="monetary"
+                                   options="{'currency_field': 'currency_id'}"/>
+                            <field name="lpp_fixe_pp" widget="monetary"
+                                   options="{'currency_field': 'currency_id'}"/>
+                        </group>
+                        <!--                        <group>-->
+                        <!--                             <field name="lpp_fixe" widget="monetary"-->
+                        <!--                                       options="{'currency_field': 'currency_id'}"/>-->
+                        <!--                            <field name="lpp_fixe_pp" widget="monetary"-->
+                        <!--                                       options="{'currency_field': 'currency_id'}"/>-->
+                        <!--                        </group>-->
+                    </group>
+                </xpath>
+                <!--                *********************************** new task-->
+                <xpath expr="//notebook/page[@name='information']"
+                       position='replace'>
+
+                    <page string="Salary Information" name="information">
+                        <group name="Salaires" string="Salaires">
+                            <group>
+                                <label for="wage" string="Salaire mensuel"/>
+                                <div class="o_row" name="wage">
+                                    <field name="wage" nolabel="1"/>
+
+                                </div>
+
+                                <label for="hourly_wage"/>
+                                <div class="o_row">
+                                    <field name="hourly_wage" nolabel="1"/>
+
+                                </div>
+                                <label style="width: 300px" for="allocation_for_child"/>
+                                <field name="allocation_for_child" widget="monetary"
+                                       options="{'currency_field': 'currency_id'}" nolabel="1"/>
+                                <label style="width: 300px" for="private_share_service_car"/>
+                                <field name="private_share_service_car" widget="monetary"
+                                       options="{'currency_field': 'currency_id'}" nolabel="1"/>
+                                <field name="lpp_fixe" widget="monetary"
+                                       options="{'currency_field': 'currency_id'}"/>
+                                <field name="lpp_fixe_pp" widget="monetary"
+                                       options="{'currency_field': 'currency_id'}"/>
+                            </group>
+                        </group>
+
+                        <group></group>
+                        <group name="frais" string="Frais fixes">
+                            <group>
+                                <label style="width: 300px" for="lump_sum_representation_costs"/>
+                                <field name="lump_sum_representation_costs" widget="monetary"
+                                       options="{'currency_field': 'currency_id'}" nolabel="1"/>
+                                <field name="Car_flat_fee" widget="monetary"
+                                       options="{'currency_field': 'currency_id'}"/>
+                                <field name="Flat_rate_for_expatriates" widget="monetary"
+                                       options="{'currency_field': 'currency_id'}"/>
+                                <field name="Other_flat_rate_costs" widget="monetary"
+                                       options="{'currency_field': 'currency_id'}"/>
+                            </group>
+                        </group>
+                        <group></group>
+                        <group name="Retenues" string="Retenues fixes">
+                            <group>
+                                <field name="rent_deduction" widget="monetary"
+                                       options="{'currency_field': 'currency_id'}"/>
+                                <label style="width: 300px" for="withholding_prosecution_office"/>
+                                <field name="withholding_prosecution_office" widget="monetary"
+                                       options="{'currency_field': 'currency_id'}" nolabel="1"/>
+                            </group>
+                        </group>
+                        <group></group>
+                        <group name="montant_fixes" string="Montants fixes divers">
+                            <group>
+                                <label style="width: 300px" for="various1"/>
+                                <field name="various1" widget="monetary"
+                                       options="{'currency_field': 'currency_id'}" nolabel="1"/>
+                                <field name="various2" widget="monetary"
+                                       options="{'currency_field': 'currency_id'}"/>
+                            </group>
+                        </group>
+                        <group>
+                            <div>
+                                <h1>
+                                    <label for="observation"
+                                           string="Observations (reportées en rubrique 15 du certificat de salaire)"/>
+                                </h1>
+                                <field name="observation" nolabel="1"/>
+                            </div>
+                        </group>
+                    </page>
+                </xpath>
+                <xpath expr="//notebook/page[2]" position='after'>
+                    <page string="Contributions" name="contribution">
+                        <group>
+                            <group>
+                                <field name="validity_date"/>
+                            </group>
+                            <group>
+
+                            </group>
+                            <group string="AVS / AC">
+                                <field name="avs_contribution"/>
+                                <field name="ac_contribution"/>
+                                <field name="compensation_fund"/>
+                            </group>
+
+                            <group string="IJM">
+                                <field name="ijm_contribution"/>
+                                <field name="ijm_code"/>
+                                <field name="ijm_cashier"/>
+                            </group>
+                            <group string="accident insurance">
+                                <field name="laa_contribution"/>
+                                <field name="laa_fund"/>
+                                <field name="laac_contribution"/>
+                                <field name="laac_code"/>
+                                <field name="laac_cashier"/>
+                            </group>
+                            <group string="LPP">
+                                <field name="lpp_contribution"/>
+                                <field name="lpp_code"/>
+                                <field name="lpp_cashier"/>
+                            </group>
+                            <group>
+
+                            </group>
+                            <group string="Withholding tax">
+                                <field name="tax_source"/>
+                                <field name="canton" />
+                                <field name="tabelle" />
+                                <field name="church_tax" />
+                                <field name="tax_rate" attrs="{'invisible':[('tax_source','!=', 'submitted_without_scale')]}" widget="percentage"/>
+                            </group>
+                        </group>
+                    </page>
+
+
+                    <page string="History">
+                        <field name="date_validity_lines">
+                            <tree>
+                                <!--                                  <tree editable="top"> add the new line to the top off tree-->
+                                <field name="validity_date"/>
+                                <field name="avs_contribution" string="AVS"/>
+                                <field name="ac_contribution" string="AC"/>
+                                <field name="laa_contribution" string="LAA"/>
+                                <field name="laac_contribution" string="LAAC"/>
+                                <field name="ijm_contribution" string="IJM"/>
+                                <field name="lpp_contribution" string="LPP"/>
+                                <field name="tax_source" />
+                                <field name="ijm_code" />
+                                <field name="compensation_fund" invisible="1"/>
+
+                                <field name="ijm_cashier" invisible="1"/>
+                                <field name="laa_fund" invisible="1"/>
+                                <field name="laac_code" invisible="1"/>
+                                <field name="laac_cashier" invisible="1"/>
+                                <field name="lpp_code" invisible="1"/>
+                                <field name="lpp_cashier" invisible="1"/>
+                                <field name="canton"/>
+                                <field name="church_tax" string="Impôt ecclésiastique"/>
+                                <field name="tabelle"/>
+                                <field name="tax_rate"
+                                       attrs="{'invisible':[('tax_source','!=', 'submitted_without_scale')]}"
+                                       widget="percentage"/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

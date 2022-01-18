@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<odoo>
+     <menuitem id="SOS_menu_root"
+            name="SOS"
+            web_icon="d4e_SOS,static/description/icon.png"
+            active="False"
+            sequence="7"/>
+
+    <record id="sos_client_form_view" model="ir.ui.view">
+        <field name="name">sos.client.form.view</field>
+        <field name="model">sos.client</field>
+        <field name="arch" type="xml">
+            <form create="false" edit="false">
+                <div class="oe_title">
+                    <h1>SOS - Swiss Odoo Support by D4E</h1>
+                </div>
+                <br></br>
+                <br></br>
+                <br></br>
+<!--                <div>-->
+<!--                    <t t-if="date_support">-->
+<!--                        <span>support up to&amp;nbsp;</span>-->
+<!--                       t1 <field name="date_support"/>-->
+<!--                        t2 <t t-esc="date_support"/>-->
+<!--                       t3 <t t-esc="len(date_support)"/>-->
+<!--                    </t>-->
+<!--                    <t t-else="">-->
+<!--                        <span>No SOS support activated - Contact our sales department</span>-->
+<!--                    </t>-->
+<!--                </div>-->
+                <h2>
+					<field name="text_sos_support"/>
+				</h2>
+                <br></br>
+                <br></br>
+                <div style="display:inline-block;">
+                    <!--<p style="font-family: Calibri;font-size:11px;display:inline-block">-->
+					<p style="display:inline-block">
+
+                        <strong>
+                            <span>D4E - Digital4Efficiency</span>
+                        </strong>
+                        <br/>
+                        <span class="sep"><a href="https://g.page/d4e-digital4efficiency?share" target="_blank">Chemin du Pré-Fleuri 5&amp;nbsp;</a></span>
+                        <br/>
+                        <span class="sep">Bâtiment Skylab</span>
+                        <br/>
+                        <span>1228 Plan-les-Ouates&amp;nbsp;</span>
+                        <br/>
+                        <span class="sep">Suisse&amp;nbsp;</span>
+                        <br/>
+                        <br/>
+
+                        <strong>
+                            <span>D4E - Digital4Efficiency Valais</span>
+                        </strong>
+                        <br/>
+                        <span class="sep"><a href="https://g.page/r/CVVCp9NS_t-YEBA?share" target="_blank">Place du Midi 48&amp;nbsp;</a></span>
+                        <br/>
+                        <span>1950 Sion&amp;nbsp;</span>
+                        <br/>
+                        <span class="sep">Suisse&amp;nbsp;</span>
+                        <br/>
+                        <br/>
+
+
+                        <strong>
+							<span>Support :&amp;nbsp;</span>
+						</strong>
+                        <br/>
+                        <span class="sep"><a href="tel:+41 58 255 11 15">+41 58 255 11 15</a></span>
+
+                        <br/>
+                        <a href="mailto:support@digital4efficiency.ch">support@digital4efficiency.ch</a>
+                        <br/>
+                        <a rel="nofollow" href="https://www.digital4efficiency.ch/contactus">
+                            https://www.digital4efficiency.ch/contactus
+                        </a>
+                    </p>
+                    <div class="row align-items-center">
+						<div class="col-lg-6 pt16 pb16">
+								<div>
+									Nous pourrions être amenés à vous demander d’installer le &amp;nbsp;<a title="" aria-describedby="tooltip702790" style="transition-property: color, background-color, border-color; transition-duration: 0.2s; transition-timing-function: linear; color: rgb(0, 0, 0);" href="https://get.teamviewer.com/support-d4e" data-original-title="">logiciel TeamViewer&amp;nbsp;</a>afin de
+										vous assister à distance.
+								</div>
+							<div style="color: #34495e;" data-name="Buttons">
+								<a title="" class="btn btn-primary" style="background-color: #34495e;" aria-describedby="tooltip688457" href="https://get.teamviewer.com/support-d4e" role="button" data-original-title="">Télécharger TeamViewer
+								</a>
+							</div>
+						</div>
+						<div>
+							<a href="https://get.teamviewer.com/support-d4e">
+								<img title="" class="img-fluid o_we_custom_image" src="d4e_SOS/static/src/img/team.jpg" data-original-title="" style="max-width: 20%" alt=" "/>
+							</a>
+						</div>
+					</div>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_sos_client" model="ir.actions.act_window">
+        <field name="name">SOS</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">sos.client</field>
+        <field name="view_mode">form</field>
+        <field name="target">inline</field>
+        <field name="res_id" ref='default_sos_client'></field>
+    </record>
+
+    <menuitem id="SOS_menu_root"
+              name="SOS" sequence="1"
+              action="action_sos_client"/>
+</odoo>

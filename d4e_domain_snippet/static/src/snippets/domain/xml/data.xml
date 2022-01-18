@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="d4e_domain_snippet.dynamic_domain_snippet.container">
+        <t t-set="dataLength" t-value="data.length" />
+        <t t-if="dataLength &gt; 0">
+            <t t-set="colClass" t-value="'col-md-' + (12 / chunkSize).toString()" />
+            <div t-att-id="uniqueId" class="carousel slide w-100">
+                <div class="carousel-inner row w-100 mx-auto" style="padding-left: 5rem;padding-right: 5rem;" role="listbox">
+                    <t t-foreach="[...Array(Math.ceil(data.length / chunkSize)).keys()]" t-as="carouselItemIndex">
+                        <t t-set="carouselItemIsActive" t-value="(carouselItemIndex === 0) ? 'active' : ''" />
+                        <div t-attf-class="carousel-item #{carouselItemIsActive}" t-att-carousel-item="carouselItemIndex">
+                            <div class="row">
+                                <t t-foreach="[...Array(chunkSize).keys()]" t-as="colIndex">
+                                    <t t-set="idx" t-value="(carouselItemIndex * chunkSize) + colIndex" />
+                                    <t t-if="idx &lt; dataLength">
+                                        <t t-set="element" t-value="data[idx]" />
+                                        <div t-attf-class="col-xs-12 #{colClass}" t-att-data-id="element.id">
+                                            <img t-att-src="element.image" style="max-width: 100%;" />
+                                            <h5 class="mt8"><strong t-esc="element.name" /></h5>
+                                            <t t-raw="element.description" />
+                                        </div>
+                                    </t>
+                                    <t t-if="idx &gt;= data.length">
+                                        <div t-attf-class="col-xs-12 #{colClass}" t-att-data-id="-1"></div>
+                                    </t>
+                                </t>
+                            </div>
+                        </div>
+                    </t>
+                </div>
+                <a t-att-href="'#' + uniqueId" class="carousel-control-prev" data-slide="prev" role="button" aria-label="Previous" title="Previous">
+                    <span class="fa fa-chevron-circle-left fa-2x"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a t-att-href="'#' + uniqueId" class="carousel-control-next" data-slide="next" role="button" aria-label="Next" title="Next">
+                    <span class="fa fa-chevron-circle-right fa-2x"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </t>
+        <t t-if="dataLength === 0">
+            <h4>No domains found!</h4>
+        </t>
+    </t>
+</templates>

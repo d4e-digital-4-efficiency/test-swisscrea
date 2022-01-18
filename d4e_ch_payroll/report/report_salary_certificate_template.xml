@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <template id="report_salary_certificate_template">
+            <t t-call="web.html_container">
+                <t t-foreach="report_data['emp_ids']" t-as="emp">
+                    <!--<t t-call="web.external_layout">-->
+                        <div class="page">
+                            <style type="text/css">
+                                .table td { padding: 0 !important; }
+                            </style>
+                            <t t-set="year" t-value="report_data['year']"/>
+                            <table class="table table-borderless" style="border-collapse: separate;border-spacing: 5px;min-width: 100%;">
+                                <tr>
+                                    <td>A</td>
+                                    <td style="background-color: #feeaf4;">X</td>
+                                    <td colspan="6" style="font-size: 1.3em;"><strong>Lohnausweis - Certificat de salaire - Certificato di salario</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>B</td>
+                                    <td style="background-color: #feeaf4;"></td>
+                                    <td colspan="6" style="font-size: 1.3em;"><strong>Rentenbescheinigung - Attestation de rentes - Attestazione delle rendite</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>C</td>
+                                    <td colspan="2" ><div style="background-color: #feeaf4;"></div><br></br><div style="font-size: 10px;">AHV-Nr. - No AVS - N. AVS</div></td>
+                                    <td colspan="2"><div style="background-color: #feeaf4;"><t t-esc="emp.avs_13"/></div><div style="font-size: 10px;">Neue AHV-Nr. - Nouveau No AVS - Nuovo N. AVS</div></td>
+                                    <td>F</td>
+                                    <td width="5%" style="background-color: #feeaf4;"><div></div></td>
+                                    <td style="font-size: 10px;">
+                                        <p style="margin: 0;">Unentgeltiche Beförderung zwischen Wohn- du Arbeitsort</p>
+                                        <p style="margin: 0;">Transport gratuit entre le domicile et le lieu de travail</p>
+                                        <p style="margin: 0;">Trasporto gratuito dal domicilio al luogo di lavoro</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>D</td>
+                                    <td><div style="background-color: #feeaf4;"><t t-esc="year"/></div><div style="font-size: 10px;">Jahr - Année - Anno</div></td>
+                                    <td>E</td>
+                                    <td><div style="background-color: #feeaf4;">01.01.<t t-esc="year"/></div><div style="font-size: 10px;">von - du - dal</div></td>
+                                    <td><div style="background-color: #feeaf4;">31.12.<t t-esc="year"/></div><div style="font-size: 10px;">bis - au - al</div></td>
+                                    <td>G</td>
+                                    <td width="5%" style="background-color: #feeaf4;"><div></div></td>
+                                    <td style="font-size: 10px;">
+                                        <p style="margin: 0;">Kantinenverpflegung / Lunch-Checks</p>
+                                        <p style="margin: 0;">Repas à la cantine / chèques-repas</p>
+                                        <p style="margin: 0;">Pasti alla mensa /buoni pasto</p>
+                                    </td>
+                                </tr>
+                            </table>
+                            <div style="border: 2px dashed hotpink;height: 12em;margin-bottom: 2em;margin-top: 1em;">
+                                <div style="margin-bottom: 1em;"><span> H </span></div>
+                                <div style="margin-left: 70%;" t-field="emp.address_home_id"
+                                    t-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": True}'/>
+                            </div>
+                            <table class="table table-borderless" style="border-collapse: separate;border-spacing: 5px;font-size: 11px;">
+                                <tr>
+                                    <td width="1%"><strong>1.</strong></td>
+                                    <td class="text-left" style="border-bottom: 1px solid black;">
+                                        <p style="margin: 0;">Lohn</p>
+                                        <p style="margin: 0;">Salaire</p>
+                                        <p style="margin: 0;">Salario</p>
+                                    </td>
+                                    <td class="text-left" width="30%" style="border-bottom: 1px solid black;">
+                                        <p style="margin: 0;">soweit nicht unter Ziffer 2-7 aufzuführen</p>
+                                        <p style="margin: 0;">qui ne concerne pas les chiffres 2 à 7 ci-dessous</p>
+                                        <p style="margin: 0;">se non da indicare sotto cifre da 2 a 7 più sotto</p>
+                                    </td>
+                                    <td class="text-left" style="border-bottom: 1px solid black;">
+                                        <p style="margin: 0;">/ Rente</p>
+                                        <p style="margin: 0;">/ Rente</p>
+                                        <p style="margin: 0;">/ Rendita</p>
+                                    </td>
+                                    <td/>
+                                    <td style="text-align: right;" width="15%">
+                                        <p>CHF</p>
+                                        <div style="background-color: #feeaf4;padding: 4px 0px;"><t t-esc="report_data['get_rubrique_value'](emp, year, '1 Salaire_Rente')"/></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="3" width="1%"><strong>2.</strong></td>
+                                    <td rowspan="3" width="20%" class="text-left" style="font-size: 10px;">
+                                        <p style="margin: 0;">Gehaltsnebenleistungen</p>
+                                        <p style="margin: 0;">Prestations salariales accessoires</p>
+                                        <p style="margin: 0;">Prestazioni accessorie al salario</p>
+                                    </td>
+                                    <td colspan="2" style="border-bottom: 1px solid black;">
+                                        <span style="padding-right: 10px;"><strong>2.1 </strong></span>
+                                        <span>Verpflegung, Unterkunft - Pension, logement - Vitto, allogio</span></td>
+                                    <td style="color: hotpink;font-size: 15px;"><strong>+</strong></td>
+                                    <td style="background-color: #feeaf4;text-align: right;"><t t-esc="report_data['get_rubrique_value'](emp, year, '2.1 Prestations salariales accessoires (pension, logement)')"/></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" style="border-bottom: 1px solid black;">
+                                        <span style="padding-right: 10px;"><strong>2.2 </strong></span>
+                                        <span>
+                                        Privatanteil Geschäftswagen - Part privée voiture de service - Quota privata automobile di servizio
+                                    </span></td>
+                                    <td style="color: hotpink;font-size: 15px;"><strong>+</strong></td>
+                                    <td style="background-color: #feeaf4;text-align: right;"><t t-esc="report_data['get_rubrique_value'](emp, year, '2.2 Part privée voiture de service')"/></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <div><span style="padding-right: 10px;"><strong>2.3 </strong></span>
+                                        <span>Andere - Autres - Altre </span></div><div style="font-size: 8px;padding: 0px 28px;">Art - Genre - Genere</div></td>
+                                    <td style="color: hotpink;font-size: 15px;"><strong>+</strong></td>
+                                    <td style="background-color: #feeaf4;text-align: right;"><t t-esc="report_data['get_rubrique_value'](emp, year, '2.3 Prestations salariales accessoires (autres)')"/></td>
+                                </tr>
+                                <tr>
+                                    <td width="1%"><strong>3.</strong></td>
+                                    <td colspan="2" class="text-left">
+                                        <p style="margin: 0;">Unregelmässige Leistungen - Prestations non périodiques - Prestazioni aperiodiche</p>
+                                    </td>
+                                    <td class="text-left" style="vertical-align: bottom;">
+                                        <p style="margin: 0;font-size: 8px;">Art - Genre - Genere</p>
+                                    </td>
+                                    <td/>
+                                    <td/>
+                                </tr>
+                                <tr>
+                                    <td/>
+                                    <td colspan="3" style="background-color: #feeaf4;"/>
+                                    <td style="color: hotpink;font-size: 15px;" width="1%"><strong>+</strong></td>
+                                    <td style="background-color: #feeaf4;text-align: right;"><t t-esc="report_data['get_rubrique_value'](emp, year, '3 Prestations non périodiques')"/></td>
+                                </tr>
+                                <tr>
+                                    <td width="1%"><strong>4.</strong></td>
+                                    <td colspan="3"><div style="padding: 0;">Kapitalleistungen - Prestations en capital - Prestazioni in capitale</div>
+                                                    <div style="font-size: 8px;padding: 0;">Art - Grenre - Genere</div></td>
+                                    <td style="color: hotpink;font-size: 15px;" width="1%"><strong>+</strong></td>
+                                    <td style="background-color: #feeaf4;text-align: right;"><t t-esc="report_data['get_rubrique_value'](emp, year, '4 Prestations en capital')"/></td>
+                                </tr>
+                                <tr>
+                                    <td width="1%"><strong>5.</strong></td>
+                                    <td colspan="3" style="border-bottom: 1px solid black;"><span style="padding: 0;">
+                                        Beteiligungsrechte gemäss Beiblatt - Droits de participation selon annexe - Diritti di partecipazione secondo allegato
+                                        </span></td>
+                                    <td style="color: hotpink;font-size: 15px;" width="1%"><strong>+</strong></td>
+                                    <td style="background-color: #feeaf4;text-align: right;"><t t-esc="report_data['get_rubrique_value'](emp, year, '5 Droits de participation')"/></td>
+                                </tr>
+                                <tr>
+                                    <td width="1%"><strong>6.</strong></td>
+                                    <td colspan="3" style="border-bottom: 1px solid black;"><span style="padding: 0;">
+                                        Verwaltungsratsentschädigungen - Indemnités des membres de l'administration - Indennità dei membri di consigli d'administrazione
+                                        </span></td>
+                                    <td style="color: hotpink;font-size: 15px;" width="1%"><strong>+</strong></td>
+                                    <td style="background-color: #feeaf4;text-align: right;"><t t-esc="report_data['get_rubrique_value'](emp, year, '6 Indemnités des membres de l administration')"/></td>
+                                </tr>
+                                <tr>
+                                    <td width="1%"><strong>7.</strong></td>
+                                    <td colspan="3"><div style="padding: 0;">Andere Leistungen - Autres prestations - Altre prestazioni</div>
+                                                    <div style="font-size: 8px;padding: 0;">Art - Grenre - Genere</div></td>
+                                    <td style="color: hotpink;font-size: 15px;" width="1%"><strong>+</strong></td>
+                                    <td style="background-color: #feeaf4;text-align: right;"><t t-esc="report_data['get_rubrique_value'](emp, year, '7')"/></td>
+                                </tr>
+                                <tr>
+                                    <td width="1%"><strong>8.</strong></td>
+                                    <td colspan="3" style="border-bottom: 1px solid black;"><span style="padding: 0;">
+                                        Bruttolohn total / Rente - Salaire brut total / Rente - Salario lordo totale / Rendita
+                                        </span></td>
+                                    <td style="color: hotpink;font-size: 15px;" width="1%"><strong>=</strong></td>
+                                    <td style="background-color: #feeaf4;text-align: right;"><t t-esc="report_data['get_rubrique_value'](emp, year, '8')"/></td>
+                                </tr>
+                                <tr>
+                                    <td width="1%"><strong>9.</strong></td>
+                                    <td colspan="3" style="border-bottom: 1px solid black;"><span style="padding: 0;">
+                                        Beiträge AHV/IV/EO/ALV/NBUV - Cotisations AVS/AI/APG/AC/AANP - Contributi AVS/AI/IPG/AD/AINP
+                                        </span></td>
+                                    <td style="color: hotpink;font-size: 15px;" width="1%"><strong>-</strong></td>
+                                    <td style="background-color: #feeaf4;text-align: right;"><t t-esc="report_data['get_rubrique_value'](emp, year, '9 Cotisations AVS/AI/APG/AC/AANP')"/></td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="3" width="1%"><strong>10.</strong></td>
+                                    <td rowspan="3" class="text-left">
+                                        <p style="margin: 0;">Berufliche Vorsorge</p>
+                                        <p style="margin: 0;">Prévoyance professionnelle</p>
+                                        <p style="margin: 0;">Previdenza professionale</p>
+                                    </td>
+                                    <td colspan="2">
+                                        <span style="padding-right: 52px;">2. Säule </span>
+                                        <span style="padding-right: 10px;"><strong>10.1 </strong></span>
+                                        <span style="border-bottom: 1px solid black;">Ordentliche Beiträge - Cotisations ordinaires - Contributi ordinar</span></td>
+                                    <td style="color: hotpink;font-size: 15px;" width="1%"><strong>-</strong></td>
+                                    <td style="background-color: #feeaf4;text-align: right;"><t t-esc="report_data['get_rubrique_value'](emp, year, '10.1 Prévoyance professionnelle (cotisations ordinaires)')"/></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4"><span>2e pilier</span></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <span style="padding-right: 40px;">2° pilastro </span>
+                                        <span style="padding-right: 10px;"><strong>10.2 </strong></span>
+                                        <span style="border-bottom: 1px solid black;">Beiträge für den EinKauf - Cotisations pour le rachat - Contributi per il riscatto</span></td>
+                                    <td style="color: hotpink;font-size: 15px;" width="1%"><strong>-</strong></td>
+                                    <td style="background-color: #feeaf4;text-align: right;"><t t-esc="report_data['get_rubrique_value'](emp, year, '10.2 Prévoyance professionnelle (cotisation pour le rachat)')"/></td>
+                                </tr>
+                                <tr>
+                                    <td width="1%"><strong>11.</strong></td>
+                                    <td colspan="2" style="border-bottom: 1px solid black;"><strong style="padding: 0;">
+                                        Nettolohn / Rente - Salaire net / Rente - Salario netto / Rendita
+                                        </strong></td>
+                                    <td style="text-align: center;border-bottom: 1px solid black;"><span style="font-size: 20px;padding: 0;"/>=></td>
+                                    <td style="color: hotpink;font-size: 15px;" width="1%"><strong>=</strong></td>
+                                    <td style="background-color: #feeaf4;text-align: right;"><t t-esc="report_data['get_rubrique_value'](emp, year, '11')"/></td>
+                                </tr>
+                                <tr>
+                                    <td/>
+                                    <td colspan="3"><strong style="padding: 0;">In die Steuererklärung übertragen - A reporter sur la déclaration d'impôt - Da riportare nella dichiarazione d'imposta</strong></td>
+                                    <td/>
+                                    <td/>
+                                </tr>
+                                <tr>
+                                    <td width="1%"><strong>12.</strong></td>
+                                    <td colspan="3" style="border-bottom: 1px solid black;"><span style="padding: 0;">
+                                        Quellensteuerabzug - Retenue de l'impôt à la source - Ritenuta d'imposta alla fonte
+                                        </span></td>
+                                    <td/>
+                                    <td style="background-color: #feeaf4;text-align: right;height: 23px;"><t t-esc="report_data['get_rubrique_value'](emp, year, '12 Retenue de l impôt à la source')"/></td>
+                                </tr>
+                                <tr>
+                                    <td width="1%"><strong>13.</strong></td>
+                                    <td colspan="3">
+                                        <div style="padding: 0;">Spesenvergütungen - Allocation pour frais - Indennità per spese</div>
+                                        <div style="font-size: 8px;padding: 0;">Nicht im Bruttolohn (gemass Ziffer 8) enthalten - Non comprises dans le salaire brut (au chiffre 8) - Non comprese nel salario lordo (sotto cifra 8)</div>
+                                    </td>
+                                    <td/>
+                                    <td/>
+                                </tr>
+                                <tr>
+                                    <td/>
+                                    <td><span style="padding-right: 10px;"><strong>13.1</strong></span>
+                                        <span style="margin: 0;">Effektive Spesen</span>
+                                        <p style="margin: 0;padding-left: 34px;">Frais effectis</p>
+                                        <p style="margin: 0;padding-left: 34px;">Spese effettive</p>
+                                    </td>
+                                    <td colspan="2" class="text-left">
+                                        <div style="border-bottom: 1px solid black;margin-bottom: 6px;"><span style="padding-right: 10px;"><strong>13.1.1</strong></span><span style="margin: 0;">Reise, Verpflegung, Übernachtung - Voyage, repas, nuitées - Viaggio, vitto, alloggio</span></div>
+                                        <div><span style="padding-right: 10px;"><strong>13.1.2</strong></span><span style="padding: 0;">Übrige - Autres - Altre</span>
+                                                           <div style="font-size: 8px;padding: 0px 40px;">Art - Genre - Genere</div></div>
+                                    </td>
+                                    <td/>
+                                    <td style="text-align: right;">
+                                        <div style="background-color: #feeaf4;padding: 4px 0px;margin-bottom: 4px;"><t t-esc="report_data['get_rubrique_value'](emp, year, '13.1.1 Frais effectifs (voyage, repas, nuitées)')"/></div>
+                                        <div style="background-color: #feeaf4;padding: 4px 0px;"><t t-esc="report_data['get_rubrique_value'](emp, year, '13.1.2 Frais effectifs (autres)')"/></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td/>
+                                    <td><span style="padding-right: 10px;"><strong>13.2</strong></span>
+                                        <span style="margin: 0;">Pauschalspesen</span>
+                                        <p style="margin: 0;padding-left: 34px;">Frais forfaitaires</p>
+                                        <p style="margin: 0;padding-left: 34px;">Spese forfettarie</p>
+                                    </td>
+                                    <td colspan="2" class="text-left">
+                                        <div style="border-bottom: 1px solid black;margin-bottom: 6px;"><span style="padding-right: 10px;"><strong>13.2.1</strong></span><span style="margin: 0;">Repräsentation - Représentation - Rappresentanza</span></div>
+                                        <div style="border-bottom: 1px solid black;margin-bottom: 6px;"><span style="padding-right: 10px;"><strong>13.2.2</strong></span><span style="margin: 0;">Auto - Voiture - Automobile</span></div>
+                                        <div><span style="padding-right: 10px;"><strong>13.2.3</strong></span><span style="padding: 0;">Übrige - Autres - Altre</span>
+                                                           <div style="font-size: 8px;padding: 0px 40px;">Art - Genre - Genere</div></div>
+                                    </td>
+                                    <td/>
+                                    <td style="text-align: right;">
+                                        <div style="background-color: #feeaf4;padding: 4px 0px;margin-bottom: 4px;"><t t-esc="report_data['get_rubrique_value'](emp, year, '13.2.1 Frais forfaitaires (représentation)')"/></div>
+                                        <div style="background-color: #feeaf4;padding: 4px 0px;margin-bottom: 4px;"><t t-esc="report_data['get_rubrique_value'](emp, year,'13.2.2 Frais forfaitaires (voiture) ')"/></div>
+                                        <div style="background-color: #feeaf4;padding: 4px 0px;"><t t-esc="report_data['get_rubrique_value'](emp, year, '13.2.3 Fris forfaitaires (autres)')"/></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td/>
+                                    <td colspan="3" style="border-bottom: 1px solid black;"><span style="padding-right: 10px;">13.3</span><span style="padding: 0;">
+                                        Beiträge an die Weiterbildung - Contributions au perfectionnement - Contributi per il perfezionamento
+                                        </span></td>
+                                    <td/>
+                                    <td style="background-color: #feeaf4;text-align: right;"><t t-esc="report_data['get_rubrique_value'](emp, year, '13.3 Contribution au perfectionnement')"/></td>
+                                </tr>
+                                <tr>
+                                    <td width="1%"><strong>14.</strong></td>
+                                    <td rowspan="2" class="text-left" style="font-size: 10px;">
+                                        <p style="margin: 0;">Weitere Gehaltsnebenleistungen</p>
+                                        <p style="margin: 0;">Autres prestations salariales accessoires</p>
+                                        <p style="margin: 0;">Altre prestazioni accessorie al salario</p>
+                                    </td>
+                                    <td rowspan="2" class="text-left"  style="font-size: 10px;">
+                                        <p style="margin: 0;">Art</p>
+                                        <p style="margin: 0;">Genre</p>
+                                        <p style="margin: 0;">Genere</p>
+                                    </td>
+                                    <td colspan="3" style="background-color: #feeaf4;"></td>
+                                </tr>
+                                <tr>
+                                    <td/>
+                                    <td colspan="3" style="background-color: #feeaf4;"></td>
+                                </tr>
+                                <tr>
+                                    <td width="1%"><strong>15.</strong></td>
+                                    <td rowspan="2" class="text-left">
+                                        <p style="margin: 0;">Bemerkungen</p>
+                                        <p style="margin: 0;">Observations</p>
+                                        <p style="margin: 0;">Osservazioni</p>
+                                    </td>
+                                    <td colspan="4" class="text-left" style="background-color: #feeaf4;text-align: right;">
+                                        <p style="margin: 0;"><t t-esc="report_data['get_rubrique_value'](emp, year, '15 Observations - Beobachtungen')"/></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td/>
+                                    <td colspan="4" style="background-color: #feeaf4;"></td>
+                                </tr>
+                            </table>
+                            <table class="table table-borderless" style="border-collapse: separate;border-spacing: 5px;font-size: 11px;">
+                                <tr>
+                                    <td width="30%">
+                                        <p style="border-left: 2px solid black; padding-left: 25px;">Ort und Datum - Lieu et date - Luogo e data</p>
+                                        <div><span style="background-color: #feeaf4;padding: 5px 50px;margin-left: 27px;"> Erde, le  <t t-esc="datetime.datetime.now().date()" t-options="{'lang': report_data['lang'], 'widget': 'date', 'format':'long'}"/></span></div>
+                                        <div style="border-left: 2px solid black;height: 3em;width: 3em;border-bottom: 2px solid black;"></div>
+                                    </td>
+                                    <td width="40%" style="padding-left: 10px !important;">
+                                        <p style="margin: 0;">  Die Richtigkeit und Vollständigkeit bestätigt</p>
+                                        <p style="font-size: 10px;margin: 0;">inkl. genauer Anschrift und telefonnummer des Arbeitgebers</p>
+                                        <p style="margin: 0;">Certifié exact et complet</p>
+                                        <p style="font-size: 10px;margin: 0;">y.c. adresse et numéro de téléphone exacts de l'employeur</p>
+                                        <p style="margin: 0;">Certificato esatto e completo</p>
+                                        <p style="font-size: 10px;margin: 0;">compresi indirizzo e numero di telefono esatti del datore di lavoro</p>
+                                    </td>
+                                    <td  width="30%" style="background-color: #feeaf4;padding: 5px !important;">
+                                        <div>IDE: <t t-esc="emp.company_id.vat"/></div>
+                                        <div t-field="emp.company_id.partner_id"
+                                    t-options='{"widget": "contact", "fields": ["address", "name", "phone"], "no_marker": True}'/>
+                                    </td>
+                                </tr>
+                            </table>
+                            <div style="font-size: 11px;"><strong>605.040.18 Form. 11</strong>(25.8.2006)</div>
+                            <!--<div style="page-break-after: always;"/>-->
+                        </div>
+                    <!--</t>-->
+                </t>
+            </t>
+        </template>
+
+    </data>
+</odoo>

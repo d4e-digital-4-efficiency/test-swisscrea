@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+    <record id="view_wizard_tree" model="ir.ui.view">
+        <field name="name">view.wizard.tree</field>
+        <field name="model">salary.rule.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <field name="rules_to_add"></field>
+                <footer>
+                    <button string="Add" name="add_rule" type="object" class="send_and_print btn-primary o_mail_send"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+
+    <record id="wizard_rule" model="ir.actions.act_window">
+        <field name="name">Rule to add</field>
+        <field name="res_model">salary.rule.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_wizard_tree"/>
+        <field name="target">new</field>
+    </record>
+
+
+    <record id="hr_payroll_structure_view_form_add_product" model="ir.ui.view">
+        <field name="name">hr.payrolL.structure.form.inherit.add.product</field>
+        <field name="model">hr.payroll.structure</field>
+        <field name="inherit_id" ref="hr_payroll.view_hr_employee_grade_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='rule_ids']" position='before'>
+                <button name="%(wizard_rule)d" type="action" class="oe_link oe_inline"
+                        string="Copy a rule from another structure"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

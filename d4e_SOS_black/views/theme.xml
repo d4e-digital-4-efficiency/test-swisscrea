@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<odoo>
+    <template id="_assets_primary_variables_inh_odoo_theme_backend_ok" inherit_id="web._assets_primary_variables">
+        <xpath expr="." position="inside">
+            <link rel="stylesheet" type="text/scss" href="/d4e_SOS_black/static/src/scss/theme_style1.scss"/>
+        </xpath>
+    </template>
+</odoo>

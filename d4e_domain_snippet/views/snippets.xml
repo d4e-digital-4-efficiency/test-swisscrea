@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template name="Dynamic Domain" id="res_domain_template">
+        <section class="res_domain_snippet">
+            <h3 class="text-center">
+                <strong>Our domains</strong>
+            </h3>
+            <div class="d-none carousel-items"></div>
+            <div class="container">
+                <div class="row s_nb_column_fixed">
+                    <div class="col-12">
+                        <div class="owl-carousel owl-theme"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <template id="snippets" inherit_id="website.snippets">
+        <xpath expr="//div[@id='snippet_effect']/div[hasclass('o_panel_body')]" position="inside">
+            <t t-snippet="d4e_domain_snippet.res_domain_template" t-thumbnail="/d4e_domain_snippet/static/src/img/icon.svg">
+                <keywords>Dynamic, Domain</keywords>
+            </t>
+        </xpath>
+    </template>
+
+    <template id="snippet_options" inherit_id="website.snippet_options">
+        <xpath expr="." position="inside">
+            <div data-js="dynamic_domain_snippet" data-selector="section[class^='res_domain_snippet']">
+                <we-select data-no-preview="true" string="Number of elements" data-apply-to=".owl-carousel">
+                    <we-button data-select-class="">1 Element</we-button>
+                    <we-button data-select-class="carousel-2">2 Elements</we-button>
+                    <we-button data-select-class="carousel-3">3 Elements</we-button>
+                    <we-button data-select-class="carousel-4">4 Elements</we-button>
+                    <we-button data-select-class="carousel-5">5 Elements</we-button>
+                    <we-button data-select-class="carousel-6">6 Elements</we-button>
+                    <we-button data-select-class="carousel-7">7 Elements</we-button>
+                    <we-button data-select-class="carousel-8">8 Elements</we-button>
+                    <we-button data-select-class="carousel-9">9 Elements</we-button>
+                    <we-button data-select-class="carousel-10">10 Elements</we-button>
+                </we-select>
+            </div>
+            <div data-name="TEST" data-js="dynamic_domain_snippet_owl_item" data-selector="div[class^='owl-item']">
+                <we-button class="duplicateCarouselItem">
+                    <i class="fa fa-clone"/> Duplicate Carousel Item
+                </we-button>
+            </div>
+        </xpath>
+    </template>
+</odoo>

@@ -1,0 +1,11 @@
+name,code,id,note,active
+Allocations,ALLOCATIONS,d4e_ch_payroll_data.ALW_1,Non soumis aux charges sociales,true
+Brut,BRUT,d4e_ch_payroll_data.GROSS_1,,true
+Déduction,DED,d4e_ch_payroll_data.DED_1,,true
+Net,NET,d4e_ch_payroll_data.NET_1,,true
+Employeur,COMP,d4e_ch_payroll_data.COMP_1,,true
+Reporting,REPORT,d4e_ch_payroll_data.REPORT_1,,true
+Libre,FREE,d4e_ch_payroll_data.FREE_1,,true
+Indemnités,INDEMNITES,d4e_ch_payroll_data.INDEMNITES_1,Indemnités non soumises aux charges sociales,true
+Calcul,Calcul,d4e_ch_payroll_data.CalCUL_1,Règles utilisées uniquement pour le calcul. par exemple Vacances. Ne sera pas ajouté au salaire brut,true
+Vacances,VACANCES,d4e_ch_payroll_data.VACANCES_1,,true

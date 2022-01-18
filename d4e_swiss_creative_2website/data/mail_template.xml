@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+        <record id="email_template_sale_recap_mail" model="mail.template">
+            <field name="name">Sale Recap Mass Mail</field>
+            <field name="subject">Sale Recap</field>
+            <field name="body_html" type="xml">
+                <div style="margin: 0px; padding: 0px;">
+                    <p style="margin: 0px; padding: 0px;font-size: 13px;">
+                        Hello ${object.supplier_id.name},<br/>
+                        Here is our <strong>${object.month_year} Sale Recap</strong>
+                    </p>
+                </div>
+            </field>
+            <field name="model_id" ref="d4e_swiss_creative_2website.model_sale_recap_mail"/>
+            <field name="auto_delete" eval="True"/>
+        </record>
+
+</odoo>

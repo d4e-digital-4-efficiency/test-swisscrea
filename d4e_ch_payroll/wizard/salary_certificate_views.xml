@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="salary_certificate_wizard_form" model="ir.ui.view">
+            <field name="name">salary.certificate.wizard.form</field>
+            <field name="model">salary.certificate</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="emp_id" widget="many2many_tags" attrs="{'invisible': [('all_emp','=', True)], 'required': [('all_emp','=', False)]}"/>
+                        <field name="all_emp"/>
+                        <field name="certif_year" required="1"/>
+                    </group>
+                    <footer>
+                        <button string="Print" name="print_report" type="object" class="oe_highlight"/>
+                        <button string="Cancel" class="btn btn-secondary" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="salary_certificate_wizard_action" model="ir.actions.act_window">
+            <field name="name">Print Employee Salary Certificate</field>
+            <field name="res_model">salary.certificate</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem id="menu_salary_certificate"
+            name="Salary Certificate"
+            action="salary_certificate_wizard_action"
+            parent="hr_payroll.menu_hr_payroll_report"
+            sequence="20"/>
+
+    </data>
+</odoo>

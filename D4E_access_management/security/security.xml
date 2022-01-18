@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="res_partner_user_rule" model="ir.rule">
+        <field name="name">res.partner.user.rule</field>
+        <field name="model_id" ref="base.model_res_partner"/>
+        <field name="domain_force">
+            ['|', ('category_id', '=', False), ('category_id', 'in', user.permitted_category_id.ids)]
+        </field>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="True"/>
+        <field name="perm_create" eval="True"/>
+        <field name="perm_unlink" eval="True"/>
+    </record>
+
+    <record id="res_product_user_rule" model="ir.rule">
+        <field name="name">product.user.rule</field>
+        <field name="model_id" ref="product.model_product_template"/>
+        <field name="domain_force">
+            ['|', ('tag_id', '=', False), ('tag_id', 'in', user.product_tag_id.ids)]
+        </field>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="True"/>
+        <field name="perm_create" eval="True"/>
+        <field name="perm_unlink" eval="True"/>
+    </record>
+
+    <record id="res_event_user_rule" model="ir.rule">
+        <field name="name">event.user.rule</field>
+        <field name="model_id" ref="event.model_event_event"/>
+        <field name="domain_force">
+            ['&amp;', '|', ('organizer_id.category_id', '=', False), ('organizer_id.category_id', 'in', user.permitted_category_id.ids), ('website_id', 'in', user.permitted_website_id.ids)]
+        </field>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="True"/>
+        <field name="perm_create" eval="True"/>
+        <field name="perm_unlink" eval="True"/>
+    </record>
+
+</odoo>

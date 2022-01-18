@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <record id="menu_producteurs" model="website.menu">
+            <field name="name">Producteurs</field>
+            <field name="url">/producteurs</field>
+            <field name="parent_id" ref="website.main_menu"/>
+            <field name="sequence" type="int">20</field>
+        </record>
+
+        <record id="menu_pass_provino" model="website.menu">
+            <field name="name">Pass Dégustation Provino</field>
+            <field name="url">/pass-provino</field>
+            <field name="parent_id" ref="website.main_menu"/>
+            <field name="sequence" type="int">40</field>
+        </record>
+
+    </data>
+</odoo>

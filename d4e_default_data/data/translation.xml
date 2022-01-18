@@ -1,0 +1,841 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data noupdate="0">
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.reconcile.model,name'"/>
+            <value eval="'fr_CH'"/>
+            <value model="account.reconcile.model" eval="obj().search([('name', '=', 'Invoices Matching Rule'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'Invoices Matching Rule'"/>
+            <value eval="'Règle de rapprochement des factures'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.reconcile.model,name'"/>
+            <value eval="'de_CH'"/>
+            <value model="account.reconcile.model" eval="obj().search([('name', '=', 'Invoices Matching Rule'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'Invoices Matching Rule'"/>
+            <value eval="'Rechnungsabgleichsregel '"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.reconcile.model,name'"/>
+            <value eval="'en_US'"/>
+            <value model="account.reconcile.model" eval="obj().search([('name', '=', 'Escompte fournisseurs'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'Escompte fournisseurs'"/>
+            <value eval="'Supplier discount'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.reconcile.model,name'"/>
+            <value eval="'de_CH'"/>
+            <value model="account.reconcile.model" eval="obj().search([('name', '=', 'Escompte fournisseurs'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'Escompte fournisseurs'"/>
+            <value eval="'Lieferantenrabatt'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.reconcile.model,name'"/>
+            <value eval="'en_US'"/>
+            <value model="account.reconcile.model" eval="obj().search([('name', '=', 'Escompte client'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'Escompte client'"/>
+            <value eval="'Customer discount'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.reconcile.model,name'"/>
+            <value eval="'de_CH'"/>
+            <value model="account.reconcile.model" eval="obj().search([('name', '=', 'Escompte client'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'Escompte client'"/>
+            <value eval="'Kundenrabatt'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.journal,name'"/>
+            <value eval="'fr_CH'"/>
+            <value model="account.journal" eval="obj().search([('name', '=', 'Miscellaneous Operations')]).ids"/>
+            <value eval="'Miscellaneous Operations'"/>
+            <value eval="'Opérations diverses'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.journal,name'"/>
+            <value eval="'fr_CH'"/>
+            <value model="account.journal" eval="obj().search([('name', '=', 'Customer Invoices')]).ids"/>
+            <value eval="'Customer Invoices'"/>
+            <value eval="'Factures clients'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.journal,name'"/>
+            <value eval="'fr_CH'"/>
+            <value model="account.journal" eval="obj().search([('name', '=', 'Vendor Bills')]).ids"/>
+            <value eval="'Vendor Bills'"/>
+            <value eval="'Factures fournisseurs'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.journal,name'"/>
+            <value eval="'fr_CH'"/>
+            <value model="account.journal" eval="obj().search([('name', '=', 'Exchange Difference')]).ids"/>
+            <value eval="'Exchange Difference'"/>
+            <value eval="'Différences de change'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.journal,name'"/>
+            <value eval="'fr_CH'"/>
+            <value model="account.journal" eval="obj().search([('name', '=', 'Bank')]).ids"/>
+            <value eval="'Bank'"/>
+            <value eval="'Banque'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.journal,name'"/>
+            <value eval="'fr_CH'"/>
+            <value model="account.journal" eval="obj().search([('name', '=', 'Cash')]).ids"/>
+            <value eval="'Cash'"/>
+            <value eval="'Caisse'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.journal,name'"/>
+            <value eval="'fr_CH'"/>
+            <value model="account.journal" eval="obj().search([('name', '=', 'Cash Basis Taxes')]).ids"/>
+            <value eval="'Cash Basis Taxes'"/>
+            <value eval="'TVA sur encaissements'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.journal,name'"/>
+            <value eval="'de_CH'"/>
+            <value model="account.journal" eval="obj().search([('name', '=', 'Miscellaneous Operations')]).ids"/>
+            <value eval="'Miscellaneous Operations'"/>
+            <value eval="'Sonstige Operationen'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.journal,name'"/>
+            <value eval="'de_CH'"/>
+            <value model="account.journal" eval="obj().search([('name', '=', 'Customer Invoices')]).ids"/>
+            <value eval="'Customer Invoices'"/>
+            <value eval="'Kundenrechnungen'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.journal,name'"/>
+            <value eval="'de_CH'"/>
+            <value model="account.journal" eval="obj().search([('name', '=', 'Vendor Bills')]).ids"/>
+            <value eval="'Vendor Bills'"/>
+            <value eval="'Lieferantenrechnungen'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.journal,name'"/>
+            <value eval="'de_CH'"/>
+            <value model="account.journal" eval="obj().search([('name', '=', 'Exchange Difference')]).ids"/>
+            <value eval="'Exchange Difference'"/>
+            <value eval="'Wechselkursdifferenzen'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.journal,name'"/>
+            <value eval="'de_CH'"/>
+            <value model="account.journal" eval="obj().search([('name', '=', 'Bank')]).ids"/>
+            <value eval="'Bank'"/>
+            <value eval="'Bank'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.journal,name'"/>
+            <value eval="'de_CH'"/>
+            <value model="account.journal" eval="obj().search([('name', '=', 'Cash')]).ids"/>
+            <value eval="'Cash'"/>
+            <value eval="'Kasse'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.journal,name'"/>
+            <value eval="'de_CH'"/>
+            <value model="account.journal" eval="obj().search([('name', '=', 'Cash Basis Taxes')]).ids"/>
+            <value eval="'Cash Basis Taxes'"/>
+            <value eval="'Steuern auf Kassenbasis'"/>
+        </function>
+
+
+<function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,name'"/>
+            <value eval="'fr_CH'"/>
+            <value model="account.tax" eval="obj().search([('name', '=', 'No VAT'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'No VAT'"/>
+            <value eval="'Pas de TVA'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,name'"/>
+            <value eval="'fr_CH'"/>
+            <value model="account.tax" eval="obj().search([('name', '=', '0% VAT excluded'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'0% VAT excluded'"/>
+            <value eval="'TVA 0% exclue'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,name'"/>
+            <value eval="'fr_CH'"/>
+            <value model="account.tax" eval="obj().search([('name', '=', '0% export VAT'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'0% export VAT'"/>
+            <value eval="'TVA 0% export'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,name'"/>
+            <value eval="'fr_CH'"/>
+            <value model="account.tax" eval="obj().search([('name', '=', '2.5% VAT purchase of goods including VAT'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'2.5% VAT purchase of goods including VAT'"/>
+            <value eval="'TVA 2.5% achat marchandise TTC'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,name'"/>
+            <value eval="'fr_CH'"/>
+            <value model="account.tax" eval="obj().search([('name', '=', 'Donations, dividends, compensation at 0%'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'Donations, dividends, compensation at 0%'"/>
+            <value eval="'Dons, dividendes, dédommagements à 0%'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,name'"/>
+            <value eval="'fr_CH'"/>
+            <value model="account.tax" eval="obj().search([('name', '=', 'Subsidies, tourist taxes at 0%'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'Subsidies, tourist taxes at 0%'"/>
+            <value eval="'Subventions, taxes touristiques à 0%'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,name'"/>
+            <value eval="'fr_CH'"/>
+            <value model="account.tax" eval="obj().search([('name', '=', 'TVA 7.7% invest. and FG HT'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'TVA 7.7% invest. and FG HT'"/>
+            <value eval="'TVA 7.7% invest. et FG HT'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,name'"/>
+            <value eval="'fr_CH'"/>
+            <value model="account.tax" eval="obj().search([('name', '=', 'TVA 7.7% invest. and FG TTC'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'TVA 7.7% invest. and FG TTC'"/>
+            <value eval="'TVA 7.7% invest. et FG TTC'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,name'"/>
+            <value eval="'fr_CH'"/>
+            <value model="account.tax" eval="obj().search([('name', '=', 'VAT 0% import'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'VAT 0% import'"/>
+            <value eval="'TVA 0% import'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,name'"/>
+            <value eval="'fr_CH'"/>
+            <value model="account.tax" eval="obj().search([('name', '=', 'VAT 100% pure invest. and FG'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'VAT 100% pure invest. and FG'"/>
+            <value eval="'TVA 100% pure invest. et FG'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,name'"/>
+            <value eval="'fr_CH'"/>
+            <value model="account.tax" eval="obj().search([('name', '=', 'VAT 100% pure purchase of goods'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'VAT 100% pure purchase of goods'"/>
+            <value eval="'TVA 100% pure achat marchandise'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,name'"/>
+            <value eval="'fr_CH'"/>
+            <value model="account.tax" eval="obj().search([('name', '=', 'VAT 2.5% invest. and FG HT'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'VAT 2.5% invest. and FG HT'"/>
+            <value eval="'TVA 2.5% invest. et FG HT'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,name'"/>
+            <value eval="'fr_CH'"/>
+            <value model="account.tax" eval="obj().search([('name', '=', 'VAT 2.5% invest. and FG TTC'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'VAT 2.5% invest. and FG TTC'"/>
+            <value eval="'TVA 2.5% invest. et FG TTC'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,name'"/>
+            <value eval="'fr_CH'"/>
+            <value model="account.tax" eval="obj().search([('name', '=', 'VAT 2.5% purchase of goods HT'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'VAT 2.5% purchase of goods HT'"/>
+            <value eval="'TVA 2.5% achat marchandise HT'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,name'"/>
+            <value eval="'fr_CH'"/>
+            <value model="account.tax" eval="obj().search([('name', '=', 'VAT 2.5% sales excl.'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'VAT 2.5% sales excl.'"/>
+            <value eval="'TVA 2.5% ventes HT'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,name'"/>
+            <value eval="'fr_CH'"/>
+            <value model="account.tax" eval="obj().search([('name', '=', 'VAT 2.5% sales incl.'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'VAT 2.5% sales incl.'"/>
+            <value eval="'TVA 2.5% ventes TTC'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,name'"/>
+            <value eval="'fr_CH'"/>
+            <value model="account.tax" eval="obj().search([('name', '=', 'VAT 3.7% invest. and FG HT'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'VAT 3.7% invest. and FG HT'"/>
+            <value eval="'TVA 3.7% invest. et FG HT'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,name'"/>
+            <value eval="'fr_CH'"/>
+            <value model="account.tax" eval="obj().search([('name', '=', 'VAT 3.7% invest. and FG TTC'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'VAT 3.7% invest. and FG TTC'"/>
+            <value eval="'TVA 3.7% invest. et FG TTC'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,name'"/>
+            <value eval="'fr_CH'"/>
+            <value model="account.tax" eval="obj().search([('name', '=', 'VAT 3.7% purchase of goods HT'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'VAT 3.7% purchase of goods HT'"/>
+            <value eval="'TVA 3.7% achat marchandise HT'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,name'"/>
+            <value eval="'fr_CH'"/>
+            <value model="account.tax" eval="obj().search([('name', '=', 'VAT 3.7% purchase of goods including VAT'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'VAT 3.7% purchase of goods including VAT'"/>
+            <value eval="'TVA 3.7% achat marchandise TTC'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,name'"/>
+            <value eval="'fr_CH'"/>
+            <value model="account.tax" eval="obj().search([('name', '=', 'VAT 3.7% sales excl.'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'VAT 3.7% sales excl.'"/>
+            <value eval="'TVA 3.7% ventes HT'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,name'"/>
+            <value eval="'fr_CH'"/>
+            <value model="account.tax" eval="obj().search([('name', '=', 'VAT 3.7% sales incl.'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'VAT 3.7% sales incl.'"/>
+            <value eval="'TVA 3.7% ventes TTC'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,name'"/>
+            <value eval="'fr_CH'"/>
+            <value model="account.tax" eval="obj().search([('name', '=', 'VAT 7.7% purchase of goods HT'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'VAT 7.7% purchase of goods HT'"/>
+            <value eval="'TVA 7.7% achat marchandise HT'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,name'"/>
+            <value eval="'fr_CH'"/>
+            <value model="account.tax" eval="obj().search([('name', '=', 'VAT 7.7% purchase of goods including VAT.'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'VAT 7.7% purchase of goods including VAT.'"/>
+            <value eval="'TVA 7.7% achat marchandise TTC'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,name'"/>
+            <value eval="'fr_CH'"/>
+            <value model="account.tax" eval="obj().search([('name', '=', 'VAT 7.7% purchase service abroad (reverse charge)'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'VAT 7.7% purchase service abroad (reverse charge)'"/>
+            <value eval="'TVA 7.7%  achat service a l etranger (reverse charge)'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,name'"/>
+            <value eval="'fr_CH'"/>
+            <value model="account.tax" eval="obj().search([('name', '=', 'VAT 7.7% sales (returns)'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'VAT 7.7% sales (returns)'"/>
+            <value eval="'TVA 7.7% ventes (retours)'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,name'"/>
+            <value eval="'fr_CH'"/>
+            <value model="account.tax" eval="obj().search([('name', '=', 'VAT 7.7% sales excl.'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'VAT 7.7% sales excl.'"/>
+            <value eval="'TVA 7.7% ventes HT'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,name'"/>
+            <value eval="'fr_CH'"/>
+            <value model="account.tax" eval="obj().search([('name', '=', 'VAT 7.7% sales incl.'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'VAT 7.7% sales incl.'"/>
+            <value eval="'TVA 7.7% ventes TTC'"/>
+        </function>
+
+
+
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,name'"/>
+            <value eval="'de_CH'"/>
+            <value model="account.tax" eval="obj().search([('name', '=', 'No VAT'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'No VAT'"/>
+            <value eval="'Keine Mwst'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,name'"/>
+            <value eval="'de_CH'"/>
+            <value model="account.tax" eval="obj().search([('name', '=', '0% VAT excluded'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'0% VAT excluded'"/>
+            <value eval="'MwSt. 0% ausgeschlossen'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,name'"/>
+            <value eval="'de_CH'"/>
+            <value model="account.tax" eval="obj().search([('name', '=', '0% export VAT'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'0% export VAT'"/>
+            <value eval="'MwSt. 0% (Exporte)'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,name'"/>
+            <value eval="'de_CH'"/>
+            <value model="account.tax" eval="obj().search([('name', '=', '2.5% VAT purchase of goods including VAT'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'2.5% VAT purchase of goods including VAT'"/>
+            <value eval="'MwSt. 2,5% Einkäufe (inkl.)'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,name'"/>
+            <value eval="'de_CH'"/>
+            <value model="account.tax" eval="obj().search([('name', '=', 'Donations, dividends, compensation at 0%'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'Donations, dividends, compensation at 0%'"/>
+            <value eval="'Spenden, Dividenden, Entschädigungen zu 0%'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,name'"/>
+            <value eval="'de_CH'"/>
+            <value model="account.tax" eval="obj().search([('name', '=', 'Subsidies, tourist taxes at 0%'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'Subsidies, tourist taxes at 0%'"/>
+            <value eval="'Subventionen, Taxen 0%'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,name'"/>
+            <value eval="'de_CH'"/>
+            <value model="account.tax" eval="obj().search([('name', '=', 'TVA 7.7% invest. and FG HT'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'TVA 7.7% invest. and FG HT'"/>
+            <value eval="'MwSt. 7,7% Invest. und sonst. Aufw. (exkl.)'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,name'"/>
+            <value eval="'de_CH'"/>
+            <value model="account.tax" eval="obj().search([('name', '=', 'TVA 7.7% invest. and FG TTC'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'TVA 7.7% invest. and FG TTC'"/>
+            <value eval="'MwSt. 7,7% Invest. und sonst. Aufw. (inkl.)'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,name'"/>
+            <value eval="'de_CH'"/>
+            <value model="account.tax" eval="obj().search([('name', '=', 'VAT 0% import'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'VAT 0% import'"/>
+            <value eval="'MwSt. 0% Import'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,name'"/>
+            <value eval="'de_CH'"/>
+            <value model="account.tax" eval="obj().search([('name', '=', 'VAT 100% pure invest. and FG'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'VAT 100% pure invest. and FG'"/>
+            <value eval="'100% MwSt. Invest. und sonst. Aufw. Verzollung'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,name'"/>
+            <value eval="'de_CH'"/>
+            <value model="account.tax" eval="obj().search([('name', '=', 'VAT 100% pure purchase of goods'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'VAT 100% pure purchase of goods'"/>
+            <value eval="'100% MwSt. Einkauf Verzollung'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,name'"/>
+            <value eval="'de_CH'"/>
+            <value model="account.tax" eval="obj().search([('name', '=', 'VAT 2.5% invest. and FG HT'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'VAT 2.5% invest. and FG HT'"/>
+            <value eval="'MwSt. 2,5% Invest. und sonst. Aufw. (exkl.)'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,name'"/>
+            <value eval="'de_CH'"/>
+            <value model="account.tax" eval="obj().search([('name', '=', 'VAT 2.5% invest. and FG TTC'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'VAT 2.5% invest. and FG TTC'"/>
+            <value eval="'MwSt. 2,5% Invest. und sonst. Aufw. (inkl.)'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,name'"/>
+            <value eval="'de_CH'"/>
+            <value model="account.tax" eval="obj().search([('name', '=', 'VAT 2.5% purchase of goods HT'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'VAT 2.5% purchase of goods HT'"/>
+            <value eval="'MwSt. 2,5 % Einkäufe (exkl.)'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,name'"/>
+            <value eval="'de_CH'"/>
+            <value model="account.tax" eval="obj().search([('name', '=', 'VAT 2.5% sales excl.'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'VAT 2.5% sales excl.'"/>
+            <value eval="'MwSt.2,5 % (exkl.)'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,name'"/>
+            <value eval="'de_CH'"/>
+            <value model="account.tax" eval="obj().search([('name', '=', 'VAT 2.5% sales incl.'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'VAT 2.5% sales incl.'"/>
+            <value eval="'MwSt.2,5 % (inkl.)'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,name'"/>
+            <value eval="'de_CH'"/>
+            <value model="account.tax" eval="obj().search([('name', '=', 'VAT 3.7% invest. and FG HT'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'VAT 3.7% invest. and FG HT'"/>
+            <value eval="'MwSt. 3,7% Invest. und sonst. Aufw. (exkl.)'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,name'"/>
+            <value eval="'de_CH'"/>
+            <value model="account.tax" eval="obj().search([('name', '=', 'VAT 3.7% invest. and FG TTC'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'VAT 3.7% invest. and FG TTC'"/>
+            <value eval="'MwSt. 3,7% Invest. und sonst. Aufw. (inkl.)'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,name'"/>
+            <value eval="'de_CH'"/>
+            <value model="account.tax" eval="obj().search([('name', '=', 'VAT 3.7% purchase of goods HT'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'VAT 3.7% purchase of goods HT'"/>
+            <value eval="'MwSt. 3,7 % Einkäufe (exkl.)'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,name'"/>
+            <value eval="'de_CH'"/>
+            <value model="account.tax" eval="obj().search([('name', '=', 'VAT 3.7% purchase of goods including VAT'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'VAT 3.7% purchase of goods including VAT'"/>
+            <value eval="'TVA 3.7% achat marchandise TTC'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,name'"/>
+            <value eval="'de_CH'"/>
+            <value model="account.tax" eval="obj().search([('name', '=', 'VAT 3.7% sales excl.'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'VAT 3.7% sales excl.'"/>
+            <value eval="'MwSt. 3,7% Einkäufe (inkl.)'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,name'"/>
+            <value eval="'de_CH'"/>
+            <value model="account.tax" eval="obj().search([('name', '=', 'VAT 3.7% sales incl.'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'VAT 3.7% sales incl.'"/>
+            <value eval="'MwSt. 3,7% (inkl.)'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,name'"/>
+            <value eval="'de_CH'"/>
+            <value model="account.tax" eval="obj().search([('name', '=', 'VAT 7.7% purchase of goods HT'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'VAT 7.7% purchase of goods HT'"/>
+            <value eval="'MwSt. 7,7% Einkäufe (exkl.)'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,name'"/>
+            <value eval="'de_CH'"/>
+            <value model="account.tax" eval="obj().search([('name', '=', 'VAT 7.7% purchase of goods including VAT.'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'VAT 7.7% purchase of goods including VAT.'"/>
+            <value eval="'MwSt. 7,7% Einkäufe (inkl.)'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,name'"/>
+            <value eval="'de_CH'"/>
+            <value model="account.tax" eval="obj().search([('name', '=', 'VAT 7.7% purchase service abroad (reverse charge)'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'VAT 7.7% purchase service abroad (reverse charge)'"/>
+            <value eval="'TVA 7.7% auf Einkauf Dienstleistungen im Ausland (reverse charge)'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,name'"/>
+            <value eval="'de_CH'"/>
+            <value model="account.tax" eval="obj().search([('name', '=', 'VAT 7.7% sales (returns)'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'VAT 7.7% sales (returns)'"/>
+            <value eval="'Mwst 7.7% (return)'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,name'"/>
+            <value eval="'de_CH'"/>
+            <value model="account.tax" eval="obj().search([('name', '=', 'VAT 7.7% sales excl.'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'VAT 7.7% sales excl.'"/>
+            <value eval="'MwSt. 7,7% (exkl.)'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,name'"/>
+            <value eval="'de_CH'"/>
+            <value model="account.tax" eval="obj().search([('name', '=', 'VAT 7.7% sales incl.'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'VAT 7.7% sales incl.'"/>
+            <value eval="'MwSt. 7,7% (inkl.)'"/>
+        </function>
+
+         <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,description'"/>
+            <value eval="'fr_CH'"/>
+            <value model="account.tax" eval="obj().search([('description', '=', '0% donations'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'0% donations'"/>
+            <value eval="'0% dons'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,description'"/>
+            <value eval="'fr_CH'"/>
+            <value model="account.tax" eval="obj().search([('description', '=', '2.5% purchase'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'2.5% purchase'"/>
+            <value eval="'2.5% achat'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,description'"/>
+            <value eval="'fr_CH'"/>
+            <value model="account.tax" eval="obj().search([('description', '=', '2.5% purchase Incl.'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'2.5% purchase Incl.'"/>
+            <value eval="'2.5% achat Incl.'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,description'"/>
+            <value eval="'fr_CH'"/>
+            <value model="account.tax" eval="obj().search([('description', '=', '3.7% purchase'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'3.7% purchase'"/>
+            <value eval="'3.7% achat'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,description'"/>
+            <value eval="'fr_CH'"/>
+            <value model="account.tax" eval="obj().search([('description', '=', '3.7% purchase Incl.'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'3.7% purchase Incl.'"/>
+            <value eval="'3.7% achat Incl.'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,description'"/>
+            <value eval="'fr_CH'"/>
+            <value model="account.tax" eval="obj().search([('description', '=', '7.7% purchase'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'7.7% purchase'"/>
+            <value eval="'7.7% achat'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,description'"/>
+            <value eval="'fr_CH'"/>
+            <value model="account.tax" eval="obj().search([('description', '=', '7.7% purchase (return)'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'7.7% purchase (return)'"/>
+            <value eval="'7.7% achat (return)'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,description'"/>
+            <value eval="'fr_CH'"/>
+            <value model="account.tax" eval="obj().search([('description', '=', '7.7% purchase Incl.'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'7.7% purchase Incl.'"/>
+            <value eval="'7.7% achat Incl.'"/>
+        </function>
+
+         <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,description'"/>
+            <value eval="'de_CH'"/>
+            <value model="account.tax" eval="obj().search([('description', '=', '0% donations'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'0% donations'"/>
+            <value eval="'0% dons'"/>
+        </function>
+
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,description'"/>
+            <value eval="'de_CH'"/>
+            <value model="account.tax" eval="obj().search([('description', '=', '0% excl.'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'0% excl.'"/>
+            <value eval="'0% Exkl.'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,description'"/>
+            <value eval="'de_CH'"/>
+            <value model="account.tax" eval="obj().search([('description', '=', '0% import.'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'0% import.'"/>
+            <value eval="'0% Import.'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,description'"/>
+            <value eval="'de_CH'"/>
+            <value model="account.tax" eval="obj().search([('description', '=', '100% imp.'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'100% imp.'"/>
+            <value eval="'100% Imp.'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,description'"/>
+            <value eval="'de_CH'"/>
+            <value model="account.tax" eval="obj().search([('description', '=', '2.5% Incl.'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'2.5% Incl.'"/>
+            <value eval="'2.5% Inkl.'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,description'"/>
+            <value eval="'de_CH'"/>
+            <value model="account.tax" eval="obj().search([('description', '=', '2.5% invest. Incl.'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'2.5% invest. Incl.'"/>
+            <value eval="'2.5% Invest. Inkl.'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,description'"/>
+            <value eval="'de_CH'"/>
+            <value model="account.tax" eval="obj().search([('description', '=', '2.5% purchase'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'2.5% purchase'"/>
+            <value eval="'2.5% Einkauf'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,description'"/>
+            <value eval="'de_CH'"/>
+            <value model="account.tax" eval="obj().search([('description', '=', '2.5% purchase Incl.'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'2.5% purchase Incl.'"/>
+            <value eval="'2.5% Einkauf Inkl.'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,description'"/>
+            <value eval="'de_CH'"/>
+            <value model="account.tax" eval="obj().search([('description', '=', '3.7% Incl.'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'3.7% Incl.'"/>
+            <value eval="'3.7% Inkl.'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,description'"/>
+            <value eval="'de_CH'"/>
+            <value model="account.tax" eval="obj().search([('description', '=', '3.7% invest'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'3.7% invest'"/>
+            <value eval="'3.7% Invest'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,description'"/>
+            <value eval="'de_CH'"/>
+            <value model="account.tax" eval="obj().search([('description', '=', '3.7% invest Incl.'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'3.7% invest Incl.'"/>
+            <value eval="'3.7% Invest Inkl.'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,description'"/>
+            <value eval="'de_CH'"/>
+            <value model="account.tax" eval="obj().search([('description', '=', '3.7% purchase'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'3.7% purchase'"/>
+            <value eval="'3.7% Einkauf'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,description'"/>
+            <value eval="'de_CH'"/>
+            <value model="account.tax" eval="obj().search([('description', '=', '3.7% purchase Incl.'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'3.7% purchase Incl.'"/>
+            <value eval="'3.7% Einkauf Inkl.'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,description'"/>
+            <value eval="'de_CH'"/>
+            <value model="account.tax" eval="obj().search([('description', '=', '7.7% Incl.'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'7.7% Incl.'"/>
+            <value eval="'7.7% Inkl.'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,description'"/>
+            <value eval="'de_CH'"/>
+            <value model="account.tax" eval="obj().search([('description', '=', '7.7% invest.'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'7.7% invest.'"/>
+            <value eval="'7.7% Invest.'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,description'"/>
+            <value eval="'de_CH'"/>
+            <value model="account.tax" eval="obj().search([('description', '=', '7.7% invest. Incl.'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'7.7% invest. Incl.'"/>
+            <value eval="'7.7% Invest. Inkl.'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,description'"/>
+            <value eval="'de_CH'"/>
+            <value model="account.tax" eval="obj().search([('description', '=', '7.7% purchase'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'7.7% purchase'"/>
+            <value eval="'7.7% Einkauf'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,description'"/>
+            <value eval="'de_CH'"/>
+            <value model="account.tax" eval="obj().search([('description', '=', '7.7% purchase (return)'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'7.7% purchase (return)'"/>
+            <value eval="'7.7% Einkauf (return)'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.tax,description'"/>
+            <value eval="'de_CH'"/>
+            <value model="account.tax" eval="obj().search([('description', '=', '7.7% purchase Incl.'), '|', ('active', '=', True), ('active', '=', False)]).ids"/>
+            <value eval="'7.7% purchase Incl.'"/>
+            <value eval="'7.7% Einkauf Inkl.'"/>
+        </function>
+
+
+    </data>
+
+</odoo>

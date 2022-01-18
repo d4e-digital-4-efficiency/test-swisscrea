@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (c) 2019 - Present PIT Solutions AG. (<https://www.pitsolutions.ch/>) -->
+<!-- See LICENSE file for full copyright and licensing details. -->
+<!-- License URL : https://www.webshopextension.com/en/licence-agreement/ -->
+<templates id="template" xml:space="preserve">
+
+  	<t t-extend="payment.display_tx_list"> 
+	    <t t-jquery="t[t-foreach*='tx_draft'][t-as*='tx'] li" t-operation="append">
+	    	<i class="fa fa-refresh fa-spin" />
+	    </t> 
+	</t>
+
+</templates>

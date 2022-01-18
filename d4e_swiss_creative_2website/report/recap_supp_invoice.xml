@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<odoo>
+
+        <record id="action_report_supp_invoice_recap" model="ir.actions.report">
+            <field name="name">Supplier Invoice Recap</field>
+            <field name="model">supplier.invoice.sale.generator</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">d4e_swiss_creative_2website.supp_invoice_recap_template</field>
+            <field name="report_file">d4e_swiss_creative_2website.supp_invoice_recap_template</field>
+        </record>
+
+
+</odoo>

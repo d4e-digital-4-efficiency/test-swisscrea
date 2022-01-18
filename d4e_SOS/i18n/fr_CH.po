@@ -1,0 +1,127 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* d4e_SOS
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-04-09 13:46+0000\n"
+"PO-Revision-Date: 2021-04-09 13:46+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: d4e_SOS
+#: model_terms:ir.ui.view,arch_db:d4e_SOS.sos_client_form_view
+msgid ""
+"<br/>\n"
+"                    <br/>\n"
+"                    <br/>\n"
+"                    <span>support up to  </span>"
+msgstr ""
+"<br/>\n"
+"                    <br/>\n"
+"                    <br/>\n"
+"                    <span>Support jusqu'au </span>"
+
+#. module: d4e_SOS
+#: model:ir.model,name:d4e_SOS.model_res_config_settings
+msgid "Config Settings"
+msgstr "Paramètres de config"
+
+#. module: d4e_SOS
+#: model:ir.model.fields,field_description:d4e_SOS.field_sos_client__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: d4e_SOS
+#: model:ir.model.fields,field_description:d4e_SOS.field_sos_client__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: d4e_SOS
+#: model:ir.model.fields,field_description:d4e_SOS.field_sos_client__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: d4e_SOS
+#: model:ir.model.fields,field_description:d4e_SOS.field_sos_client__id
+msgid "ID"
+msgstr ""
+
+#. module: d4e_SOS
+#: model:ir.model.fields,field_description:d4e_SOS.field_sos_client____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: d4e_SOS
+#: model:ir.model.fields,field_description:d4e_SOS.field_sos_client__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: d4e_SOS
+#: model:ir.model.fields,field_description:d4e_SOS.field_sos_client__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: d4e_SOS
+#: model:ir.actions.act_window,name:d4e_SOS.action_sos_client
+msgid "SOS"
+msgstr ""
+
+#. module: d4e_SOS
+#: model_terms:ir.ui.view,arch_db:d4e_SOS.sos_client_form_view
+msgid "SOS by D4E"
+msgstr ""
+
+#. module: d4e_SOS
+#: model:ir.actions.act_window,name:d4e_SOS.action_menu_sos_settings
+msgid "Settings"
+msgstr ""
+
+#. module: d4e_SOS
+#: model:ir.ui.menu,name:d4e_SOS.SOS_menu_root
+msgid "Sos"
+msgstr ""
+
+#. module: d4e_SOS
+#: model:ir.model.fields,field_description:d4e_SOS.field_res_config_settings__date_support
+#: model:ir.model.fields,field_description:d4e_SOS.field_sos_client__date_support
+msgid "Support Date"
+msgstr "Date de support"
+
+#. module: d4e_SOS
+#: model_terms:ir.ui.view,arch_db:d4e_SOS.res_config_settings_view_form
+msgid "d4e SOS"
+msgstr ""
+
+#. module: d4e_SOS
+#: model_terms:ir.ui.view,arch_db:d4e_SOS.res_config_settings_view_form
+msgid "d4e_SOS"
+msgstr ""
+
+#. module: d4e_SOS
+#: model:ir.ui.menu,name:d4e_SOS.menu_sos_settings
+msgid "settings"
+msgstr ""
+
+#. module: d4e_SOS
+#: model:ir.model,name:d4e_SOS.model_sos_client
+msgid "sos.client"
+msgstr ""
+
+#. module: d4e_SOS
+#: code:addons/d4e_SOS/models/sos.py:0
+#, python-format
+msgid "No SOS support activated - Contact our sales department"
+msgstr "Pas de support SOS activé - Contacter notre service commercial"
+
+#. module: d4e_SOS
+#: code:addons/d4e_SOS/models/sos.py:0
+#, python-format
+msgid "support up to  "
+msgstr "Support jusqu'au  "

@@ -1,0 +1,4 @@
+name,default_schedule_pay,wage_type,id,default_work_entry_type_id/id,active
+Standard,monthly,monthly,d4e_ch_payroll_data.Standard,d4e_ch_payroll_data.PRESENCE_1,true
+Salaire mensuel,monthly,monthly,d4e_ch_payroll_data.mensuel,d4e_ch_payroll_data.PRESENCE_1,true
+Salaire horaire,monthly,hourly,d4e_ch_payroll_data.horaire,d4e_ch_payroll_data.NOMBREH_1,true

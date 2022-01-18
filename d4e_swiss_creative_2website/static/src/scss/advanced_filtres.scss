@@ -1,0 +1,87 @@
+@mixin thumb($input-height, $input-border-radius, $input-thumb-color) {
+    width: $input-height;
+    height: $input-height;
+    border: none;
+    pointer-events: auto;
+    border-radius: $input-border-radius;
+    background-color: $input-thumb-color;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+
+/* https://codepen.io/rendykstan/pen/VLqZGO8 */
+@mixin range-slider(
+    $width,
+    $height,
+    $input-top,
+    $input-bg-color,
+    $input-thumb-color,
+    $float: none,
+    $input-height: 20px,
+    $input-border-radius: 14px,
+    $bubble-width: 100px
+) {
+    position: relative;
+    width: $width;
+    margin-left: (100% - $width) / 2;
+    height: $height;
+    float: $float;
+    text-align: center;
+    input[type='range'] {
+        -webkit-appearance: none;
+        height: $input-height;
+      pointer-events:none;
+        padding: 0;
+        position: absolute;
+        left: 0;
+        top: $input-top;
+        height: $input-height;
+        width: 100%;
+        border-radius: $input-border-radius;
+        border: 1px solid grey;
+        background: none;
+        &:focus,
+        &:active {
+            outline: none;
+        }
+        &::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            box-sizing: content-box;
+            @include thumb($input-height, $input-border-radius, $input-thumb-color);
+        }
+        &::-moz-range-thumb {
+            @include thumb($input-height, $input-border-radius, $input-thumb-color);
+        }
+        &::-ms-thumb {
+            @include thumb($input-height, $input-border-radius, $input-thumb-color);
+        }
+        &::-webkit-slider-runnable-track {
+            /* your track styles */
+        }
+        &::-moz-range-track {
+            -moz-appearance: none;
+            background: none;
+        }
+        &::-ms-track {
+            /* should come after -webkit- */
+            border-color: transparent;
+            color: transparent;
+            background: transparent;
+            /* again your track styles */
+        }
+        &::-ms-fill-upper {
+            background: transparent;
+        }
+        &::-ms-fill-lower {
+            background: transparent;
+        }
+        &::-ms-tooltip {
+            display: none;
+        }
+    }
+}
+
+.price-slider {
+        @include range-slider(95%, 65px, 30px, #f1efef, black, left, 20px, 14px, 80px);
+    }

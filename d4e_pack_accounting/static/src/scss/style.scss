@@ -1,0 +1,17 @@
+table.o_section_and_note_list_view tr.o_data_row.o_is_line_sub_total td.o_section_and_note_text_cell {
+    padding-right: 16px;
+    text-align: right;
+    font-weight: bold;
+}
+
+table.o_section_and_note_list_view tr.o_data_row.o_is_line_subtotal td.o_section_and_note_text_cell {
+    padding-right: 16px;
+    text-align: right;
+    font-weight: bold;
+}
+
+table.o_section_and_note_list_view tr.o_data_row.o_is_line_title,
+table.o_section_and_note_list_view tr.o_data_row.o_is_line_title textarea[name="name"],
+div.oe_kanban_card.o_is_line_note {
+    font-weight: bold;
+}

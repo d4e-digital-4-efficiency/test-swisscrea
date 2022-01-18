@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="product_uom_six_unit" model="uom.uom">
+            <field name="category_id" ref="uom.product_uom_categ_unit"/>
+            <field name="name">la Sixaine</field>
+            <field name="factor_inv" eval="6.0"/>
+            <field name="uom_type">bigger</field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="create_supp_invoices_wizard" model="ir.ui.view">
+            <field name="name">Relevé fournisseurs mensuel</field>
+            <field name="model">supplier.invoice.sale.generator</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="month"/>
+                        <field name="supplier_id"/>
+                    </group>
+                    <footer>
+                        <button name="supp_mail_prep" string="Préparation de l'envoi par mail"
+                            colspan="1" type="object"/>
+                        <button name="create_supp_invoice" string="FACTURES"
+                            colspan="1" type="object" class="btn-primary"/>
+                        <button name="print_report" string="RECAPITULATIF"
+                            colspan="1" type="object" class="btn-primary"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel" />
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_create_supp_invoices" model="ir.actions.act_window">
+            <field name="name">Relevé fournisseurs mensuel</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">supplier.invoice.sale.generator</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem id="menu_supplier_invoice_sale_generator" action="action_create_supp_invoices" parent="sale.sale_order_menu" sequence="10"/>
+
+
+    </data>
+</odoo>
